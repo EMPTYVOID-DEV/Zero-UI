@@ -1,0 +1,29 @@
+{
+  "name": "zero-ui-registry",
+  "version": "1.0.0",
+  "private": "true",
+  "description": "",
+  "main": "./dist/entry.js",
+  "scripts": {
+    "build": "tsc --outdir dist --declaration"
+  },
+  "files": [
+    "./dist/*",
+    "./registry/*"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/entry.d.ts",
+      "svelte": "./dist/entry.js"
+    },
+    "./theme": {
+      "import": "./registry/theme.css"
+    }
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "svelte": "^4.2.7"
+  }
+}

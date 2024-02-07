@@ -2,9 +2,13 @@
   "name": "zero-ui",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "docs-dev": "pnpm --filter docs dev",
+    "cli-dev": "pnpm --filter zero-ui-cli dev",
+    "cli-build": "pnpm --filter zero-ui-cli build",
+    "cli-release": "pnpm --filter zero-ui-cli release",
+    "cli-version": "pnpm --filter zero-ui-cli version",
+    "registry-build": "pnpm --filter zero-ui-registry build"
   },
   "keywords": [],
   "author": "",
