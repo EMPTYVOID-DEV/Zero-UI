@@ -19,7 +19,7 @@
   "checklist": {
     "default": {
       "files": ["defaultEntry"],
-      "icons": ["checked", "unchecked"]
+      "icons": ["checked", "unChecked"]
     }
   },
   "input": {

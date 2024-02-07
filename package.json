@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "docs-dev": "pnpm --filter docs dev",
+    "docs-dev": "pnpm --filter zero-ui-docs dev",
     "cli-dev": "pnpm --filter zero-ui-cli dev",
     "cli-build": "pnpm --filter zero-ui-cli build",
     "cli-release": "pnpm --filter zero-ui-cli release",
