@@ -1,7 +1,7 @@
 <script>
   /** @type {string} Text for the button */
   export let text = "button";
-  /** @type {import("../../types").iconComponent | null} Icon optional to be used inside the button  */
+  /** @type {import("../../types").iconComponent | null} Icon optional for the button  */
   export let icon = null;
   /** @type {"primary" | "secondary"} Dictates the color based on the state */
   export let state = "primary";

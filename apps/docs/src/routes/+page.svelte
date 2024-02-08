@@ -1,6 +1,8 @@
 <script>
-	import { HoverEntryButton } from 'zero-ui-registry';
+	import { HoverEntryButton, ShadowEntryButton } from 'zero-ui-registry';
 	import Random from '$lib/components/icons/random.svelte';
 </script>
 
-<HoverEntryButton text="login" icon={Random} />
+<ShadowEntryButton icon={Random} text="Getting started" />
+
+<HoverEntryButton text="Getting started" icon={Random} />
