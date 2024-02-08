@@ -45,7 +45,7 @@
   button span {
     text-transform: capitalize;
     color: var(--foregroundColor);
-    font-family: var(--headerFont);
+    font-family: var(--bodyFont);
     font-size: var(--body);
     font-weight: 500;
     line-height: var(--lbody);

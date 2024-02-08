@@ -1,8 +1,25 @@
 <script>
-	import { HoverEntryButton, ShadowEntryButton } from 'zero-ui-registry';
-	import Random from '$lib/components/icons/random.svelte';
+	import { DefaultEntryChecklist } from 'zero-ui-registry';
 </script>
 
-<ShadowEntryButton icon={Random} text="Getting started" />
+<div>
+	<DefaultEntryChecklist
+		checklist={[
+			{
+				text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero corrupti suscipit tenetur voluptate, natus odio aut aliquam architecto est debitis magnam esse adipisci. Corporis itaque optio eveniet perferendis alias doloremque.',
+				checked: true
+			},
 
-<HoverEntryButton text="Getting started" icon={Random} />
+			{
+				text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero corrupti suscipit tenetur voluptate, natus odio aut aliquam architecto est debitis magnam esse adipisci. Corporis itaque optio eveniet perferendis alias doloremque.',
+				checked: false
+			}
+		]}
+	/>
+</div>
+
+<style>
+	div {
+		width: 50vw;
+	}
+</style>
