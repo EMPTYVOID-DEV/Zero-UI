@@ -1,7 +1,7 @@
 <script>
   import CopyIcon from "../../icons/copyIcon.svelte";
   import DoneIcon from "../../icons/doneIcon.svelte";
-  import { a11yLight, a11yDark } from "svelte-highlight/styles";
+  import { edgeLight, edgeDark } from "svelte-highlight/styles";
   import { HighlightAuto, LineNumbers } from "svelte-highlight";
   /**@type {boolean}*/
   export let darkMode;
@@ -23,9 +23,9 @@
 
 <svelte:head>
   {#if darkMode}
-    {@html a11yLight}
+    {@html edgeLight}
   {:else}
-    {@html a11yDark}
+    {@html edgeDark}
   {/if}
 </svelte:head>
 
@@ -42,19 +42,18 @@
     </span>
   {/if}
   <HighlightAuto {code} let:highlighted>
-    <LineNumbers {highlighted} hideBorder wrapLines />
+    <LineNumbers {highlighted} hideBorder />
   </HighlightAuto>
 </div>
 
 <style>
   .code {
-    width: 100%;
-    position: relative;
     overflow: hidden;
+    position: relative;
   }
   .code :global(> :not(.control)) {
     width: 100%;
-    aspect-ratio: 2/1;
+    max-height: 500px;
   }
   .code .control {
     width: fit-content;
@@ -65,14 +64,16 @@
     border: 1px solid var(--primaryColor);
     border-radius: 4px;
     padding: 2px;
-    top: 15px;
-    right: 15px;
+    top: clamp(10px, 2%, 20px);
+    right: clamp(15px, 3%, 25px);
     cursor: pointer;
-    z-index: 2;
+    z-index: 100;
   }
+
   .radius {
     border-radius: var(--border-radius);
   }
+
   :global(::-webkit-scrollbar) {
     width: 0.5rem;
   }

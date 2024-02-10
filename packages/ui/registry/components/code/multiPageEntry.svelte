@@ -27,11 +27,7 @@
 
 <style>
   .codePages {
-    width: 100%;
     display: flex;
     flex-direction: column;
-  }
-  .page {
-    width: 100%;
   }
 </style>
