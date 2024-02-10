@@ -1,22 +1,20 @@
 <svg
   xmlns="http://www.w3.org/2000/svg"
-  width="24"
-  height="24"
+  width="20"
+  height="20"
   viewBox="0 0 24 24"
-  ><g
+  ><path
     fill="none"
     stroke="currentColor"
     stroke-linecap="round"
     stroke-linejoin="round"
     stroke-width="2"
-    ><path d="M16 3H4v13" /><path
-      d="M8 7h12v12a2 2 0 0 1-2 2h-8a2 2 0 0 1-2-2z"
-    /></g
-  ></svg
+    d="M10 6H6a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-4M14 4h6m0 0v6m0-6L10 14"
+  /></svg
 >
 
 <style>
-  svg g {
-    stroke: var(--primaryColor);
+  svg path {
+    stroke: var(--icon, var(--primaryColor));
   }
 </style>

@@ -8,7 +8,8 @@
     "cli-build": "pnpm --filter zero-ui-cli build",
     "cli-release": "pnpm --filter zero-ui-cli release",
     "cli-version": "pnpm --filter zero-ui-cli version",
-    "registry-build": "pnpm --filter zero-ui-registry build"
+    "registry-build": "pnpm --filter zero-ui-registry build",
+    "registry-lint": "pnpm --filter zero-ui-registry lint"
   },
   "keywords": [],
   "author": "",

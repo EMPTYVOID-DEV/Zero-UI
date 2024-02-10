@@ -1,17 +1,13 @@
-export { default as DefaultEntryButton } from "../registry/components/button/defaultEntry.svelte";
+export { default as DefaultChecklist } from "../registry/components/checklist/defaultEntry.svelte";
 
-export { default as HoverEntryButton } from "../registry/components/button/hoverEntry.svelte";
+export { default as DefaultRadioGroup } from "../registry/components/radioGroup/defaultEntry.svelte";
 
-export { default as ShadowEntryButton } from "../registry/components/button/shadowEntry.svelte";
+export { default as DefaultButton } from "../registry/components/button/defaultEntry.svelte";
 
-export { default as DefaultEntryCode } from "../registry/components/code/defaultEntry.svelte";
+export { default as DefaultCode } from "../registry/components/code/defaultEntry.svelte";
 
-export { default as DefaultEntryChecklist } from "../registry/components/checklist/defaultEntry.svelte";
+export { default as MultiPageCode } from "../registry/components/code/multiPageEntry.svelte";
 
-export { default as DefaultEntryEmbed } from "../registry/components/embed/defaultEntry.svelte";
+export { default as DefaultEntryLink } from "../registry/components/link/defaultEntry.svelte";
 
-export { default as DefaultEntryInput } from "../registry/components/input/defaultEntry.svelte";
-
-export { default as DefaultEntryList } from "../registry/components/list/defaultEntry.svelte";
-
-export { default as coloredEntryList } from "../registry/components/list/coloredEntry.svelte";
+export { default as DefaultEntryAccordian } from "../registry/components/accordian/defaultEntry.svelte";

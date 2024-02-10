@@ -1,25 +1,24 @@
 <script>
-	import { DefaultEntryChecklist } from 'zero-ui-registry';
+	import { DefaultEntryAccordian } from 'zero-ui-registry';
 </script>
 
 <div>
-	<DefaultEntryChecklist
-		checklist={[
-			{
-				text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero corrupti suscipit tenetur voluptate, natus odio aut aliquam architecto est debitis magnam esse adipisci. Corporis itaque optio eveniet perferendis alias doloremque.',
-				checked: true
-			},
-
-			{
-				text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero corrupti suscipit tenetur voluptate, natus odio aut aliquam architecto est debitis magnam esse adipisci. Corporis itaque optio eveniet perferendis alias doloremque.',
-				checked: false
-			}
+	<DefaultEntryAccordian
+		accordianList={[
+			{ title: 'hi', description: 'what the hell' },
+			{ title: 'hi', description: 'what the hell' }
 		]}
 	/>
 </div>
 
 <style>
+	:global(body) {
+		background-color: black;
+	}
 	div {
-		width: 50vw;
+		width: 60%;
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
 	}
 </style>
