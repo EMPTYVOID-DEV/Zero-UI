@@ -1,12 +1,6 @@
 <script>
 	import { onMount } from 'svelte';
-	import {
-		DefaultButton,
-		DefaultEntryProgressBar,
-		AsyncButton,
-		MultiStepEntryProgressBar,
-		DefaultChecklist
-	} from 'zero-ui-registry';
+	import { Toggle } from 'zero-ui-registry';
 	import Icon from './icon.svelte';
 	let progress = 0;
 	onMount(() => {
@@ -17,13 +11,12 @@
 </script>
 
 <div>
-	<MultiStepEntryProgressBar
-		type="primary"
-		numberOfSteps={10}
-		currentStepName="login"
-		stepsPassed={3}
+	<Toggle
+		state={true}
+		on:change={(e) => {
+			console.log(e);
+		}}
 	/>
-	<DefaultChecklist checklist={[{ checked: false, text: 'lol', disabled: true }]} />
 </div>
 
 <style>
