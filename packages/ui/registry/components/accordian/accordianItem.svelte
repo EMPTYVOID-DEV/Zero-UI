@@ -14,7 +14,7 @@
 <!-- svelte-ignore a11y-click-events-have-key-events -->
 <!-- svelte-ignore a11y-no-static-element-interactions -->
 <div class="accordianItem" on:click={() => (show = !show)}>
-  <div class="front">
+  <div class="title">
     <span>{title}</span>
     {#if show}
       <UpIcon />
@@ -23,34 +23,33 @@
     {/if}
   </div>
   {#if show}
-    <span class="back" transition:slide>{description}</span>
+    <span class="description" transition:slide>{description}</span>
   {/if}
 </div>
 
 <style>
   .accordianItem {
-    width: 100%;
-    height: max-content;
     display: flex;
     flex-direction: column;
     padding-block: 20px;
     border-bottom: 1px solid var(--mutedColor);
     cursor: pointer;
   }
-  .front {
+  .title {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
-  .back {
+  .description {
     margin-top: 20px;
   }
-  .accordianItem span {
+  span {
+    white-space: pre-wrap;
     color: var(--foregroundColor);
     font-size: var(--body);
     font-family: var(--bodyFont);
   }
-  .accordianItem:hover .front span:first-of-type {
+  .accordianItem:hover .title span {
     text-decoration: underline;
   }
 </style>

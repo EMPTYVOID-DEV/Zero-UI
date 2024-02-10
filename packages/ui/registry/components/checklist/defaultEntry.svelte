@@ -49,14 +49,14 @@
   .checkList {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: var(--gap);
   }
   .checkList .checkListItem {
     display: grid;
     grid-template-columns: repeat(2, auto);
     align-items: center;
     justify-content: start;
-    gap: 10px;
+    gap: var(--gap);
   }
   .checkListItem input {
     cursor: pointer;

@@ -70,14 +70,14 @@
   .radioGroup {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: var(--gap);
   }
   .radioGroup .radioGroupItem {
     display: grid;
     grid-template-columns: repeat(2, auto);
     align-items: center;
     justify-content: start;
-    gap: 10px;
+    gap: var(--gap);
   }
   .radioGroupItem input {
     cursor: pointer;

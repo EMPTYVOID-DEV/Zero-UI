@@ -42,7 +42,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
+    gap: var(--gap);
     width: fit-content;
     padding-inline: 16px;
     padding-block: 8px;

@@ -16,6 +16,7 @@
     calc(1.125rem + ((1vw - 0.48rem) * 0.1736)),
     1.25rem
   );
+  --gap: 10px;
   --border-radius: 0.35rem;
   --bodyFont: Verdana, sans-serif;
   --headerFont: Helvetica, sans-serif;

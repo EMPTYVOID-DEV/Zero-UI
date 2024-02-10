@@ -29,7 +29,7 @@
     --fg: var(--secondaryColor);
   }
   .link {
-    display: flex;
+    display: inline-flex;
     align-items: center;
     gap: 2px;
     cursor: pointer;
