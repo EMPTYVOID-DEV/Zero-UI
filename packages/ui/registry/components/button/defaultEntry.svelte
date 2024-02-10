@@ -18,25 +18,21 @@
     --text: var(--backgroundColor);
     --icon: var(--backgroundColor);
   }
-  .primary {
-    --bg: var(--primaryColor);
+  :is(.primary, .secondary, .danger, .confirm, .secondary) {
     --text: var(--foregroundColor);
     --icon: var(--foregroundColor);
+  }
+  .primary {
+    --bg: var(--primaryColor);
   }
   .secondary {
     --bg: var(--secondaryColor);
-    --text: var(--foregroundColor);
-    --icon: var(--foregroundColor);
   }
   .danger {
     --bg: var(--dangerColor);
-    --text: var(--foregroundColor);
-    --icon: var(--foregroundColor);
   }
   .confirm {
     --bg: var(--confirmColor);
-    --text: var(--foregroundColor);
-    --icon: var(--foregroundColor);
   }
   button {
     display: flex;

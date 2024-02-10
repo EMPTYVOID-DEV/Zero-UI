@@ -1,139 +1,29 @@
 <script>
-	import { DefaultCode } from 'zero-ui-registry';
-	import MultiPageEntry from '../../../../packages/ui/registry/components/code/multiPageEntry.svelte';
+	import { onMount } from 'svelte';
+	import {
+		DefaultButton,
+		DefaultEntryProgressBar,
+		AsyncButton,
+		MultiStepEntryProgressBar,
+		DefaultChecklist
+	} from 'zero-ui-registry';
+	import Icon from './icon.svelte';
+	let progress = 0;
+	onMount(() => {
+		setInterval(() => {
+			progress += 1;
+		}, 10);
+	});
 </script>
 
 <div>
-	<MultiPageEntry
-		codePages={[
-			{
-				name: 'theme.css',
-				code: `@tailwind base;
-@tailwind components;
-@tailwind utilities;
-@layer base {
-  :root {
-	--background: 0 0% 100%;
-	--foreground: 240 10% 3.9%;
-	--muted: 240 4.8% 95.9%;
-	--muted-foreground: 240 3.8% 46.1%;
-	--popover: 0 0% 100%;
-	--popover-foreground: 240 10% 3.9%;
-	--card: 0 0% 100%;
-	--card-foreground: 240 10% 3.9%;
-	--border: 240 5.9% 90%;
-	--input: 240 5.9% 90%;
-	--primary: 240 5.9% 10%;
-	--primary-foreground: 0 0% 98%;
-	--secondary: 240 4.8% 95.9%;
-	--secondary-foreground: 240 5.9% 10%;
-	--accent: 240 4.8% 95.9%;
-	--accent-foreground: 240 5.9% 10%;
-	--destructive: 0 84.2% 60.2%;
-	--destructive-foreground: 0 0% 98%;
-	--ring: 240 5% 64.9%;
-	--radius: 0.5rem;
-  }
-  .dark {
-	--background: 240 10% 3.9%;
-	--foreground: 0 0% 98%;
-	--muted: 240 3.7% 15.9%;
-	--muted-foreground: 240 5% 64.9%;
-	--popover: 240 10% 3.9%;
-	--popover-foreground: 0 0% 98%;
-	--card: 240 10% 3.9%;
-	--card-foreground: 0 0% 98%;
-	--border: 240 3.7% 15.9%;
-	--input: 240 3.7% 15.9%;
-	--primary: 0 0% 98%;
-	--primary-foreground: 240 5.9% 10%;
-	--secondary: 240 3.7% 15.9%;
-	--secondary-foreground: 0 0% 98%;
-	--accent: 240 3.7% 15.9%;
-	--accent-foreground: 0 0% 98%;
-	--destructive: 0 62.8% 30.6%;
-	--destructive-foreground: 0 85.7% 97.3%;
-	--ring: 240 3.7% 15.9%;
-  }
-}
-@layer base {
-  * {
-				@apply border-border;
-			  }
-			  body {
-				@apply bg-background text-foreground;
-				font-feature-settings: "rlig" 1, "calt" 1;
-			  }
-			}
-	  `
-			},
-			{
-				name: 'theme.css',
-				code: `console.log(12)`
-			}
-		]}
-		darkMode={true}
+	<MultiStepEntryProgressBar
+		type="primary"
+		numberOfSteps={10}
+		currentStepName="login"
+		stepsPassed={3}
 	/>
-	<DefaultCode
-		code={`@tailwind base;
-		@tailwind components;
-		@tailwind utilities;
-		@layer base {
-		  :root {
-			--background: 0 0% 100%;
-			--foreground: 240 10% 3.9%;
-			--muted: 240 4.8% 95.9%;
-			--muted-foreground: 240 3.8% 46.1%;
-			--popover: 0 0% 100%;
-			--popover-foreground: 240 10% 3.9%;
-			--card: 0 0% 100%;
-			--card-foreground: 240 10% 3.9%;
-			--border: 240 5.9% 90%;
-			--input: 240 5.9% 90%;
-			--primary: 240 5.9% 10%;
-			--primary-foreground: 0 0% 98%;
-			--secondary: 240 4.8% 95.9%;
-			--secondary-foreground: 240 5.9% 10%;
-			--accent: 240 4.8% 95.9%;
-			--accent-foreground: 240 5.9% 10%;
-			--destructive: 0 84.2% 60.2%;
-			--destructive-foreground: 0 0% 98%;
-			--ring: 240 5% 64.9%;
-			--radius: 0.5rem;
-		  }
-		  .dark {
-			--background: 240 10% 3.9%;
-			--foreground: 0 0% 98%;
-			--muted: 240 3.7% 15.9%;
-			--muted-foreground: 240 5% 64.9%;
-			--popover: 240 10% 3.9%;
-			--popover-foreground: 0 0% 98%;
-			--card: 240 10% 3.9%;
-			--card-foreground: 0 0% 98%;
-			--border: 240 3.7% 15.9%;
-			--input: 240 3.7% 15.9%;
-			--primary: 0 0% 98%;
-			--primary-foreground: 240 5.9% 10%;
-			--secondary: 240 3.7% 15.9%;
-			--secondary-foreground: 0 0% 98%;
-			--accent: 240 3.7% 15.9%;
-			--accent-foreground: 0 0% 98%;
-			--destructive: 0 62.8% 30.6%;
-			--destructive-foreground: 0 85.7% 97.3%;
-			--ring: 240 3.7% 15.9%;
-		  }
-		}
-		@layer base {
-		  * {
-			@apply border-border;
-		  }
-		  body {
-			@apply bg-background text-foreground;
-			font-feature-settings: "rlig" 1, "calt" 1;
-		  }
-		}`}
-	/>
-	<h1 color="white">hi</h1>
+	<DefaultChecklist checklist={[{ checked: false, text: 'lol', disabled: true }]} />
 </div>
 
 <style>
@@ -141,7 +31,7 @@
 		background-color: black;
 	}
 	div {
-		width: 100%;
+		width: 50%;
 		display: flex;
 		flex-direction: column;
 		gap: 20px;
