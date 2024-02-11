@@ -7,9 +7,6 @@
   /** @type {number} maxValue for the progress */
   export let maxValue = 100;
 
-  /** @type {"passive" | "primary"} Dictates the color based on the type */
-  export let type = "primary";
-
   /** @type {boolean} Whether we show the progress meter*/
   export let showMeter = true;
 
@@ -25,7 +22,7 @@
   $: processedProgress = calculateRelativeProgress(progress);
 </script>
 
-<div class={`progressBar ${type}`}>
+<div class="progressBar">
   <span class="progressWrapper">
     <span class="progressMeter" style:width={`${processedProgress}%`}></span>
   </span>
@@ -38,34 +35,25 @@
 </div>
 
 <style>
-  .passive {
-    --main-color: var(--foregroundColor);
-    --icon: var(--foregroundColor);
-  }
-
-  .primary {
-    --main-color: var(--primaryColor);
-    --icon: var(--primaryColor);
-  }
-
   .progressBar {
     display: flex;
     align-items: center;
     gap: var(--gap);
     width: 100%;
+    --icon: var(--primaryColor);
   }
 
   .progressWrapper {
     display: flex;
     flex-grow: 1;
-    border: 2px solid var(--main-color);
+    border: 2px solid var(--primaryColor);
     border-radius: 24px;
     overflow: hidden;
     height: 0.4rem;
   }
 
   .progressMeter {
-    background-color: var(--main-color);
+    background-color: var(--primaryColor);
     height: 100%;
   }
 
@@ -78,6 +66,6 @@
     width: 2rem;
     font-size: var(--small);
     font-family: var(--bodyFont);
-    color: var(--main-color);
+    color: var(--primaryColor);
   }
 </style>

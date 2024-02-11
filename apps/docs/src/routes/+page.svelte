@@ -1,6 +1,6 @@
 <script>
 	import { onMount } from 'svelte';
-	import { Toggle } from 'zero-ui-registry';
+	import { AsyncButton, Input, Toggle } from 'zero-ui-registry';
 	import Icon from './icon.svelte';
 	let progress = 0;
 	onMount(() => {
@@ -11,20 +11,25 @@
 </script>
 
 <div>
-	<Toggle
-		state={true}
-		on:change={(e) => {
+	<Input
+		label="How are you"
+		value="no"
+		placeholder="lol"
+		type="primary"
+		inputType="email"
+		on:input={(e) => {
 			console.log(e);
 		}}
 	/>
+	<AsyncButton type="primary" action={async () => {}} />
 </div>
 
 <style>
 	:global(body) {
-		background-color: black;
+		background-color: white;
 	}
 	div {
-		width: 50%;
+		width: 20%;
 		display: flex;
 		flex-direction: column;
 		gap: 20px;

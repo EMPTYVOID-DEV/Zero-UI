@@ -3,13 +3,11 @@
   export let numberOfSteps = 0;
   /**@type {number} This is the number of passed steps*/
   export let stepsPassed = 0;
-  /** @type {"passive" | "primary"} Dictates the color based on the type */
-  export let type = "primary";
   /**@type {string}*/
   export let currentStepName = "";
 </script>
 
-<div class="multiStepProgress {type}">
+<div class="multiStepProgress">
   <span class="currentStep">{currentStepName}</span>
   <div class="steps">
     {#each Array(numberOfSteps) as step, index}
@@ -19,27 +17,19 @@
 </div>
 
 <style>
-  .passive {
-    --main-color: var(--foregroundColor);
-    --icon: var(--foregroundColor);
-  }
-
-  .primary {
-    --main-color: var(--primaryColor);
-    --icon: var(--primaryColor);
-  }
   .multiStepProgress {
     width: 100%;
     display: flex;
     align-items: center;
     flex-direction: column;
     gap: var(--gap);
+    --icon: var(--primaryColor);
   }
   .currentStep {
     font-size: var(--h4);
     font-family: var(--headerFont);
     font-weight: bold;
-    color: var(--main-color);
+    color: var(--primaryColor);
   }
   .steps {
     width: 100%;
@@ -53,6 +43,6 @@
     border-radius: 8px;
   }
   .passed {
-    background-color: var(--main-color);
+    background-color: var(--primaryColor);
   }
 </style>

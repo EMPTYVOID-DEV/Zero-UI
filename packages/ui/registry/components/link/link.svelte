@@ -6,7 +6,7 @@
   export let href;
   /**@type {boolean}*/
   export let isBlank = true;
-  /**@type {"passive"|"primary"|"secondary"}*/
+  /**@type {"primary"|"secondary"}*/
   export let type = "primary";
 </script>
 
@@ -16,10 +16,6 @@
 </a>
 
 <style>
-  .passive {
-    --icon: var(--foregroundColor);
-    --fg: var(--foregroundColor);
-  }
   .primary {
     --icon: var(--primaryColor);
     --fg: var(--primaryColor);

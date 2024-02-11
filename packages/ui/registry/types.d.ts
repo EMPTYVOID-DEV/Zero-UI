@@ -24,3 +24,9 @@ export type radioGroup = {
 
 // type for the asyncButton action prop
 export type asyncButtonAction = (ev: MouseEvent) => Promise<any>;
+
+export type inputChangeHandler = (
+  ev: Event & {
+    currentTarget: EventTarget & HTMLInputElement;
+  }
+) => void;

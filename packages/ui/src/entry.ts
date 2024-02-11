@@ -21,3 +21,5 @@ export { default as DefaultEntryProgressBar } from "../registry/components/progr
 export { default as MultiStepEntryProgressBar } from "../registry/components/progressBar/multiStepBar.svelte";
 
 export { default as Toggle } from "../registry/components/toggle/toggle.svelte";
+
+export { default as Input } from "../registry/components/input/regular.svelte";
