@@ -2,11 +2,15 @@
   import ValidIcon from "../../icons/validIcon.svelte";
   import CloseIcon from "../../icons/closeIcon.svelte";
   /**@type {string}*/
+  export let name;
+  /**@type {string}*/
   export let value = "";
   /**@type {string}*/
   export let label = "";
   /**@type {"text"|"password"|"email"|"number"}*/
   export let inputType = "text";
+  /**@type {boolean}*/
+  export let disabled = false;
   /**@type {import("../../types").checkFunction}*/
   export let checkFunction;
   /**@type {{description:string,state:"idle"|"valid"|"invalid"}}*/
@@ -17,10 +21,12 @@
 </script>
 
 <div class="input-container {status.state}">
-  <label class="header" for="input">{label}</label>
+  <label class="header" for={name}>{label}</label>
   <input
-    type={inputType}
+    {name}
+    {disabled}
     {value}
+    type={inputType}
     class="input"
     on:input={(e) => {
       status = checkFunction(e.currentTarget.value);
@@ -87,6 +93,10 @@
   .input[type="number"]::-webkit-outer-spin-button,
   .input::-webkit-inner-spin-button {
     -webkit-appearance: none;
+  }
+  .input:disabled {
+    border: 2px solid var(--mutedColor);
+    color: var(--mutedColor);
   }
   .description {
     display: grid;

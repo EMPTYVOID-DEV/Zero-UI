@@ -1,15 +1,19 @@
 <script>
   /**@type {string}*/
+  export let name;
+  /**@type {string}*/
   export let value = "";
   /**@type {string}*/
   export let label = "";
   /**@type {"text"|"password"|"email"|"number"}*/
   export let inputType = "text";
+  /**@type {boolean}*/
+  export let disabled = false;
 </script>
 
 <div class="input-container">
-  <label class="header" for="input">{label}</label>
-  <input type={inputType} {value} class="input" on:input />
+  <label class="header" for={name}>{label}</label>
+  <input type={inputType} {disabled} {value} {name} class="input" on:input />
 </div>
 
 <style>
@@ -50,5 +54,9 @@
   .input[type="number"]::-webkit-outer-spin-button,
   .input::-webkit-inner-spin-button {
     -webkit-appearance: none;
+  }
+  .input:disabled {
+    border: 2px solid var(--mutedColor);
+    color: var(--mutedColor);
   }
 </style>

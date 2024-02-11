@@ -25,3 +25,5 @@ export { default as Toggle } from "../registry/components/toggle/toggle.svelte";
 export { default as Input } from "../registry/components/input/regular.svelte";
 
 export { default as Check } from "../registry/components/input/check.svelte";
+
+export { default as Textarea } from "../registry/components/textarea/textarea.svelte";

@@ -74,15 +74,15 @@
     border-radius: var(--border-radius);
   }
 
-  :global(::-webkit-scrollbar) {
+  .code :global(::-webkit-scrollbar) {
     width: 0.5rem;
   }
-  :global(::-webkit-scrollbar-track) {
+  .code :global(::-webkit-scrollbar-track) {
     border-radius: 0;
     background: color-mix(in srgb, var(--foregroundColor) 40%, transparent 60%);
   }
 
-  :global(::-webkit-scrollbar-thumb) {
+  .code:global(::-webkit-scrollbar-thumb) {
     border-radius: 4px;
     background: color-mix(in srgb, var(--primaryColor) 60%, transparent 40%);
   }
