@@ -1,0 +1,103 @@
+<script>
+  import ValidIcon from "../../icons/validIcon.svelte";
+  import CloseIcon from "../../icons/closeIcon.svelte";
+  /**@type {string}*/
+  export let value = "";
+  /**@type {string}*/
+  export let label = "";
+  /**@type {"text"|"password"|"email"|"number"}*/
+  export let inputType = "text";
+  /**@type {import("../../types").checkFunction}*/
+  export let checkFunction;
+  /**@type {{description:string,state:"idle"|"valid"|"invalid"}}*/
+  let status = {
+    description: "",
+    state: "idle",
+  };
+</script>
+
+<div class="input-container {status.state}">
+  <label class="header" for="input">{label}</label>
+  <input
+    type={inputType}
+    {value}
+    class="input"
+    on:input={(e) => {
+      status = checkFunction(e.currentTarget.value);
+    }}
+  />
+  <div class="description">
+    {#if status.state == "invalid"}
+      <CloseIcon />
+    {:else if status.state == "valid"}
+      <ValidIcon />
+    {/if}
+    <span>{status.description}</span>
+  </div>
+</div>
+
+<style>
+  .idle {
+    --main-color: var(--foregroundColor);
+  }
+  .valid {
+    --icon: var(--confirmColor);
+    --main-color: var(--confirmColor);
+  }
+
+  .invalid {
+    --icon: var(--dangerColor);
+    --main-color: var(--dangerColor);
+  }
+
+  .input-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: var(--gap);
+  }
+
+  .input-container .header {
+    font-family: var(--headerFont);
+    font-size: var(--body);
+    font-weight: 600;
+    color: var(--foregroundColor);
+  }
+
+  .input {
+    box-sizing: border-box;
+    width: 100%;
+    padding-left: 8px;
+    padding-block: 8px;
+    font-size: var(--body);
+    color: var(--foregroundColor);
+    background-color: transparent;
+    border-radius: var(--border-radius);
+    border: 2px solid var(--main-color);
+    outline: none;
+  }
+  .input:focus {
+    background-color: color-mix(
+      in srgb,
+      var(--main-color) 20%,
+      transparent 80%
+    );
+  }
+  .input[type="number"]::-webkit-outer-spin-button,
+  .input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+  }
+  .description {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 2px;
+  }
+  .description span {
+    font-size: var(--small);
+    font-family: var(--bodyFont);
+    color: var(--main-color);
+    text-transform: capitalize;
+  }
+</style>

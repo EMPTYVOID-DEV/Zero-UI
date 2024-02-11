@@ -1,5 +1,4 @@
 <script>
-  import LinkIcon from "../../icons/linkIcon.svelte";
   /**@type {string}*/
   export let text;
   /**@type {string}*/
@@ -8,11 +7,13 @@
   export let isBlank = true;
   /**@type {"primary"|"secondary"}*/
   export let type = "primary";
+  /**@type {import("../../types").iconComponent|null} icon is optional for the button */
+  export let icon = null;
 </script>
 
 <a class="link {type}" {href} target={isBlank ? "_blank" : "_self"}>
+  <svelte:component this={icon} />
   <span>{text}</span>
-  <LinkIcon />
 </a>
 
 <style>
@@ -27,7 +28,7 @@
   .link {
     display: inline-flex;
     align-items: center;
-    gap: 2px;
+    gap: var(--gap);
     cursor: pointer;
     text-decoration: none;
   }

@@ -3,32 +3,16 @@
   export let value = "";
   /**@type {string}*/
   export let label = "";
-  /**@type {string}*/
-  export let placeholder = "";
-  /**@type {"primary"|"danger"|"confirm"}*/
-  export let type = "primary";
   /**@type {"text"|"password"|"email"|"number"}*/
   export let inputType = "text";
 </script>
 
-<div class="input-container {type}">
+<div class="input-container">
   <label class="header" for="input">{label}</label>
-  <input type={inputType} {value} {placeholder} class="input" on:input />
+  <input type={inputType} {value} class="input" on:input />
 </div>
 
 <style>
-  .passive {
-    --main-color: var(--foregroundColor);
-  }
-  .primary {
-    --main-color: var(--primaryColor);
-  }
-  .danger {
-    --main-color: var(--dangerColor);
-  }
-  .confirm {
-    --main-color: var(--confirmColor);
-  }
   .input-container {
     width: 100%;
     display: flex;
@@ -53,13 +37,13 @@
     color: var(--foregroundColor);
     background-color: transparent;
     border-radius: var(--border-radius);
-    border: 2px solid var(--main-color);
+    border: 2px solid var(--foregroundColor);
     outline: none;
   }
   .input:focus {
     background-color: color-mix(
       in srgb,
-      var(--main-color) 20%,
+      var(--foregroundColor) 20%,
       transparent 80%
     );
   }

@@ -14,11 +14,6 @@
   --small: clamp(1rem, calc(1rem + ((1vw - 0.48rem) * 0.1736)), 1.125rem);
   --gap: 10px;
   --border-radius: 0.3rem;
-  --bodyFont: Verdana, sans-serif;
+  --bodyFont: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   --headerFont: Helvetica, sans-serif;
-  --lh1: "1.3";
-  --lh2: "1.35";
-  --lh3: "1.4";
-  --lh4: "1.5";
-  --lbody: "1.6";
 }

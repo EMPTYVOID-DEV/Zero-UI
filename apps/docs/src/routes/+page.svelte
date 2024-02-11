@@ -1,6 +1,6 @@
 <script>
 	import { onMount } from 'svelte';
-	import { AsyncButton, Input, Toggle } from 'zero-ui-registry';
+	import { AsyncButton, Check, Input, Toggle } from 'zero-ui-registry';
 	import Icon from './icon.svelte';
 	let progress = 0;
 	onMount(() => {
@@ -11,14 +11,23 @@
 </script>
 
 <div>
-	<Input
-		label="How are you"
-		value="no"
-		placeholder="lol"
-		type="primary"
-		inputType="email"
-		on:input={(e) => {
-			console.log(e);
+	<Input />
+	<Check
+		label="Password"
+		inputType="password"
+		checkFunction={(text) => {
+			if (text.length == 10) {
+				return {
+					state: 'valid',
+					description: 'Valid format'
+				};
+			} else {
+				return {
+					state: 'invalid',
+					description:
+						'Its should be 10 letter long,Its should be 10 letter long,Its should be 10 letter long'
+				};
+			}
 		}}
 	/>
 	<AsyncButton type="primary" action={async () => {}} />

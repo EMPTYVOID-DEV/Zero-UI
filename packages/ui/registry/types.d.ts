@@ -30,3 +30,9 @@ export type inputChangeHandler = (
     currentTarget: EventTarget & HTMLInputElement;
   }
 ) => void;
+
+// This is for the check variant input component
+export type checkFunction = (currentValue: string) => {
+  state: "valid" | "invalid";
+  description: string;
+};
