@@ -2,6 +2,7 @@
   import ValidIcon from "../../icons/validIcon.svelte";
   import CloseIcon from "../../icons/closeIcon.svelte";
   /**@type {string}*/
+  // @ts-ignore
   export let name;
   /**@type {string}*/
   export let value = "";
@@ -21,7 +22,7 @@
 </script>
 
 <div class="input-container {status.state}">
-  <label class="header" for={name}>{label}</label>
+  <label class="label" for={name}>{label}</label>
   <input
     {name}
     {disabled}
@@ -44,11 +45,11 @@
 
 <style>
   .idle {
-    --main-color: var(--foregroundColor);
+    --main-color: var(--primaryColor);
   }
   .valid {
-    --icon: var(--confirmColor);
-    --main-color: var(--confirmColor);
+    --icon: var(--successColor);
+    --main-color: var(--successColor);
   }
 
   .invalid {
@@ -64,10 +65,10 @@
     gap: var(--gap);
   }
 
-  .input-container .header {
+  .input-container .label {
     font-family: var(--headerFont);
     font-size: var(--body);
-    font-weight: 600;
+    font-weight: 500;
     color: var(--foregroundColor);
   }
 
@@ -84,10 +85,11 @@
     outline: none;
   }
   .input:focus {
+    border: 2px solid var(--main-color);
     background-color: color-mix(
       in srgb,
-      var(--main-color) 20%,
-      transparent 80%
+      var(--main-color) 30%,
+      transparent 70%
     );
   }
   .input[type="number"]::-webkit-outer-spin-button,

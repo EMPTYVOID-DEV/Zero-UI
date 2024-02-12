@@ -82,7 +82,7 @@
     background: color-mix(in srgb, var(--foregroundColor) 40%, transparent 60%);
   }
 
-  .code:global(::-webkit-scrollbar-thumb) {
+  .code :global(::-webkit-scrollbar-thumb) {
     border-radius: 4px;
     background: color-mix(in srgb, var(--primaryColor) 60%, transparent 40%);
   }

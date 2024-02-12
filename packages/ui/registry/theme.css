@@ -4,14 +4,18 @@
   --backgroundColor: #ffffff;
   --foregroundColor: #000000;
   --dangerColor: #b00020;
-  --confirmColor: #22bb33;
+  --successColor: #22bb33;
   --mutedColor: #4c4453;
   --h1: clamp(2rem, calc(2rem + ((1vw - 0.48rem) * 0.9722)), 2.5rem);
   --h2: clamp(1.8rem, calc(1.8rem + ((1vw - 0.48rem) * 0.9722)), 2.1rem);
   --h3: clamp(1.5rem, calc(1.5rem + ((1vw - 0.48rem) * 0.9722)), 1.8rem);
   --h4: clamp(1.375rem, calc(1.375rem + ((1vw - 0.48rem) * 0.3472)), 1.5rem);
-  --body: clamp(1.25rem, calc(1.25rem + ((1vw - 0.48rem) * 0.1736)), 1.375rem);
-  --small: clamp(1rem, calc(1rem + ((1vw - 0.48rem) * 0.1736)), 1.125rem);
+  --body: clamp(1rem, calc(1rem + ((1vw - 0.48rem) * 0.1736)), 1.325rem);
+  --small: clamp(
+    0.875rem,
+    calc(0.875remrem + ((1vw - 0.48rem) * 0.1736)),
+    1rem
+  );
   --gap: 10px;
   --border-radius: 0.3rem;
   --bodyFont: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;

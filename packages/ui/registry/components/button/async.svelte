@@ -11,7 +11,7 @@
   /**@type {import("../../types").asyncButtonAction} This needs to be an async function that handles the button click*/
   export let action;
 
-  /**@type {"passive"|"primary"|"secondary"|"danger"|"confirm"}  Dictates the color based on the type*/
+  /**@type {"passive"|"primary"|"secondary"|"danger"}  Dictates the color based on the type*/
   export let type = "primary";
 
   const dispatcher = createEventDispatcher();
@@ -50,7 +50,7 @@
     --text: var(--backgroundColor);
     --icon: var(--backgroundColor);
   }
-  :is(.primary, .secondary, .danger, .confirm, .secondary) {
+  :is(.primary, .secondary, .danger, .secondary) {
     --text: var(--foregroundColor);
     --icon: var(--foregroundColor);
   }
@@ -63,9 +63,7 @@
   .danger {
     --bg: var(--dangerColor);
   }
-  .confirm {
-    --bg: var(--confirmColor);
-  }
+
   button {
     display: flex;
     align-items: center;

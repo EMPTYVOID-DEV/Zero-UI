@@ -3,7 +3,7 @@
   export let text = "button";
   /**@type {import("../../types").iconComponent|null} icon is optional for the button */
   export let icon = null;
-  /**@type {"passive"|"primary"|"secondary"|"danger"|"confirm"}  Dictates the color based on the type*/
+  /**@type {"passive"|"primary"|"secondary"|"danger"}  Dictates the color based on the type*/
   export let type = "primary";
 </script>
 
@@ -18,7 +18,7 @@
     --text: var(--backgroundColor);
     --icon: var(--backgroundColor);
   }
-  :is(.primary, .secondary, .danger, .confirm, .secondary) {
+  :is(.primary, .secondary, .danger, .secondary) {
     --text: var(--foregroundColor);
     --icon: var(--foregroundColor);
   }
@@ -31,9 +31,7 @@
   .danger {
     --bg: var(--dangerColor);
   }
-  .confirm {
-    --bg: var(--confirmColor);
-  }
+
   button {
     display: flex;
     align-items: center;

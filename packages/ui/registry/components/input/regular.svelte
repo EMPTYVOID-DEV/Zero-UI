@@ -12,7 +12,7 @@
 </script>
 
 <div class="input-container">
-  <label class="header" for={name}>{label}</label>
+  <label class="label" for={name}>{label}</label>
   <input type={inputType} {disabled} {value} {name} class="input" on:input />
 </div>
 
@@ -25,10 +25,10 @@
     gap: var(--gap);
   }
 
-  .input-container .header {
+  .input-container .label {
     font-family: var(--headerFont);
     font-size: var(--body);
-    font-weight: 600;
+    font-weight: 500;
     color: var(--foregroundColor);
   }
 
@@ -45,10 +45,11 @@
     outline: none;
   }
   .input:focus {
+    border: 2px solid var(--primaryColor);
     background-color: color-mix(
       in srgb,
-      var(--foregroundColor) 20%,
-      transparent 80%
+      var(--primaryColor) 30%,
+      transparent 70%
     );
   }
   .input[type="number"]::-webkit-outer-spin-button,

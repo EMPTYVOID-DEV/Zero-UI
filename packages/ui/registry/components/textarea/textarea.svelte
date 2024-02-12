@@ -43,7 +43,9 @@
     font-size: var(--body);
     border-radius: var(--border-radius);
   }
-
+  .textarea textarea:focus {
+    border-color: var(--primaryColor);
+  }
   .textarea :global(::-webkit-scrollbar) {
     width: 0.5rem;
   }

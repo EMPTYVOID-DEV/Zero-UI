@@ -27,3 +27,7 @@ export { default as Input } from "../registry/components/input/regular.svelte";
 export { default as Check } from "../registry/components/input/check.svelte";
 
 export { default as Textarea } from "../registry/components/textarea/textarea.svelte";
+
+export { default as Slider } from "../registry/components/slider/slider.svelte";
+
+export { default as Select } from "../registry/components/select/select.svelte";

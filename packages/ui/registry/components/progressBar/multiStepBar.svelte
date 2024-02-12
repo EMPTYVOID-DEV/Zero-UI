@@ -28,7 +28,7 @@
   .currentStep {
     font-size: var(--h4);
     font-family: var(--headerFont);
-    font-weight: bold;
+    font-weight: 500;
     color: var(--primaryColor);
   }
   .steps {
@@ -39,7 +39,11 @@
   .step {
     flex-grow: 1;
     height: 0.5rem;
-    background-color: var(--mutedColor);
+    background-color: color-mix(
+      in srgb,
+      var(--primaryColor) 40%,
+      transparent 60%
+    );
     border-radius: 8px;
   }
   .passed {

@@ -39,8 +39,8 @@
   }
 
   .active {
-    --icon: var(--confirmColor);
-    background-color: var(--confirmColor);
+    --icon: var(--primaryColor);
+    background-color: var(--primaryColor);
     justify-content: flex-end;
   }
 
@@ -51,6 +51,6 @@
     height: 95%;
     aspect-ratio: 1/1;
     border-radius: 50%;
-    background-color: var(--foregroundColor);
+    background-color: var(--backgroundColor);
   }
 </style>
