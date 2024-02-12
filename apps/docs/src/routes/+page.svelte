@@ -4,6 +4,8 @@
 
 <div>
 	<Select
+		disabled
+		isMulti
 		on:change={(e) => {
 			console.log(e.detail);
 		}}

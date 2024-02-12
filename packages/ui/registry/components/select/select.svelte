@@ -41,7 +41,7 @@
     value={processedValue}
     multiple={isMulti}
     items={elements}
-    showChevron={true}
+    showChevron={!disabled}
     hideEmptyState={true}
     clearable={true}
     {name}
