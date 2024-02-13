@@ -1,33 +1,35 @@
 <script>
-	import { Select } from 'zero-ui-registry';
+	import { DefaultCode } from 'zero-ui-registry';
 </script>
 
-<div>
-	<Select
-		disabled
-		isMulti
-		on:change={(e) => {
-			console.log(e.detail);
-		}}
-		label="select a name"
-		value={[{ value: { name: 'ay', age: 12 }, label: 'aymen' }]}
-		elements={[
-			{ label: 'aymen name namenamenamenamenamenamenamenamename', value: { name: 'ay', age: 12 } },
-			{ label: 'nazim', value: 'nazim' },
-			{ label: 'maram', value: 'maram' }
-		]}
-	/>
-	<h1>hi</h1>
+<div class="main">
+	<DefaultCode
+		code={`
+<div class="main">
+	<DefaultCode code="console.lo(10)" />
 </div>
 
 <style>
 	:global(body) {
 		background-color: white;
+		overflow: hidden;
 	}
-	div {
-		width: 40%;
-		display: flex;
-		flex-direction: column;
-		gap: 20px;
+	.main {
+		width: 50vw;
+		height: 100vh;
+	}
+</style>
+	`}
+	/>
+</div>
+
+<style>
+	:global(body) {
+		background-color: white;
+		overflow: hidden;
+	}
+	.main {
+		width: 50vw;
+		height: 100vh;
 	}
 </style>

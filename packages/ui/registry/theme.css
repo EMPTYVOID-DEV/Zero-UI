@@ -6,6 +6,7 @@
   --dangerColor: #b00020;
   --successColor: #22bb33;
   --mutedColor: #514657;
+  --backdropColor: rgba(0, 0, 0, 0.151);
   --h1: clamp(2rem, calc(2rem + ((1vw - 0.48rem) * 0.9722)), 2.5rem);
   --h2: clamp(1.8rem, calc(1.8rem + ((1vw - 0.48rem) * 0.9722)), 2.1rem);
   --h3: clamp(1.5rem, calc(1.5rem + ((1vw - 0.48rem) * 0.9722)), 1.8rem);

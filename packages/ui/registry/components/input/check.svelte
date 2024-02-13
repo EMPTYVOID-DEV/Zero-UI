@@ -3,7 +3,7 @@
   import CloseIcon from "../../icons/closeIcon.svelte";
   /**@type {string}*/
   // @ts-ignore
-  export let name;
+  export let name = "";
   /**@type {string}*/
   export let value = "";
   /**@type {string}*/
