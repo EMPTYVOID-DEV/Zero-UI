@@ -23,7 +23,6 @@
     align-items: center;
     flex-direction: column;
     gap: var(--gap);
-    --icon: var(--primaryColor);
   }
   .currentStep {
     font-size: var(--h4);

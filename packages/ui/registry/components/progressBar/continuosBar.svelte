@@ -40,7 +40,6 @@
     align-items: center;
     gap: var(--gap);
     width: var(--width, 100%);
-    --icon: var(--primaryColor);
   }
 
   .progressWrapper {

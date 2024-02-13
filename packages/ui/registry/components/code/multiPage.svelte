@@ -7,7 +7,7 @@
   export let codePages = [];
   /**@type {boolean}*/
   export let darkMode = false;
-  let activePage = 0;
+  export let activePage = 0;
 </script>
 
 <div class="codePages">

@@ -1,16 +1,8 @@
 <script>
-	import { Carousel, AsyncButton, DefaultEntryAccordian, DefaultButton } from 'zero-ui-registry';
-	import Textarea from '../../../../packages/ui/registry/components/textarea/textarea.svelte';
+	import {} from 'zero-ui-registry';
 </script>
 
-<div class="main">
-	<DefaultEntryAccordian
-		accordianList={[
-			{ description: 'hi', title: 'lol' },
-			{ description: 'hi', title: 'lol' }
-		]}
-	/>
-</div>
+<div class="main"></div>
 
 <style>
 	:global(body) {

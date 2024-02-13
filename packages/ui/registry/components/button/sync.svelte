@@ -51,7 +51,7 @@
     color: var(--text);
     font-family: var(--bodyFont);
     font-size: var(--body);
-    font-weight: var(--font-weight, 500);
+    font-weight: 600;
     line-height: var(--lbody);
   }
 </style>
