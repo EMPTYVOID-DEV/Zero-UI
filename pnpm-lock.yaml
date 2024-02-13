@@ -102,6 +102,9 @@ importers:
       '@bulatdashiev/svelte-slider':
         specifier: ^1.0.3
         version: 1.0.3
+      embla-carousel-svelte:
+        specifier: 8.0.0-rc22
+        version: 8.0.0-rc22(svelte@4.2.10)
       svelte:
         specifier: ^4.2.7
         version: 4.2.10
@@ -1537,6 +1540,28 @@ packages:
   /eastasianwidth@0.2.0:
     resolution: {integrity: sha512-I88TYZWc9XiYHRQ4/3c5rjjfgkjhLyW2luGIheGERbNQ6OY7yTybanSpDXZa8y7VUP9YmDcYa+eyq4ca7iLqWA==}
     dev: true
+
+  /embla-carousel-reactive-utils@8.0.0-rc22(embla-carousel@8.0.0-rc22):
+    resolution: {integrity: sha512-K4b8QhQGXYW5wr4l+U6XryhafsFV5c/IyohDnZN3MGoYIB9xY7qpjUWAcs5bTDjAD+qCZPOuXre0D3IVa28mqw==}
+    peerDependencies:
+      embla-carousel: 8.0.0-rc22
+    dependencies:
+      embla-carousel: 8.0.0-rc22
+    dev: false
+
+  /embla-carousel-svelte@8.0.0-rc22(svelte@4.2.10):
+    resolution: {integrity: sha512-kRcKJXslkfrtXjS97AdJHQ28ctm0HOfcTA3Fb9Y57fzLzrB5uC+qOGF7nLSI8Z1s+0ww+OaouxIvbrS987CkfA==}
+    peerDependencies:
+      svelte: ^3.49.0 || ^4.0.0
+    dependencies:
+      embla-carousel: 8.0.0-rc22
+      embla-carousel-reactive-utils: 8.0.0-rc22(embla-carousel@8.0.0-rc22)
+      svelte: 4.2.10
+    dev: false
+
+  /embla-carousel@8.0.0-rc22:
+    resolution: {integrity: sha512-MeXnPT1LShfgAu8qXj3CskayV0R6OkHx7w3cPTx+Q5ZWKyShKpIuu7qVQJ5BoFegalE4n6yxqoQaRuGFbK9pYw==}
+    dev: false
 
   /emoji-regex@8.0.0:
     resolution: {integrity: sha512-MSjYzcWNOA0ewAHpz0MxpYFvwg6yjy1NG3xteoqz644VCo/RPgnr1/GGt+ic3iJTzQ8Eu3TdM14SawnVUmGE6A==}

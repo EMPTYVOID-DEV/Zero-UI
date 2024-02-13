@@ -13,7 +13,9 @@
 
 <style>
   .accordian {
+    width: var(--width, 100%);
     display: flex;
     flex-direction: column;
+    gap: var(--gap);
   }
 </style>

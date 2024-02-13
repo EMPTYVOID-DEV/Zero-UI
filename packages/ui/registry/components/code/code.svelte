@@ -54,7 +54,7 @@
   /* These styles are for svelte highlight code block  */
   .code :global(> pre) {
     width: 100%;
-    max-height: 500px;
+    max-height: var(--max-height, 500px);
   }
   .code .control {
     width: fit-content;

@@ -36,6 +36,6 @@
     color: var(--fg);
     font-family: var(--bodyFont);
     font-size: var(--body);
-    font-weight: 500;
+    font-weight: var(--font-weight, 500);
   }
 </style>

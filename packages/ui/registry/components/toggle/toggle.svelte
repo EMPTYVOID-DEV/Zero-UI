@@ -29,8 +29,8 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    height: 2rem;
     width: 4rem;
+    aspect-ratio: 2;
     border-radius: 1rem;
     background-color: var(--mutedColor);
     cursor: pointer;

@@ -38,8 +38,8 @@
     justify-content: center;
     gap: var(--gap);
     width: fit-content;
-    padding-inline: 16px;
-    padding-block: 8px;
+    padding-inline: var(--padding-inline, 16px);
+    padding-block: var(--padding-block, 8px);
     cursor: pointer;
     outline: none;
     border: none;
@@ -51,7 +51,7 @@
     color: var(--text);
     font-family: var(--bodyFont);
     font-size: var(--body);
-    font-weight: 500;
+    font-weight: var(--font-weight, 500);
     line-height: var(--lbody);
   }
 </style>

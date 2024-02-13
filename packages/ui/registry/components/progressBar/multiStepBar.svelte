@@ -18,7 +18,7 @@
 
 <style>
   .multiStepProgress {
-    width: 100%;
+    width: var(--width, 100%);
     display: flex;
     align-items: center;
     flex-direction: column;

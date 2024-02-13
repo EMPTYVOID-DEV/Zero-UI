@@ -19,7 +19,6 @@
 
 <style>
   .textarea {
-    width: 100%;
     display: flex;
     flex-direction: column;
     gap: var(--gap);
@@ -27,14 +26,14 @@
   .textarea label {
     font-family: var(--headerFont);
     font-size: var(--body);
-    font-weight: 600;
+    font-weight: 500;
     color: var(--foregroundColor);
   }
   .textarea textarea {
     outline: none;
     resize: none;
-    width: 100% !important;
-    aspect-ratio: 5/2;
+    width: var(--width, 100%);
+    height: var(--height, 400px);
     padding-left: 10px;
     overflow: auto;
     border: 2px solid var(--foregroundColor);

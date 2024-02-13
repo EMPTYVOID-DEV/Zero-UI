@@ -39,7 +39,7 @@
     display: flex;
     align-items: center;
     gap: var(--gap);
-    width: 100%;
+    width: var(--width, 100%);
     --icon: var(--primaryColor);
   }
 

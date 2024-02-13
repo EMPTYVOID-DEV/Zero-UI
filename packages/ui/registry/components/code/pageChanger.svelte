@@ -1,9 +1,8 @@
 <script>
-  import { createEventDispatcher } from "svelte";
-  const dispatcher = createEventDispatcher();
   /**@type {string[]}*/
   export let pages = [];
-  let activePage = 0;
+  /**@type {number}*/
+  export let activePage;
 </script>
 
 <div class="pageSlider">
@@ -14,7 +13,6 @@
       class:active={activePage == index}
       on:click={() => {
         activePage = index;
-        dispatcher("changePage", { activePage });
       }}>{page}</span
     >
   {/each}

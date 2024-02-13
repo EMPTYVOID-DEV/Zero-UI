@@ -7,17 +7,11 @@
   export let codePages = [];
   /**@type {boolean}*/
   export let darkMode = false;
-
   let activePage = 0;
 </script>
 
 <div class="codePages">
-  <PageSlider
-    pages={codePages.map((el) => el.name)}
-    on:changePage={(e) => {
-      activePage = e.detail.activePage;
-    }}
-  />
+  <PageSlider pages={codePages.map((el) => el.name)} bind:activePage />
   {#key activePage}
     <div class="page">
       <Code code={codePages[activePage].code} {darkMode} />

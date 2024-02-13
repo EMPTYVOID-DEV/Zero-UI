@@ -32,7 +32,10 @@
     display: flex;
     flex-direction: column;
     padding-block: 20px;
-    border-bottom: 1px solid var(--mutedColor);
+    padding-inline: 8px;
+    border: 2px solid
+      color-mix(in srgb, var(--primaryColor) 15%, transparent 85%);
+    border-radius: var(--border-radius);
     cursor: pointer;
   }
   .title {
@@ -40,16 +43,19 @@
     justify-content: space-between;
     align-items: center;
   }
+
+  .title span {
+    font-weight: bold;
+  }
+
   .description {
     margin-top: 20px;
   }
+
   span {
-    white-space: pre-wrap;
     color: var(--foregroundColor);
+    white-space: pre-wrap;
     font-size: var(--body);
     font-family: var(--bodyFont);
-  }
-  .accordianItem:hover .title span {
-    text-decoration: underline;
   }
 </style>

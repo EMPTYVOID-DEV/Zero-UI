@@ -58,7 +58,7 @@
   }
 
   .input-container {
-    width: 80%;
+    width: var(--width, 80%);
     display: flex;
     flex-direction: column;
     align-items: stretch;
@@ -81,11 +81,11 @@
     color: var(--foregroundColor);
     background-color: transparent;
     border-radius: var(--border-radius);
-    border: 2px solid var(--main-color);
+    border: 2px solid var(--foregroundColor);
     outline: none;
   }
   .input:focus {
-    border: 2px solid var(--main-color);
+    border-color: var(--main-color);
     background-color: color-mix(
       in srgb,
       var(--main-color) 30%,
@@ -97,7 +97,7 @@
     -webkit-appearance: none;
   }
   .input:disabled {
-    border: 2px solid var(--mutedColor);
+    border-color: (--mutedColor);
     color: var(--mutedColor);
   }
   .description {

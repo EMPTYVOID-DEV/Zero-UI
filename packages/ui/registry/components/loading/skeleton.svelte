@@ -1,16 +1,11 @@
-<script>
-  /**@type {string}*/
-  export let width = "50px";
-  /**@type {string}*/
-  export let height = "50px";
-  /**@type {string}*/
-  export let radius = "50%";
-</script>
-
-<div class="skeleton" style:width style:height style:border-radius={radius} />
+<div class="skeleton" />
 
 <style>
   .skeleton {
+    width: var(--width, 50px);
+    height: var(--height, 50px);
+    border-radius: var(--border-radius, 50%);
+
     background-color: color-mix(
       in srgb,
       var(--primaryColor) 50%,

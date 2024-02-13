@@ -18,7 +18,7 @@
 
 <style>
   .input-container {
-    width: 80%;
+    width: var(--width, 80%);
     display: flex;
     flex-direction: column;
     align-items: stretch;
@@ -45,7 +45,7 @@
     outline: none;
   }
   .input:focus {
-    border: 2px solid var(--primaryColor);
+    border-color: var(--primaryColor);
     background-color: color-mix(
       in srgb,
       var(--primaryColor) 30%,
@@ -57,7 +57,7 @@
     -webkit-appearance: none;
   }
   .input:disabled {
-    border: 2px solid var(--mutedColor);
+    border-color: var(--mutedColor);
     color: var(--mutedColor);
   }
 </style>
