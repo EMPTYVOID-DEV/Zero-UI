@@ -58,7 +58,7 @@
   }
 
   .input-container {
-    width: 100%;
+    width: 80%;
     display: flex;
     flex-direction: column;
     align-items: stretch;

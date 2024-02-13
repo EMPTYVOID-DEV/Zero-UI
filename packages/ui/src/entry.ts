@@ -31,3 +31,7 @@ export { default as Textarea } from "../registry/components/textarea/textarea.sv
 export { default as Slider } from "../registry/components/slider/slider.svelte";
 
 export { default as Select } from "../registry/components/select/select.svelte";
+
+export { default as Regular } from "../registry/components/loading/regular.svelte";
+
+export { default as Skeleton } from "../registry/components/loading/skeleton.svelte";
