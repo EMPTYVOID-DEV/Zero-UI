@@ -81,8 +81,7 @@
     align-items: center;
     justify-content: center;
     width: fit-content;
-    padding-inline: 8px;
-    padding-block: 8px;
+    padding: 8px;
     cursor: pointer;
     outline: none;
     border: none;

@@ -1,17 +1,17 @@
 :root {
   --primaryColor: #8a2be2;
   --secondaryColor: #f39c12;
-  --backgroundColor: #ffffff;
-  --foregroundColor: #000000;
+  --backgroundColor: #000000;
+  --foregroundColor: #ffffff;
   --dangerColor: #b00020;
   --successColor: #22bb33;
   --mutedColor: #514657;
   --backdropColor: rgba(0, 0, 0, 0.151);
   --h1: clamp(2rem, calc(2rem + ((1vw - 0.48rem) * 0.9722)), 2.5rem);
-  --h2: clamp(1.8rem, calc(1.8rem + ((1vw - 0.48rem) * 0.9722)), 2.1rem);
-  --h3: clamp(1.5rem, calc(1.5rem + ((1vw - 0.48rem) * 0.9722)), 1.8rem);
-  --h4: clamp(1.375rem, calc(1.375rem + ((1vw - 0.48rem) * 0.3472)), 1.5rem);
-  --body: clamp(1rem, calc(1rem + ((1vw - 0.48rem) * 0.1736)), 1.325rem);
+  --h2: clamp(1.725rem, calc(1.725rem + ((1vw - 0.48rem) * 0.9722)), 2rem);
+  --h3: clamp(1.5rem, calc(1.5rem + ((1vw - 0.48rem) * 0.9722)), 1.725rem);
+  --h4: clamp(1.275rem, calc(1.275rem + ((1vw - 0.48rem) * 0.3472)), 1.5rem);
+  --body: clamp(1rem, calc(1rem + ((1vw - 0.48rem) * 0.1736)), 1.275rem);
   --small: clamp(
     0.875rem,
     calc(0.875remrem + ((1vw - 0.48rem) * 0.1736)),

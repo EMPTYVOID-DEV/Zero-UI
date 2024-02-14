@@ -22,8 +22,9 @@
 </script>
 
 <div class="input-container {status.state}">
-  <label class="label" for={name}>{label}</label>
+  <label class="label" for="input">{label}</label>
   <input
+    id="input"
     {name}
     {disabled}
     {value}

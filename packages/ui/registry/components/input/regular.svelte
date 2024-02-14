@@ -12,8 +12,16 @@
 </script>
 
 <div class="input-container">
-  <label class="label" for={name}>{label}</label>
-  <input type={inputType} {disabled} {value} {name} class="input" on:input />
+  <label class="label" for="input">{label}</label>
+  <input
+    id="input"
+    type={inputType}
+    {disabled}
+    {value}
+    {name}
+    class="input"
+    on:input
+  />
 </div>
 
 <style>

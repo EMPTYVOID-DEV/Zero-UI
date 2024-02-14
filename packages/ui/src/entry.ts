@@ -37,3 +37,5 @@ export { default as Regular } from "../registry/components/loading/regular.svelt
 export { default as Skeleton } from "../registry/components/loading/skeleton.svelte";
 
 export { default as Pagination } from "../registry/components/pagination/pagination.svelte";
+
+export { default as fileUpload } from "../registry/components/file-upload/fileUpload.svelte";

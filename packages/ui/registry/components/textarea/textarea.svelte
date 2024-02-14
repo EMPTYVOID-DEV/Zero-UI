@@ -13,8 +13,8 @@
 </script>
 
 <div class="textarea">
-  <label for={name}>{label}</label>
-  <textarea {disabled} {value} {name} on:input use:setAutoResize />
+  <label for="texarea">{label}</label>
+  <textarea id="texarea" {disabled} {value} {name} on:input use:setAutoResize />
 </div>
 
 <style>

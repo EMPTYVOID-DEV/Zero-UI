@@ -26,8 +26,9 @@
   "license": "ISC",
   "dependencies": {
     "@bulatdashiev/svelte-slider": "^1.0.3",
+    "@types/mime-types": "^2.1.4",
+    "mime-types": "^2.1.35",
     "svelte": "^4.2.7",
-    "svelte-carousel": "^1.0.25",
     "svelte-highlight": "^7.6.0",
     "svelte-select": "^5.8.3",
     "typescript": "^5.3.3"

@@ -22,6 +22,7 @@
   {#each pages as page, index}
     {#if index + 1 <= end && index + 1 >= start}
       <a
+        data-sveltekit-preload-data
         href={page}
         class="page"
         class:active={index + 1 === activePage}
@@ -49,8 +50,8 @@
     gap: 3px;
   }
   .page {
-    min-width: 2.4rem;
-    min-height: 2.4rem;
+    min-width: 2.2rem;
+    min-height: 2.2rem;
     display: flex;
     justify-content: center;
     align-items: center;

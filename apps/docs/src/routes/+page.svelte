@@ -1,12 +1,14 @@
 <script>
-	import {} from 'zero-ui-registry';
+	import { fileUpload as FileUpload } from 'zero-ui-registry';
 </script>
 
-<div class="main"></div>
+<div class="main">
+	<FileUpload />
+</div>
 
 <style>
 	:global(body) {
-		background-color: white;
+		background-color: rgb(0, 0, 0);
 		overflow-x: hidden;
 	}
 	.main {
