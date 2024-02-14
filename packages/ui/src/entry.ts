@@ -35,3 +35,5 @@ export { default as Select } from "../registry/components/select/select.svelte";
 export { default as Regular } from "../registry/components/loading/regular.svelte";
 
 export { default as Skeleton } from "../registry/components/loading/skeleton.svelte";
+
+export { default as Pagination } from "../registry/components/pagination/pagination.svelte";

@@ -47,12 +47,10 @@
 <style>
   .passive {
     --bg: var(--foregroundColor);
+  }
+  :is(.primary, .secondary, .danger, .secondary, .passive) {
     --text: var(--backgroundColor);
     --icon: var(--backgroundColor);
-  }
-  :is(.primary, .secondary, .danger, .secondary) {
-    --text: var(--foregroundColor);
-    --icon: var(--foregroundColor);
   }
   .primary {
     --bg: var(--primaryColor);
@@ -85,7 +83,6 @@
     font-family: var(--bodyFont);
     font-size: var(--body);
     font-weight: 600;
-    line-height: var(--lbody);
   }
   .loading {
     opacity: 0.7;
