@@ -1,19 +1,20 @@
 <script>
   import { createEventDispatcher } from "svelte";
 
-  /**@type {import("../../types").radioGroup}*/
-  export let radioGroup = {
-    items: [],
-    disabled: false,
-  };
+  /**@type {number}*/
+  export let defaultChoice = 0;
+  /**@type {boolean}*/
+  export let disabled = false;
+  /**@type {{ text: string;name?: string; value?: string;}[]}*/
+  export let radioGroup = [];
   /**
    * creating new list of group items with the checked property
    *  also setting the checked property of the item with the index matching the defaultChoice
    */
-  const enhancedGroup = radioGroup.items.map((el, index) => {
+  const enhancedGroup = radioGroup.map((el, index) => {
     return {
       ...el,
-      checked: index === radioGroup.defaultChoice,
+      checked: index === defaultChoice,
     };
   });
 
@@ -27,7 +28,7 @@
    * @param {number} choiceIndex - The index of the choice whose state has changed.
    */
   function toggleRadioGroup(choiceIndex) {
-    if (radioGroup.disabled) return;
+    if (disabled) return;
     for (let i = 0; i < enhancedGroup.length; i++) {
       if (i === choiceIndex) {
         const oldStatus = enhancedGroup[i].checked;
@@ -53,15 +54,13 @@
       }}
     >
       <input
-        disabled={radioGroup.disabled}
+        {disabled}
         type="radio"
         name={item.name}
         value={item.value}
         checked={item.checked}
       />
-      <label for={item.name} class:disabled={radioGroup.disabled}
-        >{item.text}</label
-      >
+      <label for={item.name} class:disabled>{item.text}</label>
     </div>
   {/each}
 </div>
@@ -77,7 +76,7 @@
     grid-template-columns: repeat(2, auto);
     align-items: center;
     justify-content: start;
-    gap: var(--gap);
+    gap: 5px;
   }
   .radioGroupItem input {
     cursor: pointer;
@@ -90,7 +89,6 @@
     color: var(--foregroundColor);
     font-family: var(--bodyFont);
     font-size: var(--body);
-    line-height: var(--lbody);
   }
 
   .radioGroupItem input:disabled {

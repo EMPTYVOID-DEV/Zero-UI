@@ -26,7 +26,7 @@
   .pageSlider span {
     font-family: var(--bodyFont);
     font-size: var(--body);
-    color: var(--mutedColor);
+    color: color-mix(in srgb, var(--foregroundColor) 40%, transparent 60%);
     padding-inline: 16px;
     padding-block: 8px;
     cursor: pointer;

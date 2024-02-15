@@ -1,11 +1,10 @@
 <script>
   import { createEventDispatcher } from "svelte";
 
-  /**@type {import("../../types").checklist} this a list of objects containing items and whether they are checked or not*/
+  /**@type {{text: string;checked: boolean;disabled?: boolean;name?: string;value?: string;}[]}*/
   export let checklist = [];
 
   const dispatcher = createEventDispatcher();
-
   /**
    * @function toggleChecklistItem
    * This function handles the toggling of the checked property for a specific checklist item upon a click event.
@@ -36,11 +35,11 @@
       <input
         type="checkbox"
         disabled={item.disabled}
-        value={item.value}
-        name={item.name}
+        value={item.value || ""}
+        name={item.name || ""}
         checked={item.checked}
       />
-      <label for={name} class:disabled={item.disabled}>{item.text}</label>
+      <label for="" class:disabled={item.disabled}>{item.text}</label>
     </div>
   {/each}
 </div>

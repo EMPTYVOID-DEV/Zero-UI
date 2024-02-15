@@ -1,24 +1,9 @@
 <script>
-	import { Checklist } from 'zero-ui-registry';
+	import { MultiPageCode, SinglePageCode } from 'zero-ui-registry';
+	import Icon from './icon.svelte';
 </script>
 
-<div class="main">
-	<Checklist
-		on:change={(e) => {
-			console.log(e.detail);
-		}}
-		checklist={[
-			{
-				text: `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro quidem sit perferendis nobis mollitia harum! Omnis corporis ullam impedit autem dolorum quia. Voluptas consectetur explicabo labore error hic cupiditate omnis!`,
-				checked: false
-			},
-			{
-				text: 'hello',
-				checked: false
-			}
-		]}
-	/>
-</div>
+<div class="main"></div>
 
 <style>
 	:global(body) {

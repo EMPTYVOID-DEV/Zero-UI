@@ -10,9 +10,6 @@
   /**@type {boolean}*/
   export let useRadius = false;
   let copyStatement = false;
-  /**
-   *
-   */
   async function copyCode() {
     navigator.clipboard.writeText(code);
     copyStatement = true;
@@ -52,7 +49,7 @@
     position: relative;
   }
   /* These styles are for svelte highlight code block  */
-  .code :global(> pre) {
+  .code :global(> :not(.control)) {
     width: 100%;
     max-height: var(--max-height, 500px);
   }
