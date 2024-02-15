@@ -1,5 +1,5 @@
 <script>
-  /**@type {string} this is vthe text for the button*/
+  /**@type {string} this is the text for the button*/
   export let text = "button";
   /**@type {import("../../types").iconComponent|null} icon is optional for the button */
   export let icon = null;
@@ -34,7 +34,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: var(--gap);
+    gap: 5px;
     width: fit-content;
     padding-inline: var(--padding-inline, 16px);
     padding-block: var(--padding-block, 8px);

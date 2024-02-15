@@ -1,23 +1,20 @@
 <script>
-	import { DefaultEntryAccordian } from 'zero-ui-registry';
+	import { Checklist } from 'zero-ui-registry';
 </script>
 
 <div class="main">
-	<DefaultEntryAccordian
-		accordianList={[
+	<Checklist
+		on:change={(e) => {
+			console.log(e.detail);
+		}}
+		checklist={[
 			{
-				title: 'what is your dream?, My dream is to work at verecl maintaining svelte-kit',
-				description: 'My dream is to work at verecl maintaining svelte-kit'
+				text: `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro quidem sit perferendis nobis mollitia harum! Omnis corporis ullam impedit autem dolorum quia. Voluptas consectetur explicabo labore error hic cupiditate omnis!`,
+				checked: false
 			},
 			{
-				title:
-					'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate maxime, sint minus similique, modi dicta, ratione distinctio esse aspernatur ipsum obcaecati. Odio inventore consectetur saepe, itaque architecto sapiente dignissimos ea!',
-				description: 'My dream is to work at verecl maintaining svelte-kit'
-			},
-			{
-				title: 'lorem',
-				description: `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem iusto vitae repudiandae alias error rem at praesentium beatae eligendi! Quasi aut illo nam, laboriosam quibusdam saepe voluptatibus in beatae enim?
-`
+				text: 'hello',
+				checked: false
 			}
 		]}
 	/>

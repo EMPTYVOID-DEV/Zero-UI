@@ -34,13 +34,13 @@
       }}
     >
       <input
-        disabled={item.disabled}
         type="checkbox"
+        disabled={item.disabled}
         value={item.value}
         name={item.name}
         checked={item.checked}
       />
-      <label for={item.name} class:disabled={item.disabled}>{item.text}</label>
+      <label for={name} class:disabled={item.disabled}>{item.text}</label>
     </div>
   {/each}
 </div>
@@ -56,7 +56,7 @@
     grid-template-columns: repeat(2, auto);
     align-items: center;
     justify-content: start;
-    gap: var(--gap);
+    gap: 5px;
   }
   .checkListItem input {
     cursor: pointer;
@@ -69,7 +69,6 @@
     color: var(--foregroundColor);
     font-family: var(--bodyFont);
     font-size: var(--body);
-    line-height: var(--lbody);
   }
 
   .checkListItem input:disabled {

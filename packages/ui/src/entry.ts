@@ -1,10 +1,10 @@
-export { default as DefaultChecklist } from "../registry/components/checklist/checklist.svelte";
+export { default as Checklist } from "../registry/components/checklist/checklist.svelte";
 
 export { default as DefaultRadioGroup } from "../registry/components/radioGroup/radioGroup.svelte";
 
-export { default as DefaultButton } from "../registry/components/button/sync.svelte";
+export { default as SyncButton } from "../registry/components/button/syncButton.svelte";
 
-export { default as AsyncButton } from "../registry/components/button/async.svelte";
+export { default as AsyncButton } from "../registry/components/button/asyncButton.svelte";
 
 export { default as DefaultCode } from "../registry/components/code/singlePage.svelte";
 
@@ -12,7 +12,7 @@ export { default as MultiPageCode } from "../registry/components/code/multiPage.
 
 export { default as DefaultEntryLink } from "../registry/components/link/link.svelte";
 
-export { default as DefaultEntryAccordian } from "../registry/components/accordian/defaultVariant.svelte";
+export { default as Accordian } from "../registry/components/accordian/accordian.svelte";
 
 export { default as DefaultEntryToggle } from "../registry/components/toggle/toggle.svelte";
 

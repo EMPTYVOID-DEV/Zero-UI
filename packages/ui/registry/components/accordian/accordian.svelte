@@ -1,7 +1,7 @@
 <script>
   import AccordianItem from "./accordianItem.svelte";
 
-  /**@type {{title:string,description:string}[]}*/
+  /**@type {{title:string,description:string}[]} This is the list of accordian items with title and description*/
   export let accordianList = [];
 </script>
 

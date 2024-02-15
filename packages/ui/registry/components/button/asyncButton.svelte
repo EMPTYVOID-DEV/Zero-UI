@@ -20,7 +20,7 @@
   let state = "idle";
 
   /**@function*/
-  /**@param {MouseEvent} event This function handles the click event*/
+  /**@param {MouseEvent} event */
   async function handleClick(event) {
     if (state == "loading") return;
     state = "loading";
@@ -66,7 +66,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: var(--gap);
+    gap: 5px;
     width: fit-content;
     padding-inline: var(--padding-inline, 16px);
     padding-block: var(--padding-block, 8px);

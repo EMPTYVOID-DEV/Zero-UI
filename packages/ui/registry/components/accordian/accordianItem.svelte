@@ -43,11 +43,11 @@
     grid-template-columns: auto auto;
     align-items: center;
     justify-content: space-between;
-    gap: var(--gap);
+    gap: 5px;
   }
 
   .title span {
-    font-weight: bold;
+    font-weight: 600;
   }
 
   .description {

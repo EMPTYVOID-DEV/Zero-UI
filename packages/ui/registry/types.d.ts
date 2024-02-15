@@ -7,7 +7,7 @@ export type iconComponent = ComponentType<SvelteComponent>;
 export type checklist = {
   text: string;
   checked: boolean;
-  disabled: boolean;
+  disabled?: boolean;
   name?: string;
   value?: string;
 }[];
