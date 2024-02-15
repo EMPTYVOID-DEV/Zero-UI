@@ -12,7 +12,7 @@ export { default as MultiPageCode } from "../registry/components/code/multiPage.
 
 export { default as DefaultEntryLink } from "../registry/components/link/link.svelte";
 
-export { default as DefaultEntryAccordian } from "../registry/components/accordian/accordian.svelte";
+export { default as DefaultEntryAccordian } from "../registry/components/accordian/defaultVariant.svelte";
 
 export { default as DefaultEntryToggle } from "../registry/components/toggle/toggle.svelte";
 

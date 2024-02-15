@@ -14,8 +14,9 @@
 <style>
   .accordian {
     width: var(--width, 100%);
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(var(--accordianColumns, 1), 1fr);
+    align-items: start;
     gap: var(--gap);
   }
 </style>

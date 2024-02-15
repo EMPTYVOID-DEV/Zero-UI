@@ -34,14 +34,16 @@
     padding-block: 20px;
     padding-inline: 8px;
     border: 2px solid
-      color-mix(in srgb, var(--primaryColor) 15%, transparent 85%);
+      color-mix(in srgb, var(--primaryColor) 10%, var(--foregroundColor) 20%);
     border-radius: var(--border-radius);
     cursor: pointer;
   }
   .title {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: auto auto;
     align-items: center;
+    justify-content: space-between;
+    gap: var(--gap);
   }
 
   .title span {
