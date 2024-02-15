@@ -28,7 +28,7 @@
   .link {
     display: inline-flex;
     align-items: center;
-    gap: var(--gap);
+    gap: 5px;
     cursor: pointer;
     text-decoration: none;
   }

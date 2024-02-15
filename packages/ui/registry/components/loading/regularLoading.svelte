@@ -11,9 +11,9 @@
     <span>Loading</span>
   </div>
 {:else if state == "success"}
-  <slot name="success" />
+  <slot name="success">success</slot>
 {:else}
-  <slot name="error" />
+  <slot name="error">error</slot>
 {/if}
 
 <style>
@@ -23,11 +23,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: var(--gap);
+    gap: 5px;
   }
   .loading :global(svg) {
-    width: 32px;
-    height: 32px;
+    width: 28px;
+    height: 28px;
   }
   .loading span {
     font-size: var(--h4);

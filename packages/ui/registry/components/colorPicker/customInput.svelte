@@ -38,7 +38,7 @@
   .trigger {
     display: flex;
     align-items: center;
-    gap: var(--gap);
+    gap: 5px;
     width: var(--width, 80%);
     min-width: fit-content;
     height: 2rem;

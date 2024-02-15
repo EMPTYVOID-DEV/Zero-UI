@@ -10,7 +10,7 @@ export { default as SinglePageCode } from "../registry/components/code/singlePag
 
 export { default as MultiPageCode } from "../registry/components/code/multiPageCode.svelte";
 
-export { default as DefaultEntryLink } from "../registry/components/link/link.svelte";
+export { default as Link } from "../registry/components/link/link.svelte";
 
 export { default as Accordian } from "../registry/components/accordian/accordian.svelte";
 
@@ -32,9 +32,9 @@ export { default as Slider } from "../registry/components/slider/slider.svelte";
 
 export { default as Select } from "../registry/components/select/select.svelte";
 
-export { default as Regular } from "../registry/components/loading/regular.svelte";
+export { default as RegularLoading } from "../registry/components/loading/regularLoading.svelte";
 
-export { default as Skeleton } from "../registry/components/loading/skeleton.svelte";
+export { default as SkeletonLoading } from "../registry/components/loading/skeletonLoading.svelte";
 
 export { default as Pagination } from "../registry/components/pagination/pagination.svelte";
 

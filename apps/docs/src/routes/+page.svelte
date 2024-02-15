@@ -1,9 +1,11 @@
 <script>
-	import { MultiPageCode, SinglePageCode } from 'zero-ui-registry';
+	import { RegularLoading, SkeletonLoading } from 'zero-ui-registry';
 	import Icon from './icon.svelte';
 </script>
 
-<div class="main"></div>
+<div class="main">
+	<SkeletonLoading --border-radius="50%" />
+</div>
 
 <style>
 	:global(body) {

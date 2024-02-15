@@ -7,7 +7,7 @@
   import { quintOut } from "svelte/easing";
 
   /**@type {string}*/
-  export let description = "Upload your files here";
+  export let description;
   /**@type {File[]}*/
   export let files;
 
@@ -130,6 +130,7 @@
     align-items: center;
     gap: var(--gap);
   }
+
   .type {
     font-weight: 600;
     width: 2.5rem;
