@@ -1,12 +1,15 @@
 <script>
+  import { createEventDispatcher } from "svelte";
   import Label from "./label.svelte";
 
   /**@type {string}*/
   export let description = "";
   /**@type {string}*/
   export let acceptedFiles = "*";
+
+  const dispatcher = createEventDispatcher();
   /**@type {File[]} */
-  export let files = [];
+  let files = [];
 
   /**@function checkType checks the file type for the component*/
   /**@param {string} type*/
@@ -31,6 +34,19 @@
         if (checkType(selectedFiles[i].type))
           files = [...files, selectedFiles[i]];
       }
+    dispatcher("change", {
+      files,
+    });
+  }
+
+  /**
+   * @param {{ detail: { fileIndex: number; }; }} e
+   */
+  function remove(e) {
+    files = files.filter((el, idx) => idx != e.detail.fileIndex);
+    dispatcher("change", {
+      files,
+    });
   }
 </script>
 
@@ -47,9 +63,7 @@
   <Label
     {description}
     {files}
-    on:remove={(e) => {
-      files = files.filter((el, idx) => idx != e.detail.fileIndex);
-    }}
+    on:remove={remove}
     on:drop={(e) => {
       addFiles(e.detail.dropFiles);
     }}

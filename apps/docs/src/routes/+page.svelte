@@ -3,7 +3,11 @@
 </script>
 
 <div class="main">
-	<FileUpload />
+	<FileUpload
+		on:change={(e) => {
+			console.log(e.detail);
+		}}
+	/>
 </div>
 
 <style>
