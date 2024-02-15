@@ -7,14 +7,11 @@
   export let disabled = false;
   /**@type {string}*/
   export let label = "";
-  /**@function This function  make the textarea to auto resize to fit content*/
-  /**@param {HTMLElement} node*/
-  function setAutoResize(node) {}
 </script>
 
 <div class="textarea">
   <label for="texarea">{label}</label>
-  <textarea id="texarea" {disabled} {value} {name} on:input use:setAutoResize />
+  <textarea id="texarea" {disabled} {value} {name} on:input />
 </div>
 
 <style>

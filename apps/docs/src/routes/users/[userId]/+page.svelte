@@ -1,7 +1,6 @@
 <script>
 	import { Pagination } from 'zero-ui-registry';
-	import Sync from '../../../../../../packages/ui/registry/components/button/sync.svelte';
-	import Async from '../../../../../../packages/ui/registry/components/button/async.svelte';
+
 	let pages = [
 		'/users/1',
 		'/users/2',
@@ -18,6 +17,4 @@
 	];
 </script>
 
-<Pagination {pages} siblingsCount={1} activePage={1} />
-
-<Sync />
+<Pagination {pages} siblingsCount={2} activePage={1} />

@@ -16,9 +16,9 @@ export { default as Accordian } from "../registry/components/accordian/accordian
 
 export { default as DefaultEntryToggle } from "../registry/components/toggle/toggle.svelte";
 
-export { default as DefaultEntryProgressBar } from "../registry/components/progressBar/continuosBar.svelte";
+export { default as ContinuosProgressBar } from "../registry/components/progressBar/continuosProgress.svelte";
 
-export { default as MultiStepEntryProgressBar } from "../registry/components/progressBar/multiStepBar.svelte";
+export { default as MultiStepProgressBar } from "../registry/components/progressBar/multiStepProgress.svelte";
 
 export { default as Toggle } from "../registry/components/toggle/toggle.svelte";
 

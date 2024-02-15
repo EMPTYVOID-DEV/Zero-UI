@@ -33,7 +33,7 @@
   .steps {
     width: 100%;
     display: flex;
-    gap: var(--gap);
+    gap: 5px;
   }
   .step {
     flex-grow: 1;

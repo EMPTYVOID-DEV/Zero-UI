@@ -74,7 +74,7 @@
   .pagination {
     display: flex;
     align-items: center;
-    gap: var(--gap);
+    gap: 5px;
   }
   .control {
     display: flex;

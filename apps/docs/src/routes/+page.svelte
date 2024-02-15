@@ -1,10 +1,11 @@
 <script>
-	import { RegularLoading, SkeletonLoading } from 'zero-ui-registry';
+	import { Textarea, Toggle } from 'zero-ui-registry';
 	import Icon from './icon.svelte';
 </script>
 
 <div class="main">
-	<SkeletonLoading --border-radius="50%" />
+	<Toggle />
+	<Textarea --height="300px" label="Enter your name" />
 </div>
 
 <style>
