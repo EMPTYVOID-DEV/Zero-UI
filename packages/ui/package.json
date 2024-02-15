@@ -28,6 +28,7 @@
     "@bulatdashiev/svelte-slider": "^1.0.3",
     "@types/mime-types": "^2.1.4",
     "mime-types": "^2.1.35",
+    "remove": "^0.1.5",
     "svelte": "^4.2.7",
     "svelte-highlight": "^7.6.0",
     "svelte-select": "^5.8.3",
@@ -35,6 +36,7 @@
   },
   "devDependencies": {
     "eslint": "^8.56.0",
-    "eslint-plugin-jsdoc": "^48.0.6"
+    "eslint-plugin-jsdoc": "^48.0.6",
+    "svelte-awesome-color-picker": "^3.0.4"
   }
 }

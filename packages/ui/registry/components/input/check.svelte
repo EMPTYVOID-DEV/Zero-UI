@@ -2,7 +2,6 @@
   import ValidIcon from "../../icons/validIcon.svelte";
   import CloseIcon from "../../icons/closeIcon.svelte";
   /**@type {string}*/
-  // @ts-ignore
   export let name = "";
   /**@type {string}*/
   export let value = "";

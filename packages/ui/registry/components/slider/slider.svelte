@@ -12,13 +12,10 @@
   export let range = false;
   const dispatcher = createEventDispatcher();
   /** @type {import("../../types").sliderEvent} */
-  function changeHandler(e) {
-    dispatcher("change", e.detail);
-  }
 </script>
 
 <div class="slider">
-  <Slider {min} {max} {range} order bind:value on:input={changeHandler} />
+  <Slider {min} {max} {range} order bind:value on:input />
 </div>
 
 <style>

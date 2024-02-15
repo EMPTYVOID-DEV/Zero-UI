@@ -1,13 +1,9 @@
 <script>
-	import { fileUpload as FileUpload } from 'zero-ui-registry';
+	import { ColorPicker } from 'zero-ui-registry';
 </script>
 
 <div class="main">
-	<FileUpload
-		on:change={(e) => {
-			console.log(e.detail);
-		}}
-	/>
+	<ColorPicker --width="500px" />
 </div>
 
 <style>

@@ -38,4 +38,6 @@ export { default as Skeleton } from "../registry/components/loading/skeleton.sve
 
 export { default as Pagination } from "../registry/components/pagination/pagination.svelte";
 
-export { default as fileUpload } from "../registry/components/file-upload/fileUpload.svelte";
+export { default as FileUpload } from "../registry/components/fileUpload/fileUpload.svelte";
+
+export { default as ColorPicker } from "../registry/components/colorPicker/colorPicker.svelte";
