@@ -2,112 +2,133 @@
   "accordian": {
     "default": {
       "files": ["accordian.svelte", "accordianItem.svelte"],
-      "icons": ["upIcon", "downIcon"]
+      "icons": ["upIcon", "downIcon"],
+      "entry": "accordian.svelte"
     }
   },
   "button": {
     "sync": {
-      "files": ["syncButton.svelte"]
+      "files": ["syncButton.svelte"],
+      "entry": "syncButton.svelte"
     },
     "async": {
       "files": ["asyncButton.svelte"],
-      "icons": ["loadingIcon"]
+      "icons": ["loadingIcon"],
+      "entry": "asyncButton.svelte"
     }
   },
   "checklist": {
     "default": {
-      "files": ["checklist.svelte"]
+      "files": ["checklist.svelte"],
+      "entry": "checklist.svelte"
     }
   },
   "code": {
     "singlePage": {
       "files": ["singlePageCode.svelte", "code.svelte"],
       "icons": ["copyIcon", "doneIcon"],
-      "packages": ["svelte-highlight"]
+      "packages": ["svelte-highlight"],
+      "entry": "singlePageCode.svelte"
     },
     "multiPage": {
       "files": ["multiPageCode.svelte", "code.svelte", "pageChanger.svelte"],
       "icons": ["copyIcon", "doneIcon"],
-      "packages": ["svelte-highlight"]
+      "packages": ["svelte-highlight"],
+      "entry": "multiPageCode.svelte"
     }
   },
   "colorPicker": {
     "default": {
       "files": ["colorPicker.svelte", "customInput.svelte"],
-      "packages": ["svelte-awesome-color-picker"]
+      "packages": ["svelte-awesome-color-picker"],
+      "entry": "colorPicker.svelte"
     }
   },
   "upload": {
     "default": {
       "files": ["upload.svelte", "label.svelte"],
       "icons": ["closeIcon", "plusIcon"],
-      "packages": ["mime-types"]
+      "packages": ["mime-types"],
+      "entry": "upload.svelte"
     }
   },
   "input": {
     "regular": {
-      "files": ["regularInput.svelte"]
+      "files": ["regularInput.svelte"],
+      "entry": "regularInput.svelte"
     },
     "check": {
       "files": ["checkInput.svelte"],
-      "icons": ["closeIcon", "validIcon"]
+      "icons": ["closeIcon", "validIcon"],
+      "entry": "checkInput.svelte"
     }
   },
   "link": {
     "default": {
-      "files": ["link.svelte"]
+      "files": ["link.svelte"],
+      "entry": "link.svelte"
     }
   },
   "loading": {
     "regular": {
       "files": ["regularLoading.svelte"],
-      "icons": ["loadingIcon"]
+      "icons": ["loadingIcon"],
+      "entry": "regularLoading.svelte"
     },
     "skeleton": {
-      "files": ["skeletonLoading.svelte"]
+      "files": ["skeletonLoading.svelte"],
+      "entry": "skeletonLoading.svelte"
     }
   },
   "pagination": {
     "default": {
       "files": ["pagination.svelte", "pages.svelte"],
-      "icons": ["leftIcon", "rightIcon", "dotsIcon"]
+      "icons": ["leftIcon", "rightIcon", "dotsIcon"],
+      "entry": "pagination.svelte"
     }
   },
   "progress": {
     "continuos": {
       "files": ["continuosProgress.svelte"],
-      "icons": ["percentageIcon"]
+      "icons": ["percentageIcon"],
+      "entry": "[continuosProgress.svelte]"
     },
     "multiStep": {
-      "files": ["multiStepProgress.svelte"]
+      "files": ["multiStepProgress.svelte"],
+      "entry": "multiStepProgress.svelte"
     }
   },
   "radioGroup": {
     "default": {
-      "files": ["radioGroup.svelte"]
+      "files": ["radioGroup.svelte"],
+      "entry": "radioGroup.svelte"
     }
   },
   "select": {
     "default": {
       "files": ["select.svelte"],
-      "packages": ["svelte-select"]
+      "packages": ["svelte-select"],
+      "entry": "select.svelte"
     }
   },
   "slider": {
     "default": {
       "files": ["slider.svelte"],
-      "packages": ["@bulatdashiev/svelte-slider"]
+      "packages": ["@bulatdashiev/svelte-slider"],
+      "entry": "slider.svelte"
     }
   },
   "textarea": {
     "default": {
-      "files": ["textarea.svelte"]
+      "files": ["textarea.svelte"],
+      "entry": "textarea.svelte"
     }
   },
   "toggle": {
     "default": {
       "files": ["toggle.svelte"],
-      "icons": ["validIcon", "closeIcon"]
+      "icons": ["validIcon", "closeIcon"],
+      "entry": "toggle.svelte"
     }
   }
 }
