@@ -60,7 +60,7 @@
   },
   "loading": {
     "regular": {
-      "files": ["regualrLoading.svelte"],
+      "files": ["regularLoading.svelte"],
       "icons": ["loadingIcon"]
     },
     "skeleton": {

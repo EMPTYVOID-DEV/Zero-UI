@@ -15,9 +15,16 @@ export async function cli(registry: registryType): Promise<{
     default: "src/lib/zeroUi",
     validate: validatePath,
   });
+  const { isTypes } = await inquirer.prompt({
+    name: "isTypes",
+    type: "confirm",
+    default: true,
+    message: "Are you using typescript or jsdoc",
+  });
   const { choices } = await inquirer.prompt({
     name: "choices",
     type: "checkbox",
+    pageSize: 10,
     default: [],
     message: "Select the components variants you want add",
     choices: getVariants(registry).map((el) => ({
@@ -25,11 +32,6 @@ export async function cli(registry: registryType): Promise<{
       name: el,
     })),
   });
-  const { isTypes } = await inquirer.prompt({
-    name: "isTypes",
-    type: "confirm",
-    default: false,
-    message: "Are you using typescript or jsdoc",
-  });
+
   return { componentsPath, choices, isTypes };
 }
