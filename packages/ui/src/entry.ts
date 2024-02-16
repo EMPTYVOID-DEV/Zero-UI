@@ -14,17 +14,15 @@ export { default as Link } from "../registry/components/link/link.svelte";
 
 export { default as Accordian } from "../registry/components/accordian/accordian.svelte";
 
-export { default as DefaultEntryToggle } from "../registry/components/toggle/toggle.svelte";
-
-export { default as ContinuosProgressBar } from "../registry/components/progressBar/continuosProgress.svelte";
-
-export { default as MultiStepProgressBar } from "../registry/components/progressBar/multiStepProgress.svelte";
-
 export { default as Toggle } from "../registry/components/toggle/toggle.svelte";
 
-export { default as Input } from "../registry/components/input/regular.svelte";
+export { default as ContinuosProgress } from "../registry/components/progressBar/continuosProgress.svelte";
 
-export { default as Check } from "../registry/components/input/check.svelte";
+export { default as MultiStepProgress } from "../registry/components/progressBar/multiStepProgress.svelte";
+
+export { default as RegularInput } from "../registry/components/input/regularInput.svelte";
+
+export { default as CheckInput } from "../registry/components/input/checkInput.svelte";
 
 export { default as Textarea } from "../registry/components/textarea/textarea.svelte";
 
@@ -38,6 +36,6 @@ export { default as SkeletonLoading } from "../registry/components/loading/skele
 
 export { default as Pagination } from "../registry/components/pagination/pagination.svelte";
 
-export { default as FileUpload } from "../registry/components/fileUpload/fileUpload.svelte";
+export { default as Upload } from "../registry/components/upload/upload.svelte";
 
 export { default as ColorPicker } from "../registry/components/colorPicker/colorPicker.svelte";

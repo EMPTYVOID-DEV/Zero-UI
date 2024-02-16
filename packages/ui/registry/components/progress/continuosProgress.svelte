@@ -1,5 +1,5 @@
 <script>
-  import PercentageIcon from "../../icons/percentage.svelte";
+  import PercentageIcon from "../../icons/percentageIcon.svelte";
 
   /** @type {number} This is the progress value */
   export let progress = 100;
@@ -10,9 +10,10 @@
   /** @type {boolean} Whether we show the progress meter*/
   export let showMeter = true;
 
-  /**@function This function calculate the processedProgress relative to 100% using the maxValue and the current progress
-   * It also prevent overflow if the progress is bigger than maxValue  the processedProgress is set to 100
-   * @param {number} progress
+  /**
+   * @function calculateRelativeProgress
+   * @param {number} progress we need the progress as param to make the svelte compiler re-run the reactive declarition
+   * @returns {number} the return value is the relative progress to 100%
    */
   function calculateRelativeProgress(progress) {
     let limitedProgress = progress > maxValue ? maxValue : progress;

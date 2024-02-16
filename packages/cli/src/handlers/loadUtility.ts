@@ -12,9 +12,24 @@ export async function loadTheme(componentsPath: string) {
       return writeFile(themePath, content);
     })
     .then(() => {
-      logger.success("Successfully loading and writing the theme.");
+      logger.success("Successfully loading and writing the theme.css file");
     })
     .catch(() => {
       logger.error("There was an issue when loading the theme.css file.");
+    });
+}
+
+export async function loadTypes(componentsPath: string) {
+  const typesUrl = `${rawPath}/registry/types.d.ts`;
+  return githubFetch(typesUrl)
+    .then((content) => {
+      const typesPath = path.join(workingDir, componentsPath, "types.d.ts");
+      return writeFile(typesPath, content);
+    })
+    .then(() => {
+      logger.success("Successfully loading and writing the types.d.ts file.");
+    })
+    .catch(() => {
+      logger.error("There was an issue when loading the types.d.ts file.");
     });
 }

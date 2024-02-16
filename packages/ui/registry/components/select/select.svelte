@@ -19,15 +19,27 @@
   const dispatcher = createEventDispatcher();
   const processedValue = isMulti ? value : value[0];
 
-  /**@param {import("../../types").selectEvent} e*/
+  /**
+   * @param {import("../../types").selectEvent} e
+   * The event wont contain detail object if no elements were selected
+   * Detail will be an array in case isMulti is set , single value otherwise
+   * But the change event detail will always fire with an array
+   */
   function handleChange(e) {
     if (!e.detail) {
-      return dispatcher("change", []);
+      dispatcher("change", {
+        selected: [],
+      });
+      return;
     }
     if (isMulti) {
-      dispatcher("change", e.detail);
+      dispatcher("change", {
+        selected: e.detail,
+      });
     } else {
-      dispatcher("change", [e.detail]);
+      dispatcher("change", {
+        selected: [e.detail],
+      });
     }
   }
 </script>

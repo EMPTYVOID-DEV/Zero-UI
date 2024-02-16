@@ -10,8 +10,8 @@
   /**@type {boolean}*/
   export let range = false;
   /*
-   * This event is triggered within the range [minEdge, maxEdge].
-   * If the range is set to false, the event is fired with the maxEdge value of the slider.
+   * This event is triggered with the selection range [min,max]
+   * In case range prop is false the max value is the slider's max
    */
 </script>
 

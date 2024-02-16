@@ -13,8 +13,11 @@
 
   const dispatcher = createEventDispatcher();
 
-  /**@function formatFileSize returns the file size str in bytes,kilos,mega depending on its value*/
-  /**@param {number} fileSizeBytes*/
+  /**
+   *@function formatFileSize
+   * @param {number} fileSizeBytes this the file size in bytes
+   * @returns {string} it will be a string showing the file size in either kilos or megas
+   */
   function formatFileSize(fileSizeBytes) {
     if (fileSizeBytes < 1024) {
       return fileSizeBytes + " B";
@@ -26,14 +29,18 @@
       return sizeMB.toFixed(2) + " MB";
     }
   }
-  /**@function removeFile this function fires an event to remove a file with specific index*/
-  /**@param {number} fileIndex*/
+  /**
+   *@function removeFile this function fires an event to remove a file with specific index
+   * @param {number} fileIndex this is the index associated with file component
+   */
   function removeFile(fileIndex) {
     dispatcher("remove", {
       fileIndex,
     });
   }
-  /**@param {DragEvent} e*/
+  /**
+   *@param {DragEvent} e
+   */
   function dropHandler(e) {
     // Prevent file from being opened)
     e.preventDefault();
@@ -45,7 +52,9 @@
     }
   }
 
-  /**@param {Event} e*/
+  /**
+   * @param {Event} e
+   */
   function dragOver(e) {
     // Prevent file from being opened)
     e.preventDefault();

@@ -38,4 +38,7 @@
     font-size: var(--body);
     font-weight: var(--font-weight, 500);
   }
+  .link:hover span {
+    text-decoration: underline;
+  }
 </style>

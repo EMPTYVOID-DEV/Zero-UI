@@ -1,0 +1,113 @@
+{
+  "accordian": {
+    "default": {
+      "files": ["accordian.svelte", "accordianItem.svelte"],
+      "icons": ["upIcon", "downIcon"]
+    }
+  },
+  "button": {
+    "sync": {
+      "files": ["syncButton.svelte"]
+    },
+    "async": {
+      "files": ["asyncButton.svelte"],
+      "icons": ["loadingIcon"]
+    }
+  },
+  "checklist": {
+    "default": {
+      "files": ["checklist.svelte"]
+    }
+  },
+  "code": {
+    "singlePage": {
+      "files": ["singlePageCode.svelte", "code.svelte"],
+      "icons": ["copyIcon", "doneIcon"],
+      "packages": ["svelte-highlight"]
+    },
+    "multiPage": {
+      "files": ["multiPageCode.svelte", "code.svelte", "pageChanger.svelte"],
+      "icons": ["copyIcon", "doneIcon"],
+      "packages": ["svelte-highlight"]
+    }
+  },
+  "colorPicker": {
+    "default": {
+      "files": ["colorPicker.svelte", "customInput.svelte"],
+      "packages": ["svelte-awesome-color-picker"]
+    }
+  },
+  "upload": {
+    "default": {
+      "files": ["upload.svelte", "label.svelte"],
+      "icons": ["closeIcon", "plusIcon"],
+      "packages": ["mime-types"]
+    }
+  },
+  "input": {
+    "regular": {
+      "files": ["regularInput.svelte"]
+    },
+    "check": {
+      "files": ["checkInput.svelte"],
+      "icons": ["closeIcon", "validIcon"]
+    }
+  },
+  "link": {
+    "default": {
+      "files": ["link.svelte"]
+    }
+  },
+  "loading": {
+    "regular": {
+      "files": ["regualrLoading.svelte"],
+      "icons": ["loadingIcon"]
+    },
+    "skeleton": {
+      "files": ["skeletonLoading.svelte"]
+    }
+  },
+  "pagination": {
+    "default": {
+      "files": ["pagination.svelte", "pages.svelte"],
+      "icons": ["leftIcon", "rightIcon", "dotsIcon"]
+    }
+  },
+  "progress": {
+    "continuos": {
+      "files": ["continuosProgress.svelte"],
+      "icons": ["percentageIcon"]
+    },
+    "multiStep": {
+      "files": ["multiStepProgress.svelte"]
+    }
+  },
+  "radioGroup": {
+    "default": {
+      "files": ["radioGroup.svelte"]
+    }
+  },
+  "select": {
+    "default": {
+      "files": ["select.svelte"],
+      "packages": ["svelte-select"]
+    }
+  },
+  "slider": {
+    "default": {
+      "files": ["slider.svelte"],
+      "packages": ["@bulatdashiev/svelte-slider"]
+    }
+  },
+  "textarea": {
+    "default": {
+      "files": ["textarea.svelte"]
+    }
+  },
+  "toggle": {
+    "default": {
+      "files": ["toggle.svelte"],
+      "icons": ["validIcon", "closeIcon"]
+    }
+  }
+}

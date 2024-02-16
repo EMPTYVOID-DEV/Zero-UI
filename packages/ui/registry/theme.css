@@ -18,6 +18,6 @@
   );
   --gap: 10px;
   --border-radius: 0.3rem;
-  --bodyFont: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  --bodyFont: Verdana, Geneva, Tahoma, sans-serif;
   --headerFont: Helvetica, sans-serif;
 }

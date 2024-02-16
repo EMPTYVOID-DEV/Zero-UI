@@ -10,6 +10,9 @@
   /**@type {boolean}*/
   export let useRadius = false;
   let copyStatement = false;
+  /**
+   *@function copyCode will handle copying the code to the user keyboard
+   */
   async function copyCode() {
     navigator.clipboard.writeText(code);
     copyStatement = true;

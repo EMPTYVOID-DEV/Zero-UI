@@ -19,7 +19,10 @@
   /**@type {"idle"|"loading"}*/
   let state = "idle";
 
-  /**@param {MouseEvent} event */
+  /**
+   * @function handleClick This function will take care of state changes
+   * @param {MouseEvent} event
+   */
   async function handleClick(event) {
     if (state == "loading") return;
     state = "loading";

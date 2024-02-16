@@ -11,8 +11,11 @@
   /**@type {File[]} */
   let files = [];
 
-  /**@function checkType checks the file type for the component*/
-  /**@param {string} type*/
+  /**
+   * @function checkType checks the file type for the component
+   * @param {string} type this is the file type
+   * @returns {boolean} true:the type is valid , false:the type is not valid
+   */
   function checkType(type) {
     const typeArray = type.split("/");
     if (acceptedFiles == "*") return true;
@@ -26,8 +29,10 @@
     }
     return false;
   }
-  /**@function This is a function that handles the addition of a valid file*/
-  /**@param {FileList} selectedFiles*/
+  /**
+   * @function This is a function that handles the addition of a valid file
+   * @param {FileList} selectedFiles this is the list of the selected files after a drop or browse addition
+   */
   function addFiles(selectedFiles) {
     if (selectedFiles)
       for (let i = 0; i < selectedFiles.length; i++) {
@@ -40,7 +45,8 @@
   }
 
   /**
-   * @param {{ detail: { fileIndex: number; }; }} e
+   * @function remove this will remove a file using the fileIndex
+   * @param {{ detail: { fileIndex: number; }; }} e this is an event fired by the label component each time the user removes a file
    */
   function remove(e) {
     files = files.filter((el, idx) => idx != e.detail.fileIndex);

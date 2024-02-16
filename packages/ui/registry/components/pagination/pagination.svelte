@@ -6,7 +6,7 @@
   /** @type {string[]} */
   export let pages = [];
   export let activePage = 1;
-  export let siblingsCount = 1;
+  let siblingsCount = 1;
 
   let numberOfPages = pages.length;
   $: visiblePages = adjustToActive(activePage);
@@ -14,7 +14,7 @@
   /**
    * @function adjustToActive - Adjust visible pages based on active page and siblings count
    * @param {number} activePage
-   * @returns {{ start: number; end: number; }}
+   * @returns {{ start: number; end: number; }} the return value is the range of visible pages
    */
   function adjustToActive(activePage) {
     let start = Math.max(1, activePage - siblingsCount);

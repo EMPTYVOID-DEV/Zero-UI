@@ -7,6 +7,5 @@ export type variant = {
 export type registryType = {
   [component: string]: {
     [otherVariant: string]: variant;
-    default: variant;
   };
 };

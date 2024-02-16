@@ -12,7 +12,7 @@ export function getDependencies(registry: registryType, choices: string[]) {
     if (currentDependencies.icons)
       currentDependencies.icons.forEach((icon) => icons.add(`${icon}.svelte`));
     currentDependencies.files.forEach((file) =>
-      files.add(`${component}/${file}.svelte`)
+      files.add(`${component}/${file}`),
     );
   }
   return {
