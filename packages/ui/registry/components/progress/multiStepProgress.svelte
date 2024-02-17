@@ -22,18 +22,18 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    gap: var(--gap);
+    gap: 8px;
   }
   .currentStep {
     font-size: var(--h4);
     font-family: var(--headerFont);
-    font-weight: 500;
+    font-weight: 600;
     color: var(--primaryColor);
   }
   .steps {
     width: 100%;
     display: flex;
-    gap: 5px;
+    gap: 4px;
   }
   .step {
     flex-grow: 1;

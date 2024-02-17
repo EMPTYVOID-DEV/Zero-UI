@@ -34,34 +34,25 @@
   input {
     display: none;
   }
-
   .trigger {
     display: flex;
     align-items: center;
-    gap: 5px;
-    width: var(--width, 80%);
-    min-width: fit-content;
-    height: 2rem;
+    gap: 8px;
     cursor: pointer;
   }
   .trigger .bg {
-    height: 100%;
+    height: 2rem;
     aspect-ratio: 1/1;
     border-radius: 50%;
-    border: 2px solid var(--foregroundColor);
-    box-sizing: border-box;
   }
   .trigger .hex {
-    height: 100%;
+    width: fit-content;
     display: flex;
-    flex-grow: 1;
     align-items: center;
-    box-sizing: border-box;
     border-radius: var(--border-radius);
     background-color: var(--foregroundColor);
     padding-block: 8px;
-    padding-inline: 5px;
-    padding-right: 2rem;
+    padding-inline: 16px;
     font-size: var(--body);
     font-family: var(--bodyFont);
     color: var(--backgroundColor);

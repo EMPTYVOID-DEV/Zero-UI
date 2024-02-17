@@ -2,7 +2,7 @@
   import PercentageIcon from "../../icons/percentageIcon.svelte";
 
   /** @type {number} This is the progress value */
-  export let progress = 100;
+  export let progress = 0;
 
   /** @type {number} maxValue for the progress */
   export let maxValue = 100;
@@ -39,7 +39,7 @@
   .progressBar {
     display: flex;
     align-items: center;
-    gap: var(--gap);
+    gap: 8px;
     width: var(--width, 100%);
   }
 
@@ -60,7 +60,7 @@
   .progressCounter {
     display: flex;
     align-items: center;
-    gap: 2px;
+    gap: 4px;
   }
 
   .progressCounter span {

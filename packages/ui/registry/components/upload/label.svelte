@@ -1,10 +1,7 @@
 <script>
-  import { fade } from "svelte/transition";
-  import Mime from "mime-types";
-  import CloseIcon from "../../icons/closeIcon.svelte";
   import PlusIcon from "../../icons/plusIcon.svelte";
   import { createEventDispatcher } from "svelte";
-  import { quintOut } from "svelte/easing";
+  import Files from "./files.svelte";
 
   /**@type {string}*/
   export let description;
@@ -12,32 +9,6 @@
   export let files;
 
   const dispatcher = createEventDispatcher();
-
-  /**
-   *@function formatFileSize
-   * @param {number} fileSizeBytes this the file size in bytes
-   * @returns {string} it will be a string showing the file size in either kilos or megas
-   */
-  function formatFileSize(fileSizeBytes) {
-    if (fileSizeBytes < 1024) {
-      return fileSizeBytes + " B";
-    } else if (fileSizeBytes < 1024 * 1024) {
-      let sizeKB = fileSizeBytes / 1024;
-      return sizeKB.toFixed(2) + " KB";
-    } else {
-      let sizeMB = fileSizeBytes / (1024 * 1024);
-      return sizeMB.toFixed(2) + " MB";
-    }
-  }
-  /**
-   *@function removeFile this function fires an event to remove a file with specific index
-   * @param {number} fileIndex this is the index associated with file component
-   */
-  function removeFile(fileIndex) {
-    dispatcher("remove", {
-      fileIndex,
-    });
-  }
   /**
    *@param {DragEvent} e
    */
@@ -75,23 +46,7 @@
     >
   </label>
   <span class="description">{description}</span>
-  <div class="files">
-    {#each files as file, index (file.lastModified)}
-      <div class="file" transition:fade={{ easing: quintOut }}>
-        <span class="type">.{Mime.extension(file.type) || "file"}</span>
-        <span class="info">
-          <span>{file.name.substring(0, 20)}</span>
-          <span>{formatFileSize(file.size)}</span>
-        </span>
-        <button
-          class="remove"
-          on:click={() => {
-            removeFile(index);
-          }}><CloseIcon /></button
-        >
-      </div>
-    {/each}
-  </div>
+  <Files {files} on:remove />
 </div>
 
 <style>
@@ -99,12 +54,7 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: var(--gap);
-  }
-  span {
-    font-size: var(--body);
-    font-family: var(--bodyFont);
-    color: var(--foregroundColor);
+    gap: 12px;
   }
   .label {
     width: 100%;
@@ -112,7 +62,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: var(--gap);
+    gap: 4px;
     background-color: transparent;
     border: 2px dashed var(--foregroundColor);
     border-radius: var(--border-radius);
@@ -128,53 +78,9 @@
   .description {
     color: color-mix(in srgb, var(--foregroundColor) 70%, transparent 30%);
   }
-  .files {
-    display: flex;
-    flex-direction: column;
-    gap: calc(var(--gap) / 2);
-  }
-  .file {
-    width: 95%;
-    display: flex;
-    align-items: center;
-    gap: var(--gap);
-  }
-
-  .type {
-    font-weight: 600;
-    width: 2.5rem;
-    aspect-ratio: 1/1;
-    border-radius: 4px;
-    color: color-mix(in srgb, var(--primaryColor) 70%, transparent 30%);
-  }
-  .info {
-    display: flex;
-    flex-direction: column;
-    gap: calc(var(--gap) / 2);
-    padding: 4px;
-  }
-  .info span:first-child {
-    word-break: break-word;
-  }
-  .info span:last-child {
-    color: color-mix(in srgb, var(--primaryColor) 70%, transparent 30%);
-  }
-  .remove {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 2.4rem;
-    aspect-ratio: 1/1;
-    cursor: pointer;
-    outline: none;
-    border: none;
-    border-radius: 4px;
-    margin-left: auto;
-    background-color: color-mix(
-      in srgb,
-      var(--foregroundColor) 20%,
-      transparent 80%
-    );
-    --icon: var(--foregroundColor);
+  span {
+    font-size: var(--body);
+    font-family: var(--bodyFont);
+    color: var(--foregroundColor);
   }
 </style>

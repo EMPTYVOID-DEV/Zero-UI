@@ -47,7 +47,7 @@
   .pages {
     display: flex;
     align-items: center;
-    gap: 3px;
+    gap: 4px;
   }
   .page {
     min-width: 2.2rem;
@@ -58,24 +58,19 @@
     text-decoration: none;
     color: var(--foregroundColor);
     background-color: transparent;
-    border: 1px solid
-      color-mix(in srgb, var(--foregroundColor) 20%, transparent 80%);
     font-size: var(--small);
     font-family: var(--bodyFont);
     border-radius: 4px;
   }
   .active {
-    background-color: color-mix(
-      in srgb,
-      var(--primaryColor) 40%,
-      transparent 60%
-    );
+    background-color: var(--primaryColor);
+    color: var(--backgroundColor);
   }
   .page:not(.active):hover {
     background-color: color-mix(
       in srgb,
-      var(--foregroundColor) 20%,
-      transparent 80%
+      var(--primaryColor) 40%,
+      transparent 60%
     );
   }
   .delimiter {

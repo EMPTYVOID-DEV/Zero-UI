@@ -18,12 +18,12 @@
   .textarea {
     display: flex;
     flex-direction: column;
-    gap: var(--gap);
+    gap: 8px;
   }
   .textarea label {
     font-family: var(--headerFont);
     font-size: var(--body);
-    font-weight: 500;
+    font-weight: 600;
     color: var(--foregroundColor);
   }
   .textarea textarea {
@@ -31,7 +31,7 @@
     resize: none;
     width: var(--width, 100%);
     height: var(--height, 400px);
-    padding-left: 10px;
+    padding-left: 8px;
     overflow: auto;
     border: 2px solid var(--foregroundColor);
     color: var(--foregroundColor);

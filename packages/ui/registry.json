@@ -46,7 +46,7 @@
   },
   "upload": {
     "default": {
-      "files": ["upload.svelte", "label.svelte"],
+      "files": ["upload.svelte", "label.svelte", "files.svelte"],
       "icons": ["closeIcon", "plusIcon"],
       "packages": ["mime-types"],
       "entry": "upload.svelte"

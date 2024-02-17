@@ -74,42 +74,34 @@
   .pagination {
     display: flex;
     align-items: center;
-    gap: 5px;
+    gap: 8px;
   }
   .control {
     display: flex;
     align-items: center;
     justify-content: center;
     width: fit-content;
-    padding: 8px;
     cursor: pointer;
     outline: none;
     border: none;
-    border-radius: var(--border-radius);
     background-color: transparent;
     color: var(--foregroundColor);
     font-family: var(--bodyFont);
     font-size: var(--small);
     font-weight: 600;
+    --icon: var(--foregroundColor);
   }
   .control:hover {
-    background-color: color-mix(
-      in srgb,
-      var(--primaryColor) 40%,
-      transparent 60%
-    );
+    color: var(--primaryColor);
+    --icon: var(--primaryColor);
   }
   .control :global(svg) {
     width: 20px;
     height: 20px;
-    --icon: var(--foregroundColor);
   }
   .control:disabled {
     color: var(--mutedColor);
     --icon: var(--mutedColor);
     cursor: default;
-  }
-  .control:disabled:hover {
-    background-color: transparent;
   }
 </style>

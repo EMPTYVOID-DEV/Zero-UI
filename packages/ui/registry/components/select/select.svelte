@@ -64,6 +64,7 @@
     --clear-icon-color="var(--primaryColor)"
     --background="transparent"
     --placeholder-color="var(--foregroundColor)"
+    --font-size="var(--body)"
     --input-color="var(--foregroundColor)"
     --list-background="var(--backgroundColor)"
     --list-border="1px solid var(--primaryColor)"
@@ -89,9 +90,10 @@
 
 <style>
   .select {
+    width: var(--width, 100%);
     display: flex;
     flex-direction: column;
-    gap: var(--gap);
+    gap: 8px;
   }
 
   .select label {

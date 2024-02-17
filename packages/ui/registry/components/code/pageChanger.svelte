@@ -32,7 +32,7 @@
   .pageSlider span {
     font-family: var(--bodyFont);
     font-size: var(--body);
-    color: color-mix(in srgb, var(--foregroundColor) 40%, transparent 60%);
+    color: var(--foregroundColor);
     padding-inline: 16px;
     padding-block: 8px;
     cursor: pointer;
@@ -42,6 +42,6 @@
     border-top-left-radius: var(--border-radius);
     border-top-right-radius: var(--border-radius);
     background-color: var(--foregroundColor);
-    font-weight: bold;
+    font-weight: 600;
   }
 </style>

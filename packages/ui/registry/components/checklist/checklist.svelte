@@ -48,14 +48,14 @@
   .checkList {
     display: flex;
     flex-direction: column;
-    gap: var(--gap);
+    gap: 12px;
   }
   .checkList .checkListItem {
     display: grid;
     grid-template-columns: repeat(2, auto);
     align-items: center;
     justify-content: start;
-    gap: 5px;
+    gap: 8px;
   }
   .checkListItem input {
     cursor: pointer;

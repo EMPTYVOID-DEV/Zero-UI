@@ -28,7 +28,7 @@
   .link {
     display: inline-flex;
     align-items: center;
-    gap: 5px;
+    gap: 4px;
     cursor: pointer;
     text-decoration: none;
   }
@@ -36,7 +36,10 @@
     color: var(--fg);
     font-family: var(--bodyFont);
     font-size: var(--body);
-    font-weight: var(--font-weight, 500);
-    padding-bottom: 10px;
+    font-weight: 600;
+  }
+  .link :global(svg) {
+    width: 18px;
+    height: 18px;
   }
 </style>

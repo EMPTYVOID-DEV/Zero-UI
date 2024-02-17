@@ -2,6 +2,12 @@
   import { createEventDispatcher } from "svelte";
   import Label from "./label.svelte";
 
+  /**@type {number} file size limit in kilos*/
+  export let sizeLimit = -1;
+
+  /**@type {number}*/
+  export let numberLimit = -1;
+
   /**@type {string}*/
   export let description = "";
   /**@type {string}*/
@@ -10,6 +16,28 @@
   const dispatcher = createEventDispatcher();
   /**@type {File[]} */
   let files = [];
+
+  /**
+   * @function this function checks the size limit
+   * @param {number} sizeInBytes
+   * @returns {boolean}
+   */
+  function checkSize(sizeInBytes) {
+    const sizeInKilos = sizeInBytes / 1024;
+    if (sizeLimit == -1) return false;
+    if (sizeInKilos < sizeLimit) return false;
+    return true;
+  }
+
+  /**
+   * @function This function checks whether we reach the size limit
+   * @returns {boolean}
+   */
+  function reachLimit() {
+    if (numberLimit == -1) return false;
+    else if (files.length < numberLimit) return false;
+    return true;
+  }
 
   /**
    * @function checkType checks the file type for the component
@@ -29,6 +57,7 @@
     }
     return false;
   }
+
   /**
    * @function This is a function that handles the addition of a valid file
    * @param {FileList} selectedFiles this is the list of the selected files after a drop or browse addition
@@ -36,7 +65,11 @@
   function addFiles(selectedFiles) {
     if (selectedFiles)
       for (let i = 0; i < selectedFiles.length; i++) {
-        if (checkType(selectedFiles[i].type))
+        if (
+          checkType(selectedFiles[i].type) &&
+          !reachLimit() &&
+          !checkSize(selectedFiles[i].size)
+        )
           files = [...files, selectedFiles[i]];
       }
     dispatcher("change", {

@@ -31,19 +31,19 @@
   .accordianItem {
     display: flex;
     flex-direction: column;
-    padding-block: 20px;
-    padding-inline: 8px;
-    border: 2px solid
-      color-mix(in srgb, var(--primaryColor) 10%, var(--foregroundColor) 20%);
-    border-radius: var(--border-radius);
+    padding-block: 8px;
+    padding-inline: 16px;
     cursor: pointer;
+    border-radius: var(--border-radius);
+    border: 2px solid
+      color-mix(in srgb, var(--primaryColor) 40%, transparent 60%);
   }
   .title {
     display: grid;
     grid-template-columns: auto auto;
     align-items: center;
     justify-content: space-between;
-    gap: 5px;
+    gap: 4px;
   }
 
   .title span {
@@ -51,7 +51,7 @@
   }
 
   .description {
-    margin-top: 20px;
+    margin-top: 8px;
   }
 
   span {

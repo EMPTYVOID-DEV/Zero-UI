@@ -1,6 +1,6 @@
 :root {
-  --primaryColor: #b57edc;
-  --secondaryColor: #6faa8c;
+  --primaryColor: #8d25d8;
+  --secondaryColor: #41a772;
   --backgroundColor: #ffffff;
   --foregroundColor: #000000;
   --dangerColor: #b00020;
@@ -16,7 +16,6 @@
     calc(0.875remrem + ((1vw - 0.48rem) * 0.1736)),
     1rem
   );
-  --gap: 10px;
   --border-radius: 0.3rem;
   --bodyFont: Verdana, Geneva, Tahoma, sans-serif;
   --headerFont: Helvetica, sans-serif;

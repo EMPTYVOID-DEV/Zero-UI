@@ -62,13 +62,13 @@
     display: flex;
     flex-direction: column;
     align-items: stretch;
-    gap: var(--gap);
+    gap: 8px;
   }
 
   .input-container .label {
     font-family: var(--headerFont);
     font-size: var(--body);
-    font-weight: 500;
+    font-weight: 600;
     color: var(--foregroundColor);
   }
 
@@ -78,8 +78,8 @@
     padding-left: 8px;
     padding-block: 8px;
     font-size: var(--body);
+    font-family: var(--headerFont);
     color: var(--foregroundColor);
-    background-color: transparent;
     border-radius: var(--border-radius);
     border: 2px solid var(--foregroundColor);
     outline: none;
@@ -104,7 +104,7 @@
     display: grid;
     grid-template-columns: auto 1fr;
     align-items: center;
-    gap: 2px;
+    gap: 4px;
   }
   .description span {
     font-size: var(--small);

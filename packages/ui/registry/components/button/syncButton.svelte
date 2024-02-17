@@ -34,7 +34,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 5px;
+    gap: 4px;
     width: fit-content;
     padding-inline: var(--padding-inline, 16px);
     padding-block: var(--padding-block, 8px);
@@ -50,5 +50,9 @@
     font-family: var(--bodyFont);
     font-size: var(--body);
     font-weight: 600;
+  }
+  button :global(svg) {
+    width: 20px;
+    height: 20px;
   }
 </style>
