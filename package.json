@@ -8,7 +8,7 @@
     "cli-build": "pnpm --filter zero-ui-cli build",
     "registry-build": "pnpm --filter zero-ui-registry build",
     "registry-lint": "pnpm --filter zero-ui-registry lint",
-    "release": "pnpm --filter zero-ui-cli release",
+    "release": "pnpm cli-build && changeset publish ",
     "version": "npx changeset version --ignore zero-ui-registry --ignore zero-ui-docs"
   },
   "keywords": [],
