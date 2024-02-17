@@ -3,7 +3,6 @@
   "version": "0.0.2",
   "main": "./dist/index.js",
   "type": "module",
-  "private": "false",
   "types": "./dist/index.d.ts",
   "license": "MIT",
   "description": "A cli tool for zero-ui component library.",
@@ -37,8 +36,8 @@
     "start": "node dist/index.js",
     "build": "tsup",
     "check": "tsc",
-    "release": "tsup && changeset publish",
-    "version": "npx changeset version"
+    "release": "pnpm build && pnpm publish --access public",
+    "version": "changeset version"
   },
   "dependencies": {
     "cfonts": "^3.2.0",
