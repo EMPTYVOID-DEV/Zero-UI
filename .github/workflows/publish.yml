@@ -34,7 +34,7 @@ jobs:
         with:
           node-version: ${{matrix.node-version}}
           cache: "pnpm"
-      - run: pnpm install  --frozen-lockfile --filter zero-ui-cli
+      - run: pnpm install
       - name: Publish to npm
         id: changesets
         uses: changesets/action@v1
