@@ -1,6 +1,6 @@
 # Zero-UI - Flexible Svelte UI Component Library
 
-![zeroui Logo](./Logo.png)
+![zeroui Logo](./asset/Logo.png)
 
 **zeroui** is a versatile and easy-to-use UI component library for building reusable components in Svelte. It comes with good default styles, customizable components, and adheres to UI/UX guidelines. With no need for configuration, zeroui is designed to be effortlessly integrated into your Svelte projects.
 

@@ -1,28 +1,22 @@
 <script>
-	import { CheckInput, Link, Upload } from 'zero-ui-registry';
+	import { MultiPageCode } from 'zero-ui-registry';
 </script>
 
 <div class="main">
-	<Upload
+	<MultiPageCode
 		on:change={(e) => {
 			console.log(e.detail);
 		}}
-	/>
-	<Link text="hi" href="/" />
-	<CheckInput
-		checkFunction={(value) => {
-			if (value.length < 10) {
-				return {
-					state: 'invalid',
-					description: 'you should enter a 10 letters word'
-				};
-			} else {
-				return {
-					state: 'valid',
-					description: 'valid word'
-				};
+		codePages={[
+			{
+				code: 'lol',
+				name: 'aym'
+			},
+			{
+				code: 'ay',
+				name: 'lo'
 			}
-		}}
+		]}
 	/>
 </div>
 

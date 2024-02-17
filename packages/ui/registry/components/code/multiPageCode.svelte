@@ -1,6 +1,6 @@
 <script>
   import Code from "./code.svelte";
-  import PageSlider from "./pageChanger.svelte";
+  import PageChanger from "./pageChanger.svelte";
   /**
    * @type {{name:string,code:string}[]}
    */
@@ -11,7 +11,11 @@
 </script>
 
 <div class="codePages">
-  <PageSlider pages={codePages.map((el) => el.name)} bind:activePage />
+  <PageChanger
+    on:change
+    pages={codePages.map((el) => el.name)}
+    bind:activePage
+  />
   {#key activePage}
     <div class="page">
       <Code code={codePages[activePage].code} {darkMode} />

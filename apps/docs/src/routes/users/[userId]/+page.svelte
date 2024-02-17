@@ -16,5 +16,3 @@
 		'/users/12'
 	];
 </script>
-
-<Pagination {pages} siblingsCount={2} activePage={1} />
