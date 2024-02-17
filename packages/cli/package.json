@@ -6,6 +6,11 @@
   "types": "./dist/index.d.ts",
   "license": "MIT",
   "description": "A cli tool for zero-ui component library.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/EMPTYVOID-DEV/Zero-UI",
+    "directory": "packages/cli"
+  },
   "keywords": [
     "zero-ui",
     "cli",
@@ -36,8 +41,7 @@
     "start": "node dist/index.js",
     "build": "tsup",
     "check": "tsc",
-    "release": "pnpm build && pnpm publish --access public",
-    "version": "changeset version"
+    "release": "pnpm build && pnpm publish --access public"
   },
   "dependencies": {
     "cfonts": "^3.2.0",

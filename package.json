@@ -6,15 +6,18 @@
     "docs-dev": "pnpm --filter zero-ui-docs dev",
     "cli-dev": "pnpm --filter zero-ui-cli dev",
     "cli-build": "pnpm --filter zero-ui-cli build",
-    "cli-release": "pnpm --filter zero-ui-cli release",
-    "cli-version": "pnpm --filter zero-ui-cli version",
     "registry-build": "pnpm --filter zero-ui-registry build",
-    "registry-lint": "pnpm --filter zero-ui-registry lint"
+    "registry-lint": "pnpm --filter zero-ui-registry lint",
+    "release": "pnpm --filter zero-ui-cli release",
+    "version": "npx changeset version --ignore zero-ui-registry --ignore zero-ui-docs"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@changesets/cli": "^2.27.1"
+  },
+  "engines": {
+    "pnpm": ">=8"
   }
 }
