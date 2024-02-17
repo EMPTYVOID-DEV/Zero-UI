@@ -10,7 +10,7 @@
   export let activePage = 0;
 </script>
 
-<div class="codePages">
+<div class="multiPageCode">
   <PageChanger
     on:change
     pages={codePages.map((el) => el.name)}
@@ -24,7 +24,8 @@
 </div>
 
 <style>
-  .codePages {
+  .multiPageCode {
+    width: var(--width, 100%);
     display: flex;
     flex-direction: column;
   }

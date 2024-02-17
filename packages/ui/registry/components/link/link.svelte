@@ -37,8 +37,6 @@
     font-family: var(--bodyFont);
     font-size: var(--body);
     font-weight: var(--font-weight, 500);
-  }
-  .link:hover span {
-    text-decoration: underline;
+    padding-bottom: 10px;
   }
 </style>

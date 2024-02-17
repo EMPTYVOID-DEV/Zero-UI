@@ -6,4 +6,12 @@
   export let darkMode = false;
 </script>
 
-<Code {code} {darkMode} useRadius={true} />
+<div class="singlePageCode">
+  <Code {code} {darkMode} useRadius={true} />
+</div>
+
+<style>
+  .singlePageCode {
+    width: var(--width, 100%);
+  }
+</style>

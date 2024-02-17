@@ -1,35 +1,22 @@
 <script>
-	import { MultiPageCode } from 'zero-ui-registry';
+	import { SinglePageCode, MultiPageCode, RegularInput, ContinuosProgress } from 'zero-ui-registry';
 </script>
 
 <div class="main">
-	<MultiPageCode
-		on:change={(e) => {
-			console.log(e.detail);
-		}}
-		codePages={[
-			{
-				code: 'lol',
-				name: 'aym'
-			},
-			{
-				code: 'ay',
-				name: 'lo'
-			}
-		]}
-	/>
+	<ContinuosProgress />
+	<RegularInput />
 </div>
 
 <style>
 	:global(body) {
-		background-color: rgb(255, 255, 255);
+		background-color: #ffffff;
 		overflow-x: hidden;
 	}
 	.main {
-		width: 50vw;
-		height: 100vh;
 		display: flex;
 		flex-direction: column;
 		gap: 20px;
+		width: 80vw;
+		height: 100vh;
 	}
 </style>
