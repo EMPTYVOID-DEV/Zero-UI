@@ -1,5 +1,11 @@
 # zero-ui-cli
 
+## 0.0.3
+
+### Patch Changes
+
+- 40b6c27: testing new versioning flow
+
 ## 0.0.2
 
 ### Patch Changes
