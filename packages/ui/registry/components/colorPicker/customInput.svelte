@@ -11,13 +11,7 @@
   export let name;
 </script>
 
-<input
-  type="color"
-  {name}
-  id="colorPicker"
-  on:click|preventDefault
-  on:mousedown|preventDefault
-/>
+<input type="color" {name} id="colorPicker" on:click on:mousedown />
 <!-- svelte-ignore a11y-no-noninteractive-element-interactions a11y-click-events-have-key-events -->
 <label
   class="trigger"

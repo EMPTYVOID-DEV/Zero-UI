@@ -58,13 +58,13 @@
   }
 
   .progressCounter {
+    width: fit-content;
     display: flex;
     align-items: center;
     gap: 4px;
   }
 
   .progressCounter span {
-    width: 1.6rem;
     font-size: var(--small);
     font-family: var(--bodyFont);
     color: var(--primaryColor);

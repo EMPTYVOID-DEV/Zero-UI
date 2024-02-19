@@ -99,7 +99,7 @@
   .select label {
     font-family: var(--headerFont);
     font-size: var(--body);
-    font-weight: 500;
+    font-weight: 600;
     color: var(--foregroundColor);
     text-transform: capitalize;
   }

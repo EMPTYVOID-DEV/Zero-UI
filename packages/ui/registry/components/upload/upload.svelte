@@ -2,10 +2,10 @@
   import { createEventDispatcher } from "svelte";
   import Label from "./label.svelte";
 
-  /**@type {number} file size limit in kilos*/
+  /**@type {number} file size limit in kilos , -1 means any size is accepted*/
   export let sizeLimit = -1;
 
-  /**@type {number}*/
+  /**@type {number} This will limit number of files the user can upload , -1 means there is no limits*/
   export let numberLimit = -1;
 
   /**@type {string}*/

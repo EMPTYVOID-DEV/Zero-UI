@@ -56,8 +56,8 @@
 
   span {
     word-break: break-word;
-    color: var(--foregroundColor);
     white-space: pre-wrap;
+    color: var(--foregroundColor);
     font-size: var(--body);
     font-family: var(--bodyFont);
   }

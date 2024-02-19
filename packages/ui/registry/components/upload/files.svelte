@@ -4,6 +4,7 @@
   import CloseIcon from "../../icons/closeIcon.svelte";
   import Mime from "mime-types";
   import { createEventDispatcher } from "svelte";
+  import { flip } from "svelte/animate";
 
   /**@type {File[]}*/
   export let files;
@@ -39,7 +40,11 @@
 
 <div class="files">
   {#each files as file, index (file.lastModified)}
-    <div class="file" transition:fade={{ easing: quadIn }}>
+    <div
+      class="file"
+      transition:fade={{ easing: quadIn }}
+      animate:flip={{ duration: 1200 }}
+    >
       <span class="type">.{Mime.extension(file.type) || "file"}</span>
       <span class="info">
         <span>{file.name.substring(0, 20)}</span>
@@ -77,7 +82,6 @@
     display: flex;
     flex-direction: column;
     gap: 4px;
-    padding: 4px;
   }
   .info span:first-child {
     word-break: break-word;

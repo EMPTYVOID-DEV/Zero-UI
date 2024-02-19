@@ -46,7 +46,7 @@
     padding-left: 8px;
     padding-block: 8px;
     font-size: var(--body);
-    font-family: var(--headerFont);
+    font-family: var(--bodyFont);
     color: var(--foregroundColor);
     border-radius: var(--border-radius);
     border: 2px solid var(--foregroundColor);

@@ -28,7 +28,8 @@
     font-size: var(--h4);
     font-family: var(--headerFont);
     font-weight: 600;
-    color: var(--primaryColor);
+    color: var(--foregroundColor);
+    text-transform: capitalize;
   }
   .steps {
     width: 100%;

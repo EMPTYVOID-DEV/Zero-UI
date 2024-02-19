@@ -13,7 +13,7 @@
    *@param {DragEvent} e
    */
   function dropHandler(e) {
-    // Prevent file from being opened)
+    // Prevent file from being opened
     e.preventDefault();
     const dropFiles = e.dataTransfer?.files;
     if (dropFiles) {
@@ -27,7 +27,7 @@
    * @param {Event} e
    */
   function dragOver(e) {
-    // Prevent file from being opened)
+    // Prevent file from being opened
     e.preventDefault();
   }
 </script>
@@ -44,8 +44,8 @@
       >Drop your files here , or <span class="browsing">click to browse</span
       ></span
     >
+    <span class="description">{description}</span>
   </label>
-  <span class="description">{description}</span>
   <Files {files} on:remove />
 </div>
 
@@ -54,7 +54,7 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 16px;
   }
   .label {
     width: 100%;
@@ -62,12 +62,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 4px;
+    gap: 8px;
     background-color: transparent;
     border: 2px dashed var(--foregroundColor);
     border-radius: var(--border-radius);
     padding-inline: 4px;
-    padding-block: 20px;
+    padding-block: 24px;
     cursor: pointer;
   }
 
