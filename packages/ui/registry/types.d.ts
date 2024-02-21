@@ -10,7 +10,7 @@ export type asyncButtonAction = (ev: MouseEvent) => Promise<any>;
 export type inputChangeHandler = (
   ev: Event & {
     currentTarget: EventTarget & HTMLInputElement;
-  },
+  }
 ) => void;
 
 // event type for the change handler fired by slider package which contains a detail tuple  with range
@@ -19,7 +19,7 @@ export type sliderEvent = (
     currentTarget: EventTarget & HTMLInputElement;
   } & {
     detail: [number, number];
-  },
+  }
 ) => void;
 
 // type for the select change event
@@ -34,5 +34,5 @@ export type selectEvent = Event & {
 // This is for the check variant input component
 export type checkFunction = (currentValue: string) => {
   state: "valid" | "invalid";
-  description: string;
+  errorMsg: string;
 };

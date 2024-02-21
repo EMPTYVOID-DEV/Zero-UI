@@ -12,7 +12,7 @@
 </script>
 
 <div class="input-container">
-  <label class="label" for="input">{label}</label>
+  <label for="input">{label}</label>
   <input
     id="input"
     type={inputType}
@@ -33,13 +33,16 @@
     gap: 8px;
   }
 
-  .input-container .label {
+  .input-container label {
     font-family: var(--headerFont);
     font-size: var(--body);
     font-weight: 600;
     color: var(--foregroundColor);
   }
 
+  .input-container label:empty {
+    display: none;
+  }
   .input {
     box-sizing: border-box;
     width: 100%;

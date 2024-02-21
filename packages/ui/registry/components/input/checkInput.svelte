@@ -1,5 +1,4 @@
 <script>
-  import ValidIcon from "../../icons/validIcon.svelte";
   import CloseIcon from "../../icons/closeIcon.svelte";
   /**@type {string}*/
   export let name = "";
@@ -13,15 +12,15 @@
   export let disabled = false;
   /**@type {import("../../types").checkFunction}*/
   export let checkFunction;
-  /**@type {{description:string,state:"idle"|"valid"|"invalid"}}*/
+  /**@type {{errorMsg:string,state:"idle"|"valid"|"invalid"}}*/
   let status = {
-    description: "",
     state: "idle",
+    errorMsg: "",
   };
 </script>
 
 <div class="input-container {status.state}">
-  <label class="label" for="input">{label}</label>
+  <label for="input">{label}</label>
   <input
     id="input"
     {name}
@@ -33,14 +32,12 @@
       status = checkFunction(e.currentTarget.value);
     }}
   />
-  <div class="description">
-    {#if status.state == "invalid"}
+  {#if status.state == "invalid"}
+    <div class="error">
       <CloseIcon />
-    {:else if status.state == "valid"}
-      <ValidIcon />
-    {/if}
-    <span>{status.description}</span>
-  </div>
+      <span>{status.errorMsg}</span>
+    </div>
+  {/if}
 </div>
 
 <style>
@@ -48,7 +45,6 @@
     --main-color: var(--primaryColor);
   }
   .valid {
-    --icon: var(--successColor);
     --main-color: var(--successColor);
   }
 
@@ -65,11 +61,14 @@
     gap: 8px;
   }
 
-  .input-container .label {
+  .input-container label {
     font-family: var(--headerFont);
     font-size: var(--body);
     font-weight: 600;
     color: var(--foregroundColor);
+  }
+  .input-container label:empty {
+    display: none;
   }
 
   .input {
@@ -100,13 +99,14 @@
     border-color: (--mutedColor);
     color: var(--mutedColor);
   }
-  .description {
+
+  .error {
     display: grid;
     grid-template-columns: auto 1fr;
     align-items: center;
     gap: 4px;
   }
-  .description span {
+  .error span {
     font-size: var(--small);
     font-family: var(--bodyFont);
     color: var(--main-color);

@@ -31,6 +31,9 @@
     color: var(--foregroundColor);
     text-transform: capitalize;
   }
+  .currentStep:empty {
+    display: none;
+  }
   .steps {
     width: 100%;
     display: flex;

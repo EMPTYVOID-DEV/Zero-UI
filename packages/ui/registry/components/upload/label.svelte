@@ -33,12 +33,7 @@
 </script>
 
 <div class="uploadUi">
-  <label
-    for="upload"
-    class="label"
-    on:dragover={dragOver}
-    on:drop={dropHandler}
-  >
+  <label for="upload" on:dragover={dragOver} on:drop={dropHandler}>
     <PlusIcon />
     <span
       >Drop your files here , or <span class="browsing">click to browse</span
@@ -56,7 +51,7 @@
     flex-direction: column;
     gap: 16px;
   }
-  .label {
+  label {
     width: 100%;
     display: flex;
     flex-direction: column;

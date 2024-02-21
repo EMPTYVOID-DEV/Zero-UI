@@ -26,6 +26,9 @@
     font-weight: 600;
     color: var(--foregroundColor);
   }
+  .textarea label:empty {
+    display: none;
+  }
   .textarea textarea {
     outline: none;
     resize: none;

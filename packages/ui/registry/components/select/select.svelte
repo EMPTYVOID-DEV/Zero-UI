@@ -45,9 +45,7 @@
 </script>
 
 <div class="select">
-  <label for={name}>
-    {label}
-  </label>
+  <label for="select">{label}</label>
   <Select
     searchable
     value={processedValue}
@@ -102,5 +100,8 @@
     font-weight: 600;
     color: var(--foregroundColor);
     text-transform: capitalize;
+  }
+  .select label:empty {
+    display: none;
   }
 </style>

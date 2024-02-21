@@ -39,3 +39,5 @@ export { default as Pagination } from "../registry/components/pagination/paginat
 export { default as Upload } from "../registry/components/upload/upload.svelte";
 
 export { default as ColorPicker } from "../registry/components/colorPicker/colorPicker.svelte";
+
+export { default as Dialog } from "../registry/components/dialog/dialog.svelte";
