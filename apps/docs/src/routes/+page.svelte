@@ -5,53 +5,16 @@
 </script>
 
 <div class="main">
-	<RegularInput />
 	<Dialog let:close>
 		<button
 			slot="trigger"
 			let:open
 			on:click={() => {
 				open();
-			}}>hey</button
+			}}>open</button
 		>
 		<div class="container">
-			<CheckInput
-				label="Enter your nationality id"
-				inputType="number"
-				checkFunction={(val) => {
-					if (val.length == 10) {
-						return {
-							errorMsg: 'lol',
-							state: 'valid'
-						};
-					} else
-						return {
-							errorMsg: 'You should enter a 10 digit number',
-							state: 'invalid'
-						};
-				}}
-			/>
-			<CheckInput
-				label="Enter your password"
-				checkFunction={(val) => {
-					const strongPassRegex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
-					if (strongPassRegex.test(val)) {
-						return {
-							errorMsg: 'lol',
-							state: 'valid'
-						};
-					} else
-						return {
-							errorMsg: 'Weak password',
-							state: 'invalid'
-						};
-				}}
-			/>
-			<SyncButton
-				on:click={() => {
-					close();
-				}}
-			/>
+			<img src="/R.jpeg" alt="lol" />
 		</div>
 	</Dialog>
 </div>
@@ -69,8 +32,8 @@
 		gap: 12px;
 	}
 	.container {
-		width: 30vw;
-		height: 30vh;
+		width: 40vw;
+		height: fit-content;
 		background-color: white;
 		padding: 20px;
 		display: flex;
