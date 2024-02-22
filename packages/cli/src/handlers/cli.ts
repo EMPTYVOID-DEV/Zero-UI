@@ -24,7 +24,7 @@ export async function cli(registry: registryType): Promise<{
   const { choices } = await inquirer.prompt({
     name: "choices",
     type: "checkbox",
-    pageSize: 10,
+    pageSize: 15,
     default: [],
     message: "Select the components variants you want add",
     choices: getVariants(registry).map((el) => ({

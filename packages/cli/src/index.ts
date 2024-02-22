@@ -21,6 +21,6 @@ async function main() {
 
 main().catch((e) => {
   logger.error(
-    `It seems unknown error has occured. Can you open issue with this message ${e.message}`,
+    `It seems unknown error has occured. Can you open issue with this message ${e.message}`
   );
 });

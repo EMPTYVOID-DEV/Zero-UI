@@ -1,8 +1,8 @@
 # Zero-UI - Flexible Svelte UI Component Library
 
-![zeroui Logo](./asset/Logo.png)
+![zeroui Logo](./asset/logo.png)
 
-**zeroui** is a versatile and easy-to-use UI component library for building reusable components in Svelte. It comes with good default styles, customizable components, and adheres to UI/UX guidelines. With no need for configuration, zeroui is designed to be effortlessly integrated into your Svelte projects.
+**zeroui** is a versatile and easy-to-use UI component library for svelte applications. It comes with good default styles, customizable components, and adheres to UI/UX guidelines. With no need for configuration, zeroui is designed to be effortlessly integrated into your Svelte projects.
 
 ## Key Features
 
@@ -16,34 +16,32 @@
    - Focus on filling the component and handling logic.
    - No direct handling of style props, allowing for cleaner customization.
 
-3. **CSS Variables Scope**
+3. **Global Theme**
 
-   - Utilizes global and local CSS variables for flexibility.
-   - Global theme defined in theme.css, providing a consistent design foundation.
-
-4. **Global Theme**
-
-   - Defines a global theme with CSS variables for colors, font sizes, font families, default border radius, and default gap.
+   - Defines a global theme with CSS variables for colors, font sizes, font families and  
+     border radius.
    - Follows the 60-30-10 rule for color themes.
 
-5. **Variants**
+4. **Variants**
 
    - Offers different variants for the same component based on functionality changes.
    - Examples include synchronous and asynchronous button variants.
 
-6. **Jsdoc**
+5. **Jsdoc**
 
-   - Comprehensive documentation using JSDoc for seamless integration, whether using TypeScript or not.
+   - Comprehensive documentation using JSDoc for seamless integration, whether using TypeScript or
+     not.
 
-7. **UI/UX**
+6. **UI/UX**
 
    - Built with UI/UX guidelines in mind.
    - Responsive design and correct usage of colors for a pleasing user experience.
 
-8. **No Configuration Needed**
+7. **No Configuration Needed**
 
    - Simple installation and usage with the zero-ui-cli.
-   - Just use the CLI to load what you need into your project directory and install the required packages.
+   - Just use the CLI to load what you need into your project directory and install the required
+     packages.
 
 ## Getting started
 
