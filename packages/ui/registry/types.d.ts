@@ -6,6 +6,18 @@ export type iconComponent = ComponentType<SvelteComponent>;
 // type for the asyncButton action prop
 export type asyncButtonAction = (ev: MouseEvent) => Promise<any>;
 
+// type for checklist component
+export type checkItem = {
+  text: string;
+  checked: boolean;
+  disabled?: boolean;
+  name?: string;
+  value?: string;
+};
+
+// type for radioGroup component
+export type radioItem = { text: string; name?: string; value?: string };
+
 // type for the change event
 export type changeEvent<T> = Event & {
   currentTarget: EventTarget & T;

@@ -1,7 +1,7 @@
 <script>
   import { createEventDispatcher } from "svelte";
 
-  /**@type {{text: string;checked: boolean;disabled?: boolean;name?: string;value?: string;}[]}*/
+  /**@type {import("../../types").checkItem[]}*/
   export let checklist = [];
 
   const dispatcher = createEventDispatcher();

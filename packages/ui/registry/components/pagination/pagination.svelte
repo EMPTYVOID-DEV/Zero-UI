@@ -5,9 +5,10 @@
 
   /** @type {string[]} */
   export let pages = [];
+  /**@type {number}*/
   export let activePage = 1;
-  let siblingsCount = 1;
 
+  let siblingsCount = 1;
   let numberOfPages = pages.length;
   $: visiblePages = adjustToActive(activePage);
 
