@@ -24,14 +24,14 @@
 {#if isOpen}
   <dialog
     transition:scale={{
-      duration: 600,
+      duration: 520,
       easing: quadInOut,
       start: 0,
       opacity: 0.2,
     }}
     bind:this={dialogRef}
     on:click|self={() => close()}
-    on:keydown={(e) => {
+    on:keyup={(e) => {
       if (e.key == "esc") close();
     }}
   >
