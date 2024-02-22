@@ -2,6 +2,7 @@ export type variant = {
   files: string[];
   packages?: string[];
   icons?: string[];
+  variants?: string[];
 };
 
 export type registryType = {

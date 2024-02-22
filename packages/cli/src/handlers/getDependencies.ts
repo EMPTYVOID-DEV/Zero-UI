@@ -12,8 +12,11 @@ export function getDependencies(registry: registryType, choices: string[]) {
     if (currentDependencies.icons)
       currentDependencies.icons.forEach((icon) => icons.add(`${icon}.svelte`));
     currentDependencies.files.forEach((file) =>
-      files.add(`${component}/${file}`),
+      files.add(`${component}/${file}`)
     );
+    // adding recursive variant dependencies
+    if (currentDependencies.variants)
+      currentDependencies.variants.forEach((variant) => choices.push(variant));
   }
   return {
     files: [...files],

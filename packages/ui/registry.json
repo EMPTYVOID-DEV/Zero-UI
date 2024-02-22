@@ -130,5 +130,31 @@
       "icons": ["validIcon", "closeIcon"],
       "entry": "toggle.svelte"
     }
+  },
+  "dialog": {
+    "default": {
+      "files": ["dialog.svelte"],
+      "entry": "dialog.svelte"
+    }
+  },
+  "search": {
+    "default": {
+      "files": [
+        "siteSearch.svelte",
+        "section.svelte",
+        "category.svelte",
+        "searchInput.svelte"
+      ],
+      "icons": [
+        "closeIcon",
+        "searchIcon",
+        "hashIcon",
+        "subMenuIcon",
+        "fileIcon",
+        "upIcon"
+      ],
+      "variants": ["dialog/default"],
+      "entry": "siteSearch.svelte"
+    }
   }
 }
