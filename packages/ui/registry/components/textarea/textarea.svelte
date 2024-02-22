@@ -1,4 +1,6 @@
 <script>
+  import { createEventDispatcher } from "svelte";
+
   /**@type {string}*/
   export let name = "";
   /**@type {string}*/
@@ -7,11 +9,20 @@
   export let disabled = false;
   /**@type {string}*/
   export let label = "";
+
+  const dispatcher = createEventDispatcher();
+
+  /**@type {import("../../types").inputChangeHandler<HTMLTextAreaElement>}*/
+  function handleChange(e) {
+    dispatcher("change", {
+      query: e.currentTarget.value,
+    });
+  }
 </script>
 
 <div class="textarea">
   <label for="texarea">{label}</label>
-  <textarea id="texarea" {disabled} {value} {name} on:input />
+  <textarea id="texarea" {disabled} {value} {name} on:input={handleChange} />
 </div>
 
 <style>

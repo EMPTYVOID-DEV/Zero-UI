@@ -1,29 +1,39 @@
 <script>
-  import CloseIcon from "../../icons/closeIcon.svelte";
-  import InfoIcon from "../../icons/infoIcon.svelte";
-  import HashIcon from "../../icons/hashIcon.svelte";
-
-  /**@type {{category:string,sections:{link:string,name:string,header?:string}[]}}*/
+  import Section from "./section.svelte";
+  /**@type {import("../../types").category}*/
   export let category;
 </script>
 
 <div class="category">
-  <span>{category.category}</span>
+  <span>{category.categoryName}</span>
   <div class="sections">
     {#each category.sections as section}
-      <a class="section" href={section.link}>
-        {#if section.header}
-          <HashIcon />
-          <div class="header">
-            <span>{section.name}</span>
-            <span>{section.header}</span>
-          </div>
-        {:else}
-          <InfoIcon />
-          <span>{section.name}</span>
-        {/if}
-        <CloseIcon />
-      </a>
+      <Section {section} />
     {/each}
   </div>
 </div>
+
+<style>
+  .category {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 8px;
+    border-bottom: 1px solid
+      color-mix(in srgb, var(--foregroundColor) 30%, transparent 70%);
+  }
+  .category:last-child {
+    border: 0;
+  }
+  .category span {
+    color: var(--primaryColor);
+    font-size: var(--small);
+    font-family: var(--bodyFont);
+    font-weight: 600;
+  }
+  .sections {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+</style>

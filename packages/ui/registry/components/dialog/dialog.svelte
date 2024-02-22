@@ -1,10 +1,11 @@
 <script>
   import { tick } from "svelte";
-  import { quadInOut } from "svelte/easing";
-  import { scale } from "svelte/transition";
 
   /**@type {HTMLDialogElement}*/
   let dialogRef;
+  /**
+   * The reason we re opening and closing the dialog by toggling a variable is to let svelte animate the slot.
+   */
   let isOpen = false;
   async function open() {
     isOpen = true;
@@ -23,16 +24,15 @@
 <!-- outside click to close the model -->
 {#if isOpen}
   <dialog
-    transition:scale={{
-      duration: 520,
-      easing: quadInOut,
-      start: 0,
-      opacity: 0.2,
-    }}
     bind:this={dialogRef}
     on:click|self={() => close()}
-    on:keyup={(e) => {
-      if (e.key == "esc") close();
+    on:close={(e) => {
+      /**
+       * you need to re-open the model after the browser closes it.
+       * then close it using the close function
+       * */
+      dialogRef.showModal();
+      close();
     }}
   >
     <slot {close} />
@@ -46,6 +46,8 @@
     outline: 0;
     box-shadow: none;
     background: none;
+    max-width: 100vw !important;
+    max-height: 100vh !important;
   }
 
   dialog::backdrop {

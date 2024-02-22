@@ -3,10 +3,19 @@
   import UpIcon from "../../icons/upIcon.svelte";
 </script>
 
+<!-- svelte-ignore a11y-click-events-have-key-events -->
 <!-- svelte-ignore a11y-no-static-element-interactions -->
-<div class="SearchInput" on:click on:keyup>
+<div class="mobileSearch" on:click>
   <SearchIcon />
-  <span class="label">Quick Search</span>
+</div>
+
+<svelte:window on:keyup />
+
+<!-- svelte-ignore a11y-no-static-element-interactions -->
+<!-- svelte-ignore a11y-click-events-have-key-events -->
+<div class="SearchInput" on:click>
+  <SearchIcon />
+  <span>Search...</span>
   <div class="command">
     <UpIcon />
     <span>K</span>
@@ -15,7 +24,7 @@
 
 <style>
   .SearchInput {
-    width: var(--width, 80%);
+    width: var(--width, fit-content);
     box-sizing: border-box;
     border-radius: var(--border-radius);
     border: 2px solid var(--foregroundColor);
@@ -40,5 +49,17 @@
     border-radius: inherit;
     gap: 4px;
     margin-left: auto;
+  }
+  .mobileSearch {
+    display: none;
+  }
+  @media screen and (width<768px) {
+    .SearchInput {
+      display: none;
+    }
+    .mobileSearch {
+      display: inline-block;
+      width: fit-content;
+    }
   }
 </style>

@@ -1,4 +1,6 @@
 <script>
+  import { createEventDispatcher } from "svelte";
+
   /**@type {string}*/
   export let name = "";
   /**@type {string}*/
@@ -9,6 +11,15 @@
   export let inputType = "text";
   /**@type {boolean}*/
   export let disabled = false;
+
+  const dispatcher = createEventDispatcher();
+
+  /**@type {import("../../types").inputChangeHandler<HTMLInputElement>}*/
+  function handleChange(e) {
+    dispatcher("change", {
+      value: e.currentTarget.value,
+    });
+  }
 </script>
 
 <div class="input-container">
@@ -20,7 +31,7 @@
     {value}
     {name}
     class="input"
-    on:input
+    on:input={handleChange}
   />
 </div>
 
