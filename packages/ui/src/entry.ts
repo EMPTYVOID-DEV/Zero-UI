@@ -14,7 +14,7 @@ export { default as Link } from "../registry/components/link/link.svelte";
 
 export { default as Accordian } from "../registry/components/accordian/accordian.svelte";
 
-export { default as Toggle } from "../registry/components/toggle/toggle.svelte";
+export { default as StateToggle } from "../registry/components/toggle/stateToggle.svelte";
 
 export { default as ContinuosProgress } from "../registry/components/progress/continuosProgress.svelte";
 
@@ -43,3 +43,5 @@ export { default as ColorPicker } from "../registry/components/colorPicker/color
 export { default as Dialog } from "../registry/components/dialog/dialog.svelte";
 
 export { default as SiteSearch } from "../registry/components/search/siteSearch.svelte";
+
+export { default as ThemeToggle } from "../registry/components/toggle/themeToggle.svelte";

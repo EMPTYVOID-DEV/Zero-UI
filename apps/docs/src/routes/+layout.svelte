@@ -1,5 +1,5 @@
 <script>
-	import 'zero-ui-registry/theme';
+	import '../app.css';
 </script>
 
 <slot />

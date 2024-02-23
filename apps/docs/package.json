@@ -30,6 +30,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"sveltedocsmaker": "^0.6.0",
 		"zero-ui-registry": "workspace:^"
 	}
 }
