@@ -125,10 +125,15 @@
     }
   },
   "toggle": {
-    "default": {
-      "files": ["toggle.svelte"],
+    "state": {
+      "files": ["stateToggle.svelte"],
       "icons": ["validIcon", "closeIcon"],
-      "entry": "toggle.svelte"
+      "entry": "stateToggle.svelte"
+    },
+    "theme": {
+      "files": ["themeToggle.svelte"],
+      "icons": ["moonIcon", "sunIcon", "computerIcon"],
+      "entry": "themeToggle.svelte"
     }
   },
   "dialog": {

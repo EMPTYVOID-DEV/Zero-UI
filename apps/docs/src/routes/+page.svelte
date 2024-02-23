@@ -1,10 +1,10 @@
 <script>
-	import { ThemeToggle } from 'zero-ui-registry';
+	import { SiteSearch, ThemeToggle } from 'zero-ui-registry';
 </script>
 
 <div class="main">
 	<ThemeToggle on:change={(e) => console.log(e.detail)} />
-	<h1>ho</h1>
+	<SiteSearch />
 </div>
 
 <style>

@@ -3,8 +3,8 @@
   import SunIcon from "../../icons/sunIcon.svelte";
   import ComputerIcon from "../../icons/computerIcon.svelte";
   import { createEventDispatcher } from "svelte";
-  import { fade, fly } from "svelte/transition";
-  import { quadIn } from "svelte/easing";
+  import { slide } from "svelte/transition";
+  import { quadInOut } from "svelte/easing";
 
   /**@type {"dark"|"light"|"system"}*/
   export let active = "dark";
@@ -21,7 +21,7 @@
     <!-- svelte-ignore a11y-no-static-element-interactions -->
     <div
       class="options"
-      transition:fly={{ duration: 800, easing: quadIn }}
+      transition:slide={{ duration: 400, easing: quadInOut }}
       on:click={() => {
         show = false;
         dispatcher("change", {
@@ -84,7 +84,7 @@
   .options {
     position: absolute;
     top: 30px;
-    width: 7rem;
+    width: fit-content;
     display: flex;
     flex-direction: column;
     gap: 8px;
@@ -103,27 +103,28 @@
     border: none;
     outline: none;
     gap: 8px;
-    padding: 4px;
+    padding-block: 4px;
+    padding-right: 24px;
     border-radius: inherit;
-    --icon: var(--foregroundColor);
+    --icon: var(--mutedColor);
   }
   .option span {
-    color: var(--foregroundColor);
+    color: var(--mutedColor);
     font-size: var(--small);
     font-family: var(--bodyFont);
   }
   .option:hover {
     background-color: color-mix(
       in srgb,
-      var(--primaryColor) 50%,
-      transparent 50%
+      var(--primaryColor) 60%,
+      transparent 40%
     );
   }
   .active {
-    --icon: var(--primaryColor);
+    --icon: var(--foregroundColor);
   }
   .active span {
     font-weight: 600;
-    color: var(--primaryColor);
+    color: var(--foregroundColor);
   }
 </style>
