@@ -1,10 +1,14 @@
+// export const prerender = true;
+
 /** @type {import('./$types').PageLoad} */
+
 // @ts-ignore
-export const load = async ({ params }) => {
+export const load = async ({ params, data }) => {
 	const path = `../../../../lib/components/zeroUIWrappers/${params.name}${capitalize(params.variant)}.svelte`;
 	const currentComponent = (await import(path)).default;
 	return {
-		currentComponent
+		currentComponent,
+		md: data.md
 	};
 };
 

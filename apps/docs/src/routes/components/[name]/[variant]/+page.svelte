@@ -1,6 +1,7 @@
 <script>
 	import { page } from '$app/stores';
 	import HomeNav from '$lib/components/core/homeNav.svelte';
+	import CoreMd from '$lib/components/md/coreMd.svelte';
 </script>
 
 <div class="playGround">
@@ -9,6 +10,7 @@
 		<span class="component">Component:{$page.params.name}</span>
 		<span class="variant">Variant:{$page.params.name}</span>
 	</div>
+	<CoreMd source={$page.data.md} />
 	<svelte:component this={$page.data.currentComponent} />
 </div>
 
