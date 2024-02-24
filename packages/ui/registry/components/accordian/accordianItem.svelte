@@ -36,7 +36,7 @@
     cursor: pointer;
     border-radius: var(--border-radius);
     border: 2px solid
-      color-mix(in srgb, var(--primaryColor) 40%, transparent 60%);
+      color-mix(in srgb, var(--primaryColor) 60%, transparent 40%);
   }
   .title {
     display: grid;

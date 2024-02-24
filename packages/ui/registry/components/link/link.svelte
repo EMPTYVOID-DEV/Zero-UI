@@ -18,12 +18,10 @@
 
 <style>
   .primary {
-    --icon: var(--primaryColor);
-    --fg: var(--primaryColor);
+    --main-color: var(--primaryColor);
   }
   .secondary {
-    --icon: var(--secondaryColor);
-    --fg: var(--secondaryColor);
+    --main-color: var(--secondaryColor);
   }
   .link {
     display: inline-flex;
@@ -31,15 +29,22 @@
     gap: 4px;
     cursor: pointer;
     text-decoration: none;
+    --cl: var(--foregroundColor);
+    --icon: var(--foregroundColor);
   }
   .link span {
-    color: var(--fg);
+    color: var(--cl);
+    text-transform: capitalize;
     font-family: var(--bodyFont);
     font-size: var(--body);
     font-weight: 600;
   }
-  .link :global(svg) {
-    width: 18px;
-    height: 18px;
+  .link:hover {
+    --cl: var(--main-color);
+    --icon: var(--main-color);
+  }
+
+  .link span:empty {
+    display: none;
   }
 </style>

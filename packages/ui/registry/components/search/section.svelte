@@ -39,7 +39,7 @@
     align-items: center;
     gap: 4px;
     padding: 8px;
-    border-radius: var(--border-radius);
+    border-radius: 4px;
     text-decoration: none;
   }
   .link :global(svg) {
@@ -55,8 +55,8 @@
   .link:hover {
     background-color: color-mix(
       in srgb,
-      var(--foregroundColor) 20%,
-      transparent 80%
+      var(--foregroundColor) 30%,
+      transparent 70%
     );
   }
   .subSections {

@@ -47,9 +47,10 @@
     height: var(--height, 400px);
     padding-left: 8px;
     overflow: auto;
+    background-color: transparent;
     border: 2px solid var(--foregroundColor);
     color: var(--foregroundColor);
-    font-family: var(--headerFont);
+    font-family: var(--bodyFont);
     font-size: var(--body);
     border-radius: var(--border-radius);
   }

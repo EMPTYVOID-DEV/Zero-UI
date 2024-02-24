@@ -1,9 +1,9 @@
 :root {
-  --primaryColor: #b57edc;
-  --secondaryColor: #7edc8f;
+  --primaryColor: #d4322c;
+  --secondaryColor: #3edd5b;
   --backgroundColor: #ffffff;
   --foregroundColor: #000000;
-  --dangerColor: #b00020;
+  --dangerColor: #ff0000;
   --successColor: #22bb33;
   --mutedColor: #514657;
   --h1: clamp(2rem, calc(2rem + ((1vw - 0.48rem) * 0.9722)), 2.5rem);

@@ -19,6 +19,9 @@
     },
     "./theme": {
       "import": "./registry/theme.css"
+    },
+    "./types": {
+      "import": "./registry/types.d.ts"
     }
   },
   "keywords": [],

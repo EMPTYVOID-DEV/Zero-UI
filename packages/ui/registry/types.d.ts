@@ -1,4 +1,4 @@
-import { ComponentType, SvelteComponent } from "svelte";
+import { ComponentType, EventDispatcher, SvelteComponent } from "svelte";
 
 // general type for a an icon component
 export type iconComponent = ComponentType<SvelteComponent>;

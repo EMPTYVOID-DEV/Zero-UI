@@ -66,12 +66,9 @@
 <style>
   .themeToggle {
     position: relative;
-    width: fit-content;
+    width: min-content;
   }
-  .themeToggle :global(svg) {
-    width: 20px;
-    height: 20px;
-  }
+
   .show {
     outline: none;
     border: none;
@@ -80,11 +77,16 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    --icon: var(--foregroundColor);
   }
+  .show:hover {
+    --icon: var(--primaryColor);
+  }
+
   .options {
     position: absolute;
-    top: 30px;
-    width: fit-content;
+    top: var(--top, 30px);
+    left: var(--left, 0);
     display: flex;
     flex-direction: column;
     gap: 8px;
@@ -94,8 +96,12 @@
     border-radius: var(--border-radius);
     z-index: 99;
   }
+  .options :global(svg) {
+    width: 20px;
+    height: 20px;
+  }
   .option {
-    width: 100%;
+    width: 6rem;
     display: flex;
     align-items: center;
     background-color: transparent;
@@ -104,7 +110,7 @@
     outline: none;
     gap: 8px;
     padding-block: 4px;
-    padding-right: 24px;
+    padding-left: 4px;
     border-radius: inherit;
     --icon: var(--mutedColor);
   }

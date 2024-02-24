@@ -32,7 +32,7 @@
     display: flex;
     align-items: center;
     padding-inline: 8px;
-    padding-block: 8px;
+    padding-block: 4px;
     gap: 8px;
     cursor: pointer;
   }

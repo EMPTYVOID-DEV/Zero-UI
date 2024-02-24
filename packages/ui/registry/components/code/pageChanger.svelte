@@ -39,8 +39,8 @@
   }
   .pageSlider .active {
     color: var(--backgroundColor);
-    border-top-left-radius: var(--border-radius);
-    border-top-right-radius: var(--border-radius);
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
     background-color: var(--foregroundColor);
     font-weight: 600;
   }

@@ -80,6 +80,7 @@
     border: none;
     outline: none;
     color: var(--foregroundColor);
+    background-color: transparent;
     font-size: var(--body);
     font-family: var(--bodyFont);
   }

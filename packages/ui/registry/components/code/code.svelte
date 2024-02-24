@@ -50,6 +50,7 @@
   .code {
     overflow: hidden;
     position: relative;
+    border-radius: var(--border-radius);
   }
   /* These styles are for svelte highlight code block  */
   .code :global(> :not(.control)) {
@@ -71,8 +72,8 @@
     z-index: 100;
   }
 
-  .radius {
-    border-radius: var(--border-radius);
+  .code:not(.radius) {
+    border-top-left-radius: 0;
   }
 
   .code :global(::-webkit-scrollbar) {

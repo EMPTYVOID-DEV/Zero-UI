@@ -49,7 +49,7 @@
     border: 2px solid var(--primaryColor);
     border-radius: 24px;
     overflow: hidden;
-    height: 0.4rem;
+    height: var(--height, 0.5rem);
   }
 
   .progressMeter {
@@ -65,12 +65,8 @@
   }
 
   .progressCounter span {
-    font-size: var(--small);
+    font-size: var(--h4);
     font-family: var(--bodyFont);
     color: var(--primaryColor);
-  }
-  .progressCounter :global(svg) {
-    width: 20px;
-    height: 20px;
   }
 </style>

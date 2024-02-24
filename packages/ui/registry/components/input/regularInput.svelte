@@ -62,6 +62,7 @@
     font-size: var(--body);
     font-family: var(--bodyFont);
     color: var(--foregroundColor);
+    background-color: transparent;
     border-radius: var(--border-radius);
     border: 2px solid var(--foregroundColor);
     outline: none;
