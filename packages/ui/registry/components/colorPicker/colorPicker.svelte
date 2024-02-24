@@ -4,7 +4,7 @@
   /**@type {string}*/
   export let name = "";
   /**@type {string}*/
-  export let hex = "#8a2be2";
+  export let hex = "#d4322c";
   /**@type {boolean}*/
   export let isAlpha = false;
 </script>

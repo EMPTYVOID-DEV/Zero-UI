@@ -53,7 +53,7 @@
 		background: radial-gradient(circle at 50% 50%, var(--primaryColor), var(--backgroundColor) 3px);
 		background-size: 32px 32px;
 		background-repeat: repeat;
-		padding-bottom: 80px;
+		padding-bottom: 3rem;
 	}
 	.info {
 		width: 100%;

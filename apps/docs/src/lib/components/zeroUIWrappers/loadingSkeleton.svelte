@@ -4,7 +4,7 @@
 
 <div class="skeletonLoadingTest">
 	<SkeletonLoading --border-radius="50%" />
-	<SkeletonLoading --height="2rem" --width="60%" --border-radius="8px" />
+	<SkeletonLoading --height="2rem" --width="69%" --border-radius="8px" />
 	<SkeletonLoading --height="2rem" --width="90%" --border-radius="8px" />
 	<SkeletonLoading --height="2rem" --width="90%" --border-radius="8px" />
 </div>

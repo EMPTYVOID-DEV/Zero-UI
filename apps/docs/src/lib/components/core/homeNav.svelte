@@ -4,6 +4,7 @@
 	import { Link, ThemeToggle } from 'zero-ui-registry';
 	import { onMount } from 'svelte';
 	import SearchDefault from '$lib/components/zeroUIWrappers/searchDefault.svelte';
+	import { page } from '$app/stores';
 	/**@type {"dark"|"light"}*/
 	let theme = 'light';
 	onMount(() => {
@@ -15,11 +16,17 @@
 	<a class="logo" href="/">
 		<Logo />
 	</a>
+	<div class="links">
+		<Link href="/docs/core/introduction" text="core" isBlank={false} />
+		<Link href="/components/accordian/default" text="components" isBlank={false} />
+	</div>
 	<div class="utility">
 		<Link href="https://github.com/EMPTYVOID-DEV/Zero-UI" icon={Github} text="" />
 		<ThemeToggle on:change active={theme} --left="-50px" --top="40px" />
 	</div>
-	<SearchDefault />
+	{#key $page.url}
+		<SearchDefault />
+	{/key}
 </nav>
 
 <style>
@@ -38,14 +45,15 @@
 		margin-right: auto;
 	}
 
+	.links,
 	.utility {
 		display: flex;
 		align-items: center;
 		gap: 8px;
 	}
 	@media screen and (width <768px) {
-		.homeNav {
-			padding-inline: 4px;
+		.links {
+			display: none;
 		}
 	}
 </style>

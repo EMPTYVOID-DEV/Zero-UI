@@ -16,4 +16,4 @@
 	}
 </script>
 
-<CheckInput {checkFunction} inputType="password" />
+<CheckInput {checkFunction} inputType="password" label="Enter random password" />

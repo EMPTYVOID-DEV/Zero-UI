@@ -3,12 +3,11 @@
 /** @type {import('./$types').PageLoad} */
 
 // @ts-ignore
-export const load = async ({ params, data }) => {
+export const load = async ({ params }) => {
 	const path = `../../../../lib/components/zeroUIWrappers/${params.name}${capitalize(params.variant)}.svelte`;
 	const currentComponent = (await import(path)).default;
 	return {
-		currentComponent,
-		md: data.md
+		currentComponent
 	};
 };
 

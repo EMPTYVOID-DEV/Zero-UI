@@ -27,6 +27,7 @@
 
 <style>
   .textarea {
+    width: var(--width, 100%);
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
@@ -43,7 +44,7 @@
   .textarea textarea {
     outline: none;
     resize: none;
-    width: var(--width, 100%);
+    width: 100%;
     height: var(--height, 400px);
     padding-left: 0.5rem;
     overflow: auto;

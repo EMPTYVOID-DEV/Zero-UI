@@ -13,6 +13,7 @@
 		cursor: pointer;
 		color: var(--primaryColor);
 		opacity: 0.7;
+		text-decoration: none;
 	}
 	.anchor:hover {
 		opacity: 1;
