@@ -71,7 +71,7 @@
     width: 100%;
     display: flex;
     align-items: center;
-    padding: 8px;
+    padding: 0.5rem;
     border-bottom: 1px solid
       color-mix(in srgb, var(--foregroundColor) 30%, transparent 70%);
   }
@@ -109,7 +109,7 @@
   }
 
   .searchModel :global(::-webkit-scrollbar-thumb) {
-    border-radius: 4px;
+    border-radius: 0.25rem;
     background: color-mix(in srgb, var(--primaryColor) 60%, transparent 40%);
   }
 

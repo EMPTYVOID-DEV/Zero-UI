@@ -29,7 +29,7 @@
   .textarea {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 0.5rem;
   }
   .textarea label {
     font-family: var(--headerFont);
@@ -45,7 +45,7 @@
     resize: none;
     width: var(--width, 100%);
     height: var(--height, 400px);
-    padding-left: 8px;
+    padding-left: 0.5rem;
     overflow: auto;
     background-color: transparent;
     border: 2px solid var(--foregroundColor);
@@ -66,7 +66,7 @@
   }
 
   .textarea :global(::-webkit-scrollbar-thumb) {
-    border-radius: 4px;
+    border-radius: 0.25rem;
     background: color-mix(in srgb, var(--primaryColor) 60%, transparent 40%);
   }
 </style>

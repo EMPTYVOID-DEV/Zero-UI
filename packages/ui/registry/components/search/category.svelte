@@ -17,8 +17,8 @@
   .category {
     display: flex;
     flex-direction: column;
-    gap: 8px;
-    padding: 8px;
+    gap: 0.5rem;
+    padding: 0.5rem;
     border-bottom: 1px solid
       color-mix(in srgb, var(--foregroundColor) 30%, transparent 70%);
   }
@@ -34,6 +34,6 @@
   .sections {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 0.5rem;
   }
 </style>

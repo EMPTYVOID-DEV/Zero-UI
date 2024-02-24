@@ -22,7 +22,7 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    gap: 8px;
+    gap: 0.5rem;
   }
   .currentStep {
     font-size: var(--h4);
@@ -37,7 +37,7 @@
   .steps {
     width: 100%;
     display: flex;
-    gap: 4px;
+    gap: 0.25rem;
   }
   .step {
     flex-grow: 1;
@@ -47,7 +47,7 @@
       var(--primaryColor) 40%,
       transparent 60%
     );
-    border-radius: 8px;
+    border-radius: 0.5rem;
   }
   .passed {
     background-color: var(--primaryColor);

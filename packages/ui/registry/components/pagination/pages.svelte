@@ -47,11 +47,11 @@
   .pages {
     display: flex;
     align-items: center;
-    gap: 4px;
+    gap: 0.25rem;
   }
   .page {
-    min-width: 2.2rem;
-    min-height: 2.2rem;
+    min-width: 2.25rem;
+    min-height: 2.25rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -60,7 +60,7 @@
     background-color: transparent;
     font-size: var(--small);
     font-family: var(--bodyFont);
-    border-radius: 4px;
+    border-radius: 0.25rem;
   }
   .active {
     background-color: var(--primaryColor);

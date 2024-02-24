@@ -31,9 +31,9 @@
     background-color: transparent;
     display: flex;
     align-items: center;
-    padding-inline: 8px;
-    padding-block: 4px;
-    gap: 8px;
+    padding-inline: 0.5rem;
+    padding-block: 0.25rem;
+    gap: 0.5rem;
     cursor: pointer;
   }
   .SearchInput span {
@@ -44,10 +44,10 @@
   .command {
     display: flex;
     align-items: center;
-    padding: 4px;
+    padding: 0.25rem;
     border: 2px solid var(--foregroundColor);
     border-radius: inherit;
-    gap: 4px;
+    gap: 0.25rem;
     margin-left: auto;
   }
   .mobileSearch {

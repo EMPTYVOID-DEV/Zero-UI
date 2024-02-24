@@ -31,8 +31,8 @@
   .accordianItem {
     display: flex;
     flex-direction: column;
-    padding-block: 8px;
-    padding-inline: 16px;
+    padding-block: 0.5rem;
+    padding-inline: 1rem;
     cursor: pointer;
     border-radius: var(--border-radius);
     border: 2px solid
@@ -43,7 +43,7 @@
     grid-template-columns: auto auto;
     align-items: center;
     justify-content: space-between;
-    gap: 4px;
+    gap: 0.25rem;
   }
 
   .title span {
@@ -51,7 +51,7 @@
   }
 
   .description {
-    margin-top: 8px;
+    margin-top: 0.5rem;
   }
 
   span {

@@ -75,7 +75,7 @@
   .pagination {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 0.5rem;
   }
   .control {
     display: flex;
@@ -97,8 +97,8 @@
     --icon: var(--primaryColor);
   }
   .control :global(svg) {
-    width: 20px;
-    height: 20px;
+    width: 1.25rem;
+    height: 1.25rem;
   }
   .control:disabled {
     color: var(--mutedColor);

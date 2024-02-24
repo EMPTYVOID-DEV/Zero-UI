@@ -2,8 +2,8 @@
 
 <style>
   .skeleton {
-    width: var(--width, 50px);
-    height: var(--height, 50px);
+    width: var(--width, 3rem);
+    height: var(--height, 3rem);
     border-radius: var(--border-radius);
 
     background-color: color-mix(

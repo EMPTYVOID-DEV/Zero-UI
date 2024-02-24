@@ -33,14 +33,14 @@
     font-family: var(--bodyFont);
     font-size: var(--body);
     color: var(--foregroundColor);
-    padding-inline: 16px;
-    padding-block: 8px;
+    padding-inline: 1rem;
+    padding-block: 0.5rem;
     cursor: pointer;
   }
   .pageSlider .active {
     color: var(--backgroundColor);
-    border-top-left-radius: 4px;
-    border-top-right-radius: 4px;
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
     background-color: var(--foregroundColor);
     font-weight: 600;
   }

@@ -64,24 +64,24 @@
   .files {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 0.75rem;
   }
   .file {
     width: 95%;
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 0.5rem;
   }
 
   .type {
     font-weight: 400;
-    border-radius: 4px;
+    border-radius: 0.25rem;
     color: var(--primaryColor);
   }
   .info {
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    gap: 0.25rem;
   }
   .info span:first-child {
     word-break: break-word;
@@ -98,7 +98,7 @@
     cursor: pointer;
     outline: none;
     border: none;
-    border-radius: 4px;
+    border-radius: 0.25rem;
     margin-left: auto;
     background-color: var(--foregroundColor);
     --icon: var(--backgroundColor);

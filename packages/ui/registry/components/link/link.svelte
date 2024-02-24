@@ -26,7 +26,7 @@
   .link {
     display: inline-flex;
     align-items: center;
-    gap: 4px;
+    gap: 0.25rem;
     cursor: pointer;
     text-decoration: none;
     --cl: var(--foregroundColor);

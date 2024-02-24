@@ -89,16 +89,16 @@
     left: var(--left, 0);
     display: flex;
     flex-direction: column;
-    gap: 8px;
-    padding: 4px;
+    gap: 0.5rem;
+    padding: 0.25rem;
     background-color: var(--backgroundColor);
     border: 2px solid var(--primaryColor);
     border-radius: var(--border-radius);
     z-index: 99;
   }
   .options :global(svg) {
-    width: 20px;
-    height: 20px;
+    width: 1.25rem;
+    height: 1.25rem;
   }
   .option {
     width: 6rem;
@@ -108,9 +108,9 @@
     cursor: pointer;
     border: none;
     outline: none;
-    gap: 8px;
-    padding-block: 4px;
-    padding-left: 4px;
+    gap: 0.5rem;
+    padding-block: 0.25rem;
+    padding-left: 0.25rem;
     border-radius: inherit;
     --icon: var(--mutedColor);
   }

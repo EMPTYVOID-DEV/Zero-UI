@@ -32,19 +32,19 @@
   .subSections {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 0.5rem;
   }
   .link {
     display: flex;
     align-items: center;
-    gap: 4px;
-    padding: 8px;
-    border-radius: 4px;
+    gap: 0.25rem;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
     text-decoration: none;
   }
   .link :global(svg) {
-    width: 20px;
-    height: 20px;
+    width: 1.25rem;
+    height: 1.25rem;
     --icon: var(--foregroundColor);
   }
   .link span {
@@ -60,8 +60,8 @@
     );
   }
   .subSections {
-    margin-left: 12px;
-    padding-left: 8px;
+    margin-left: 0, 75rem;
+    padding-left: 0.5rem;
     border-left: 2px solid var(--foregroundColor);
   }
 </style>

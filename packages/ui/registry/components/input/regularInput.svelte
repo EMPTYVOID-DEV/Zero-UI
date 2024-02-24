@@ -41,7 +41,7 @@
     display: flex;
     flex-direction: column;
     align-items: stretch;
-    gap: 8px;
+    gap: 0.5rem;
   }
 
   .input-container label {
@@ -57,8 +57,8 @@
   .input {
     box-sizing: border-box;
     width: 100%;
-    padding-left: 8px;
-    padding-block: 8px;
+    padding-left: 0.5rem;
+    padding-block: 0.5rem;
     font-size: var(--body);
     font-family: var(--bodyFont);
     color: var(--foregroundColor);

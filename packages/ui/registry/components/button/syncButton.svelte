@@ -34,10 +34,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 4px;
+    gap: 0.25rem;
     width: fit-content;
-    padding-inline: var(--padding-inline, 16px);
-    padding-block: var(--padding-block, 8px);
+    padding-inline: var(--padding-inline, 1rem);
+    padding-block: var(--padding-block, 0.5rem);
     cursor: pointer;
     outline: none;
     border: none;
@@ -52,7 +52,7 @@
     font-weight: 600;
   }
   button :global(svg) {
-    width: 20px;
-    height: 20px;
+    width: 1.25rem;
+    height: 1.25rem;
   }
 </style>

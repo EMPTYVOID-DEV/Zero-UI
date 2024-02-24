@@ -39,7 +39,7 @@
   .progressBar {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 0.5rem;
     width: var(--width, 100%);
   }
 
@@ -47,7 +47,7 @@
     display: flex;
     flex-grow: 1;
     border: 2px solid var(--primaryColor);
-    border-radius: 24px;
+    border-radius: 1.5rem;
     overflow: hidden;
     height: var(--height, 0.5rem);
   }
@@ -61,7 +61,7 @@
     width: fit-content;
     display: flex;
     align-items: center;
-    gap: 4px;
+    gap: 0.25rem;
   }
 
   .progressCounter span {

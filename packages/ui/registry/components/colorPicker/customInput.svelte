@@ -31,7 +31,7 @@
   .trigger {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 0.5rem;
     cursor: pointer;
   }
   .trigger .bg {
@@ -45,8 +45,8 @@
     align-items: center;
     border-radius: var(--border-radius);
     background-color: var(--foregroundColor);
-    padding-block: 8px;
-    padding-inline: 16px;
+    padding-block: 0.5rem;
+    padding-inline: 1rem;
     font-size: var(--body);
     font-family: var(--bodyFont);
     color: var(--backgroundColor);

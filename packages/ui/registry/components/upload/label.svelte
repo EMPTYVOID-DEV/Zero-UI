@@ -49,7 +49,7 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 1rem;
   }
   label {
     width: 100%;
@@ -57,12 +57,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 8px;
+    gap: 0.5rem;
     background-color: transparent;
     border: 2px dashed var(--foregroundColor);
     border-radius: var(--border-radius);
-    padding-inline: 4px;
-    padding-block: 24px;
+    padding-inline: 0.25rem;
+    padding-block: 1.5rem;
     cursor: pointer;
   }
 

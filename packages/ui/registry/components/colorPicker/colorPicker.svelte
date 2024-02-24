@@ -16,7 +16,7 @@
   {hex}
   components={{ input: CustomInput }}
   --picker-z-index="10"
-  --picker-indicator-size="12px"
+  --picker-indicator-size="0.75rem"
   --focus-color="var(--primaryColor)"
   --cp-bg-color="var(--foregroundColor)"
   --cp-border-color="var(--backgroundColor)"

@@ -64,10 +64,10 @@
     align-items: center;
     position: absolute;
     border: 1px solid var(--primaryColor);
-    border-radius: 4px;
+    border-radius: 0.25rem;
     padding: 2px;
-    top: clamp(10px, 2%, 20px);
-    right: clamp(15px, 3%, 25px);
+    top: clamp(0.75rem, 2%, 1.25rem);
+    right: clamp(1rem, 3%, 1.5rem);
     cursor: pointer;
     z-index: 100;
   }
@@ -85,7 +85,7 @@
   }
 
   .code :global(::-webkit-scrollbar-thumb) {
-    border-radius: 4px;
+    border-radius: 0.25rem;
     background: color-mix(in srgb, var(--primaryColor) 60%, transparent 40%);
   }
 </style>

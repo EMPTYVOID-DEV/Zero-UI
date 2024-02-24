@@ -16,6 +16,6 @@
     width: var(--width, 100%);
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 0.75rem;
   }
 </style>

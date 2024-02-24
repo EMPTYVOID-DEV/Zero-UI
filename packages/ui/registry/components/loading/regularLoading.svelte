@@ -20,11 +20,11 @@
   .loading {
     display: flex;
     align-items: center;
-    gap: 4px;
+    gap: 0.25rem;
   }
   .loading :global(svg) {
-    width: 28px;
-    height: 28px;
+    width: 2.75rem;
+    height: 2.75rem;
   }
   .loading span {
     font-size: var(--h4);
