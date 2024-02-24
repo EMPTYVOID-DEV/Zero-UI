@@ -6,27 +6,24 @@
   export let activePage;
   /**@type {number}*/
   export let end;
-  /** @type {string[]} */
-  export let pages;
-  let numberOfPages = pages.length;
+  /** @type {number} */
+  export let numberOfPages;
 </script>
 
 <div class="pages">
   {#if start !== 1}
-    <a href={pages[0]} class="page" on:click={() => (activePage = 1)}>1</a>
+    <button class="page" on:click={() => (activePage = 1)}>1</button>
     <span class="delimiter">
       <DotsIcon />
     </span>
   {/if}
 
-  {#each pages as page, index}
+  {#each Array(numberOfPages) as page, index}
     {#if index + 1 <= end && index + 1 >= start}
-      <a
-        data-sveltekit-preload-data
-        href={page}
+      <button
         class="page"
         class:active={index + 1 === activePage}
-        on:click={() => (activePage = index + 1)}>{index + 1}</a
+        on:click={() => (activePage = index + 1)}>{index + 1}</button
       >
     {/if}
   {/each}
@@ -35,10 +32,8 @@
     <span class="delimiter">
       <DotsIcon />
     </span>
-    <a
-      href={pages.at(-1)}
-      class="page"
-      on:click={() => (activePage = numberOfPages)}>{numberOfPages}</a
+    <button class="page" on:click={() => (activePage = numberOfPages)}
+      >{numberOfPages}</button
     >
   {/if}
 </div>
@@ -55,7 +50,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    text-decoration: none;
+    border: none;
+    outline: none;
+    background-color: transparent;
     color: var(--foregroundColor);
     background-color: transparent;
     font-size: var(--small);

@@ -1,11 +1,15 @@
 <script>
   import SearchIcon from "../../icons/searchIcon.svelte";
   import UpIcon from "../../icons/upIcon.svelte";
+  /**@type {string}*/
+  export let placeholder;
+  /**@type {boolean}*/
+  export let showFullMobile;
 </script>
 
 <!-- svelte-ignore a11y-click-events-have-key-events -->
 <!-- svelte-ignore a11y-no-static-element-interactions -->
-<div class="mobileSearch" on:click>
+<div class="mobileSearch" class:show={!showFullMobile} on:click>
   <SearchIcon />
 </div>
 
@@ -13,9 +17,9 @@
 
 <!-- svelte-ignore a11y-no-static-element-interactions -->
 <!-- svelte-ignore a11y-click-events-have-key-events -->
-<div class="SearchInput" on:click>
+<div class="SearchInput" class:notShow={!showFullMobile} on:click>
   <SearchIcon />
-  <span>Search...</span>
+  <span>{placeholder}</span>
   <div class="command">
     <UpIcon />
     <span>K</span>
@@ -54,10 +58,10 @@
     display: none;
   }
   @media screen and (width<768px) {
-    .SearchInput {
+    .SearchInput.notShow {
       display: none;
     }
-    .mobileSearch {
+    .mobileSearch.show {
       display: inline-block;
       width: fit-content;
     }

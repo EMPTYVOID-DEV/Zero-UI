@@ -1,14 +1,14 @@
 import { categories } from './const';
-
+import { themeStore } from '$lib/utils/store';
 /**
  *@function changeTheme will persist the the theme to local storage and set css variables
  *@param {"dark"|"light"|"system"} theme
  */
 export function changeTheme(theme) {
-	console.log(theme);
 	const actualTheme = theme == 'system' ? detectSystemTheme() : theme;
-	window.localStorage.setItem('theme', actualTheme);
 	const body = document.querySelector('body');
+	themeStore.set(actualTheme);
+	window.localStorage.setItem('theme', theme);
 	if (actualTheme == 'dark') {
 		body?.classList.remove('light');
 		body?.classList.add('dark');

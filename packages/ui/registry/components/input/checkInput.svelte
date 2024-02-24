@@ -54,7 +54,7 @@
   }
 
   .input-container {
-    width: var(--width, 80%);
+    width: var(--width, 100%);
     display: flex;
     flex-direction: column;
     align-items: stretch;

@@ -2,34 +2,34 @@
   import { createEventDispatcher } from "svelte";
 
   /**@type {import("../../types").checkItem[]}*/
-  export let checklist = [];
+  export let checkList = [];
 
   const dispatcher = createEventDispatcher();
   /**
-   * @function toggleChecklistItem
-   * This function handles the toggling of the checked property for a specific checklist item upon a click event.
+   * @function toggleCheckListItem
+   * This function handles the toggling of the checked property for a specific checkList item upon a click event.
    * It triggers a custom "change" event with a detail object containing information about the clicked item's index and its updated checked status.
-   * @param {number} itemIndex - The index of the checklist item that changed its status.
+   * @param {number} itemIndex - The index of the checkList item that changed its status.
    */
-  function toggleChecklistItem(itemIndex) {
-    if (checklist[itemIndex].disabled) return;
-    const oldStatus = checklist[itemIndex].checked;
-    checklist[itemIndex].checked = !oldStatus;
+  function toggleCheckListItem(itemIndex) {
+    if (checkList[itemIndex].disabled) return;
+    const oldStatus = checkList[itemIndex].checked;
+    checkList[itemIndex].checked = !oldStatus;
     dispatcher("change", {
-      checked: checklist[itemIndex].checked,
+      checked: checkList[itemIndex].checked,
       itemIndex,
     });
   }
 </script>
 
 <div class="checkList">
-  {#each checklist as item, index}
+  {#each checkList as item, index}
     <!-- svelte-ignore a11y-click-events-have-key-events -->
     <!-- svelte-ignore a11y-no-static-element-interactions -->
     <div
       class="checkListItem"
       on:click={() => {
-        toggleChecklistItem(index);
+        toggleCheckListItem(index);
       }}
     >
       <input

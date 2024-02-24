@@ -29,7 +29,7 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    width: var(--width, 3rem);
+    width: 3.5rem;
     aspect-ratio: 2;
     border-radius: 1rem;
     background-color: var(--mutedColor);

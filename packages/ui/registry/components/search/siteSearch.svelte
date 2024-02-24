@@ -8,11 +8,14 @@
   import SearchInput from "./searchInput.svelte";
   import { createEventDispatcher } from "svelte";
 
+  /**@type {boolean} This will decide whether to show the full search input or just the search icon on mobile*/
+  export let showFullMobile = false;
   /**@type {import("../../types").category[]}*/
   export let categories = [];
+  /**@type {string}*/
+  export let placeholder = "Search ...";
 
   const dispatcher = createEventDispatcher();
-
   /**@type {import("../../types").inputChangeHandler<HTMLInputElement>}*/
   function handleChange(e) {
     dispatcher("change", {
@@ -24,6 +27,8 @@
 <Dialog let:close>
   <svelte:fragment slot="trigger" let:open>
     <SearchInput
+      {showFullMobile}
+      {placeholder}
       on:click={() => open()}
       on:keyup={(e) => {
         if (e.ctrlKey && e.shiftKey && e.key == "K") open();
@@ -41,7 +46,7 @@
   >
     <nav class="searchBar">
       <SearchIcon />
-      <input type="text" placeholder="Search..." on:input={handleChange} />
+      <input type="text" {placeholder} on:input={handleChange} />
       <!-- svelte-ignore a11y-click-events-have-key-events -->
       <!-- svelte-ignore a11y-no-static-element-interactions -->
       <span class="clear" on:click={() => close()}>

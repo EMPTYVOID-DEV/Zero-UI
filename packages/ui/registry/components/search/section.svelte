@@ -15,7 +15,7 @@
     <div class="subSections">
       {#each section.subSections as subSection}
         <a href={subSection.link} class="link">
-          {#if subSection.isHeader}
+          {#if subSection.isHeader || false}
             <HashIcon />
           {:else}
             <SubMenuIcon />
@@ -51,6 +51,7 @@
     color: var(--foregroundColor);
     font-size: var(--small);
     font-family: var(--bodyFont);
+    text-transform: capitalize;
   }
   .link:hover {
     background-color: color-mix(
@@ -60,7 +61,7 @@
     );
   }
   .subSections {
-    margin-left: 0, 75rem;
+    margin-left: 0.75rem;
     padding-left: 0.5rem;
     border-left: 2px solid var(--foregroundColor);
   }

@@ -57,7 +57,7 @@ export type section = {
   subSections?: {
     subSectionName: string;
     link: string;
-    isHeader: boolean;
+    isHeader?: boolean;
   }[];
 };
 

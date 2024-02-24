@@ -5,6 +5,13 @@
 	/**@type {Map<number,{ name: string; message: string }>}*/
 	const errorMap = new Map([
 		[
+			400,
+			{
+				name: 'BAD REQUEST',
+				message: 'It seems there is something wrong on your side'
+			}
+		],
+		[
 			404,
 			{
 				name: 'PAGE NOT FOUND',
@@ -20,11 +27,10 @@
 			}
 		],
 		[
-			401,
+			429,
 			{
-				name: 'UNAUTHORIZED ACCESS',
-				message:
-					'You trying to access a page that need authentication,you create new account or login to existing one.'
+				name: 'REQUEST LIMIT',
+				message: 'It seems you have reached the request limit for github raw api.'
 			}
 		],
 		[

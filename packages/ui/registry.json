@@ -17,10 +17,10 @@
       "entry": "asyncButton.svelte"
     }
   },
-  "checklist": {
+  "checkList": {
     "default": {
-      "files": ["checklist.svelte"],
-      "entry": "checklist.svelte"
+      "files": ["checkList.svelte"],
+      "entry": "checkList.svelte"
     }
   },
   "code": {

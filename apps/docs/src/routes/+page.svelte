@@ -1,13 +1,17 @@
 <script>
 	import { goto } from '$app/navigation';
-	import AccordianWrapper from '$lib/components/core/accordianWrapper.svelte';
-	import ProgressWrapper from '$lib/components/core/progressWrapper.svelte';
-	import InputWrapper from '$lib/components/core/inputWrapper.svelte';
+	import AccordianWrapper from '$lib/components/zeroUIWrappers/accordianDefault.svelte';
+	import ProgressWrapper from '$lib/components/zeroUIWrappers/progressContinuos.svelte';
+	import InputWrapper from '$lib/components/zeroUIWrappers/inputCheck.svelte';
 	import HomeNav from '$lib/components/core/homeNav.svelte';
 	import { changeTheme } from '$lib/utils/client';
 	import { MultiPageCode, SyncButton } from 'zero-ui-registry';
 	import { codePages } from '$lib/utils/const';
+	import { themeStore } from '$lib/utils/store';
+
 	const pages = [AccordianWrapper, InputWrapper, ProgressWrapper];
+
+	$: darkMode = $themeStore == 'dark';
 	let pageIndex = 0;
 </script>
 
@@ -20,7 +24,7 @@
 			configuration, Just copy and paste code.
 		</h4>
 		<SyncButton
-			text="Get started"
+			text="Getting started"
 			type="primary"
 			--padding-inline="24px"
 			--padding-block="12px"
@@ -34,7 +38,7 @@
 			<svelte:component this={pages[pageIndex]} />
 		</div>
 		<div class="rightSide">
-			<MultiPageCode {codePages} --max-height="400px" bind:activePage={pageIndex} />
+			<MultiPageCode {codePages} --max-height="400px" bind:activePage={pageIndex} {darkMode} />
 		</div>
 	</section>
 </div>

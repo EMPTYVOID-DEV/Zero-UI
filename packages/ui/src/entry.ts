@@ -1,4 +1,4 @@
-export { default as Checklist } from "../registry/components/checklist/checklist.svelte";
+export { default as CheckList } from "../registry/components/checkList/checkList.svelte";
 
 export { default as RadioGroup } from "../registry/components/radioGroup/radioGroup.svelte";
 

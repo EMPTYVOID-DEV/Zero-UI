@@ -1,15 +1,13 @@
 <script>
 	import Logo from '$lib/components/icons/logo.svelte';
 	import Github from '$lib/components/icons/github.svelte';
-	import { Link, SiteSearch, ThemeToggle } from 'zero-ui-registry';
+	import { Link, ThemeToggle } from 'zero-ui-registry';
 	import { onMount } from 'svelte';
-	import { categories } from '$lib/utils/const';
-	import { filterCategories } from '$lib/utils/client';
-	/**@type {"dark"|"light"|"system"}*/
+	import SearchDefault from '$lib/components/zeroUIWrappers/searchDefault.svelte';
+	/**@type {"dark"|"light"}*/
 	let theme = 'light';
-	let filteredCategories = categories;
 	onMount(() => {
-		theme = /** @type {"dark"|"light"|"system"}*/ (window.localStorage.getItem('theme') || 'light');
+		theme = /** @type {"dark"|"light"}*/ (window.localStorage.getItem('theme') || 'light');
 	});
 </script>
 
@@ -17,20 +15,11 @@
 	<a class="logo" href="/">
 		<Logo />
 	</a>
-	<div class="links">
-		<Link text="core" href="/docs/core/introduction" />
-		<Link text="components" href="/docs/components/accordian" />
-	</div>
 	<div class="utility">
 		<Link href="https://github.com/EMPTYVOID-DEV/Zero-UI" icon={Github} text="" />
 		<ThemeToggle on:change active={theme} --left="-50px" --top="40px" />
 	</div>
-	<SiteSearch
-		categories={filteredCategories}
-		on:change={(e) => {
-			filteredCategories = filterCategories(e.detail.query);
-		}}
-	/>
+	<SearchDefault />
 </nav>
 
 <style>
@@ -49,16 +38,14 @@
 		margin-right: auto;
 	}
 
-	.links,
 	.utility {
 		display: flex;
 		align-items: center;
 		gap: 8px;
 	}
-
-	@media screen and (width<768px) {
-		.links {
-			display: none;
+	@media screen and (width <768px) {
+		.homeNav {
+			padding-inline: 4px;
 		}
 	}
 </style>

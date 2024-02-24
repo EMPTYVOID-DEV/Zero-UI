@@ -1,108 +1,139 @@
 /**@type {import("zero-ui-registry/types").category[]}*/
 export const categories = [
 	{
-		categoryName: 'core',
-		sections: [
-			{
-				link: '/docs/core/introduction',
-				sectionName: 'Introduction'
-			},
-			{
-				link: '/docs/core/installation',
-				sectionName: 'Installation'
-			},
-			{
-				link: '/docs/core/theme',
-				sectionName: 'Theming your components'
-			},
-			{
-				link: '/docs/core/Structure',
-				sectionName: 'Structure of components'
-			},
-			{
-				link: '/docs/core/jsdoc',
-				sectionName: 'The usage of jsdoc'
-			},
-			{
-				link: '/docs/core/registry',
-				sectionName: 'Components registry and cli'
-			}
-		]
-	},
-	{
 		categoryName: 'components',
 		sections: [
 			{
-				sectionName: 'accordian',
-				link: '/docs/components/accordian'
+				sectionName: 'accordion',
+				link: '/components/accordian/default'
 			},
 			{
 				sectionName: 'button',
-				link: '/docs/components/button'
+				link: '/components/button/sync',
+				subSections: [
+					{
+						link: '/components/button/sync',
+						subSectionName: 'synchronous button'
+					},
+					{
+						link: '/components/button/async',
+						subSectionName: 'asynchronous button'
+					}
+				]
 			},
 			{
-				sectionName: 'checklist',
-				link: '/docs/components/checklist'
+				sectionName: 'checkList',
+				link: '/components/checkList/default'
 			},
 			{
 				sectionName: 'code',
-				link: '/docs/components/code'
+				link: '/components/code/singlePage',
+				subSections: [
+					{
+						link: '/components/code/singlePage',
+						subSectionName: 'single page code'
+					},
+					{
+						link: '/components/code/multiPage',
+						subSectionName: 'multi page code'
+					}
+				]
 			},
 			{
 				sectionName: 'colorPicker',
-				link: '/docs/components/colorPicker'
-			},
-			{
-				sectionName: 'upload',
-				link: '/docs/components/upload'
-			},
-			{
-				sectionName: 'input',
-				link: '/docs/components/input'
-			},
-			{
-				sectionName: 'link',
-				link: '/docs/components/link'
-			},
-			{
-				sectionName: 'loading',
-				link: '/docs/components/loading'
-			},
-			{
-				sectionName: 'pagination',
-				link: '/docs/components/pagination'
-			},
-			{
-				sectionName: 'progress',
-				link: '/docs/components/progress'
-			},
-			{
-				sectionName: 'radioGroup',
-				link: '/docs/components/radioGroup'
-			},
-			{
-				sectionName: 'select',
-				link: '/docs/components/select'
-			},
-			{
-				sectionName: 'slider',
-				link: '/docs/components/slider'
-			},
-			{
-				sectionName: 'textarea',
-				link: '/docs/components/textarea'
-			},
-			{
-				sectionName: 'toggle',
-				link: '/docs/components/toggle'
+				link: '/components/colorPicker/default'
 			},
 			{
 				sectionName: 'dialog',
-				link: '/docs/components/dialog'
+				link: '/components/dialog/default'
+			},
+			{
+				sectionName: 'input',
+				link: '/components/input/regular',
+				subSections: [
+					{
+						link: '/components/input/regular',
+						subSectionName: 'regular input'
+					},
+					{
+						link: '/components/input/check',
+						subSectionName: 'check input'
+					}
+				]
+			},
+			{
+				sectionName: 'link',
+				link: '/components/link/default'
+			},
+			{
+				sectionName: 'loading',
+				link: '/components/loading/regular',
+				subSections: [
+					{
+						link: '/components/loading/regular',
+						subSectionName: 'regular loading'
+					},
+					{
+						link: '/components/loading/skeleton',
+						subSectionName: 'skeleton loading'
+					}
+				]
+			},
+			{
+				sectionName: 'pagination',
+				link: '/components/pagination/default'
+			},
+			{
+				sectionName: 'progress',
+				link: '/components/progress/continuos',
+				subSections: [
+					{
+						link: '/components/progress/continuos',
+						subSectionName: 'continuos progress bar'
+					},
+					{
+						link: '/components/progress/multiStep',
+						subSectionName: 'multiStep progress bar'
+					}
+				]
+			},
+			{
+				sectionName: 'radioGroup',
+				link: '/components/radioGroup/default'
 			},
 			{
 				sectionName: 'search',
-				link: '/docs/components/search'
+				link: '/components/search/default'
+			},
+			{
+				sectionName: 'select',
+				link: '/components/select/default'
+			},
+			{
+				sectionName: 'slider',
+				link: '/components/slider/default'
+			},
+			{
+				sectionName: 'textarea',
+				link: '/components/textarea/default'
+			},
+			{
+				sectionName: 'toggle',
+				link: '/components/toggle/state',
+				subSections: [
+					{
+						link: '/components/toggle/state',
+						subSectionName: 'state toggle'
+					},
+					{
+						link: '/components/toggle/theme',
+						subSectionName: 'theme toggle'
+					}
+				]
+			},
+			{
+				sectionName: 'upload',
+				link: '/components/upload/default'
 			}
 		]
 	}

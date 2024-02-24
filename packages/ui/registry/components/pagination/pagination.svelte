@@ -2,14 +2,15 @@
   import RightIcon from "../../icons/rightIcon.svelte";
   import LeftIcon from "../../icons/leftIcon.svelte";
   import Pages from "./pages.svelte";
+  import { createEventDispatcher } from "svelte";
 
-  /** @type {string[]} */
-  export let pages = [];
+  /** @type {number} */
+  export let numberOfPages = 5;
   /**@type {number}*/
   export let activePage = 1;
 
+  const dispatcher = createEventDispatcher();
   let siblingsCount = 1;
-  let numberOfPages = pages.length;
   $: visiblePages = adjustToActive(activePage);
 
   /**
@@ -37,6 +38,10 @@
       start = 1;
     }
 
+    dispatcher("change", {
+      activePage,
+    });
+
     return {
       start,
       end,
@@ -58,7 +63,7 @@
     bind:activePage
     start={visiblePages.start}
     end={visiblePages.end}
-    {pages}
+    {numberOfPages}
   />
 
   <button
