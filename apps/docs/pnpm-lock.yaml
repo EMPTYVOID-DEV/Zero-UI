@@ -9,7 +9,7 @@ dependencies:
     specifier: ^0.6.0
     version: 0.6.0(svelte@4.2.11)
   zero-ui-registry:
-    specifier: workspace:^
+    specifier: workspace:*
     version: link:../../packages/ui
 
 devDependencies:
