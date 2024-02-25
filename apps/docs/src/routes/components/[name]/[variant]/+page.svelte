@@ -24,7 +24,7 @@
 			<svelte:component this={$page.data.currentComponent} />
 		</section>
 		<section class="md">
-			<CoreMd source="" />
+			<CoreMd source={$page.data.md} />
 		</section>
 	</div>
 </div>

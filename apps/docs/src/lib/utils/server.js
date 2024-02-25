@@ -1,6 +1,6 @@
-import { error } from '@sveltejs/kit';
 /**
  * @param {string} url
+ * @returns {Promise<string|null>}
  */
 export async function githubFetch(url) {
 	try {
@@ -16,23 +16,6 @@ export async function githubFetch(url) {
 		const content = await response.text();
 		return content;
 	} catch (/**@type {any}*/ e) {
-		if (!e.cause?.res) {
-			error(400, 'bad Request');
-		}
-		const { status } = e.cause.res;
-		switch (status) {
-			case 429:
-				error(429, 'Github requests limit');
-				break;
-			case 403:
-				error(403, 'Github requests limit');
-				break;
-			case 404:
-				error(404, 'Not found');
-				break;
-			default:
-				error(500, 'Unknown Error');
-				break;
-		}
+		return null;
 	}
 }
