@@ -22,8 +22,8 @@
 		<Logo />
 	</a>
 	<div class="links">
-		<Link href="/" text="core" isBlank={false} />
-		<Link href="/" text="components" isBlank={false} />
+		<Link href="/docs/Getting Started/Introduction" text="docs" isBlank={false} />
+		<Link href="/components/accordian/default" text="components" isBlank={false} />
 	</div>
 	<div class="utility">
 		<Link href="https://github.com/EMPTYVOID-DEV/Zero-UI" icon={Github} text="" />

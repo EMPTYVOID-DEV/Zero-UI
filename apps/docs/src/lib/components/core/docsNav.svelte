@@ -2,12 +2,19 @@
 	import HomeNav from './homeNav.svelte';
 	import Menu from '$lib/components/icons/menu.svelte';
 	import Close from '$lib/components/icons/close.svelte';
-	import { changeMobileStatus } from 'sveltedocsmaker/utils';
+	import { changeTheme, detectSystemTheme } from '$lib/utils/client';
+	import { changeMobileStatus, changeMode } from 'sveltedocsmaker/utils';
 	let showSections = false;
+	/**@param {Event & { detail:{theme:"dark"|"light"|"system"}}} e*/
+	function handleThemeChange(e) {
+		const theme = e.detail.theme == 'system' ? detectSystemTheme() : e.detail.theme;
+		changeTheme(theme);
+		changeMode(theme != 'dark');
+	}
 </script>
 
 <div class="docsNav">
-	<HomeNav />
+	<HomeNav on:change={handleThemeChange} />
 	{#if showSections}
 		<!-- svelte-ignore a11y-click-events-have-key-events -->
 		<!-- svelte-ignore a11y-no-static-element-interactions -->

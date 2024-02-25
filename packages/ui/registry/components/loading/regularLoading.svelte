@@ -23,13 +23,13 @@
     gap: 0.25rem;
   }
   .loading :global(svg) {
-    width: 2.75rem;
-    height: 2.75rem;
+    width: 2.5rem;
+    height: 2.5rem;
   }
   .loading span {
     font-size: var(--h4);
+    font-weight: 600;
     font-family: var(--headerFont);
-    font-weight: bold;
-    color: var(--foregroundColor);
+    color: color-mix(in srgb, var(--foregroundColor) 70%, transparent 30%);
   }
 </style>

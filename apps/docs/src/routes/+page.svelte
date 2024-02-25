@@ -25,6 +25,7 @@
 			type="primary"
 			--padding-inline="24px"
 			--padding-block="12px"
+			on:click={() => goto('/docs/Getting Started/Introduction')}
 		/>
 	</section>
 	<section class="description">

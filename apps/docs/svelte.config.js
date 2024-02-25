@@ -6,6 +6,12 @@ const config = {
 		adapter: adapter(),
 		prerender: {
 			entries: [
+				'/docs/Getting Started/Introduction',
+				'/docs/Getting Started/Installation',
+				'/docs/Getting Started/Theming',
+				'/docs/Getting Started/Components',
+				'/docs/Getting Started/Jsdoc',
+				'/docs/Getting Started/Cli',
 				'/components/accordian/default',
 				'/components/button/sync',
 				'/components/button/async',

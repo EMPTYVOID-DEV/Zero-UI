@@ -6,7 +6,6 @@ export const load = async ({ params, data }) => {
 			`../../../../lib/components/zeroUIWrappers/${params.name}${capitalize(params.variant)}.svelte`
 		)
 	).default;
-	console.log(currentComponent);
 	return {
 		currentComponent,
 		// @ts-ignore
