@@ -1,9 +1,7 @@
 <script>
 	import { codePages } from '$lib/utils/const';
 	import { MultiPageCode } from 'zero-ui-registry';
-	import { themeStore } from '$lib/utils/store';
-
-	$: darkMode = $themeStore == 'dark';
+	import { onMount } from 'svelte';
 </script>
 
-<MultiPageCode {codePages} --max-height="400px" {darkMode} />
+<MultiPageCode {codePages} --max-height="400px" on:change />

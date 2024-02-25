@@ -5,10 +5,15 @@
 	import { onMount } from 'svelte';
 	import SearchDefault from '$lib/components/zeroUIWrappers/searchDefault.svelte';
 	import { page } from '$app/stores';
+	import { getContext } from 'svelte';
 	/**@type {"dark"|"light"}*/
 	let theme = 'light';
+	let categories = getContext('searchContent');
 	onMount(() => {
-		theme = /** @type {"dark"|"light"}*/ (window.localStorage.getItem('theme') || 'light');
+		const html = document.querySelector('html');
+		const dataset = html?.dataset;
+		// @ts-ignore
+		if (dataset) theme = dataset.theme;
 	});
 </script>
 
@@ -17,15 +22,15 @@
 		<Logo />
 	</a>
 	<div class="links">
-		<Link href="/docs/core/introduction" text="core" isBlank={false} />
-		<Link href="/components/accordian/default" text="components" isBlank={false} />
+		<Link href="/" text="core" isBlank={false} />
+		<Link href="/" text="components" isBlank={false} />
 	</div>
 	<div class="utility">
 		<Link href="https://github.com/EMPTYVOID-DEV/Zero-UI" icon={Github} text="" />
 		<ThemeToggle on:change active={theme} --left="-50px" --top="40px" />
 	</div>
 	{#key $page.url}
-		<SearchDefault />
+		<SearchDefault {categories} placeholder="Search for components" />
 	{/key}
 </nav>
 
@@ -54,6 +59,9 @@
 	@media screen and (width <768px) {
 		.links {
 			display: none;
+		}
+		.homeNav {
+			padding-left: 2px;
 		}
 	}
 </style>

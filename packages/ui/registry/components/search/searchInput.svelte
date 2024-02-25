@@ -41,7 +41,7 @@
     cursor: pointer;
   }
   .SearchInput span {
-    font-size: var(--body);
+    font-size: var(--small);
     font-family: var(--bodyFont);
     color: var(--foregroundColor);
   }

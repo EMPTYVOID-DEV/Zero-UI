@@ -4,7 +4,8 @@
   "description": "",
   "scripts": {
     "docs-dev": "pnpm --filter zero-ui-docs dev",
-    "deploy": "pnpm --filter zero-ui-docs build",
+    "docs-build": "pnpm --filter zero-ui-docs build",
+    "docs-preview": "pnpm --filter zero-ui-docs preview",
     "cli-dev": "pnpm --filter zero-ui-cli dev",
     "cli-build": "pnpm --filter zero-ui-cli build",
     "registry-build": "pnpm --filter zero-ui-registry build",

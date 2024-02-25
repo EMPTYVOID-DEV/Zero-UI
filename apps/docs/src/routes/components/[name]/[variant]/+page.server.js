@@ -6,6 +6,6 @@ export const load = async ({ params }) => {
 	const url = `https://raw.githubusercontent.com/EMPTYVOID-DEV/Zero-UI/master/md/${params.name}/${params.variant}.md`;
 	const content = await githubFetch(url);
 	return {
-		md: content || '### The documentation is not unavailabel for now.'
+		md: content || '### TODO'
 	};
 };

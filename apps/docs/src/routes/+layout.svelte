@@ -1,13 +1,8 @@
 <script>
 	import '../app.css';
-	import { changeTheme } from '$lib/utils/client';
-	import { onMount } from 'svelte';
-	onMount(() => {
-		let theme = /** @type {"dark"|"light"|"system"}*/ (
-			window.localStorage.getItem('theme') || 'light'
-		);
-		changeTheme(theme);
-	});
+	import { setContext } from 'svelte';
+	import { page } from '$app/stores';
+	setContext('searchContent', $page.data.searchContent);
 </script>
 
 <slot />

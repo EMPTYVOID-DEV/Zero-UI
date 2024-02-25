@@ -1,16 +1,17 @@
 <script>
 	import { filterCategories } from '$lib/utils/client';
-	import { categories } from '$lib/utils/const';
 	import { SiteSearch } from 'zero-ui-registry';
-
+	/**@type {import("zero-ui-registry/types").category[]}*/
+	export let categories = [];
+	export let placeholder = 'search...';
 	let filteredCategories = categories;
 </script>
 
 <SiteSearch
 	showFullMobile={true}
-	placeholder="Search For components"
+	{placeholder}
 	categories={filteredCategories}
 	on:change={(e) => {
-		filteredCategories = filterCategories(e.detail.query);
+		filteredCategories = filterCategories(e.detail.query, categories);
 	}}
 />

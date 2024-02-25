@@ -24,6 +24,7 @@
 			<svelte:component this={$page.data.currentComponent} />
 		</section>
 		<section class="md">
+			<h2>Documentation</h2>
 			<CoreMd source={$page.data.md} />
 		</section>
 	</div>
@@ -84,6 +85,9 @@
 		display: flex;
 		flex-direction: column;
 		gap: 0.75rem;
+	}
+	.md {
+		color: var(--foregroundColor);
 	}
 	@media screen and (width<768px) {
 		.wrapper {

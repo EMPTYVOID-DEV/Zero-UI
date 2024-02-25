@@ -3,10 +3,35 @@ import adapter from '@sveltejs/adapter-auto';
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	kit: {
-		// adapter-auto only supports some environments, see https://kit.svelte.dev/docs/adapter-auto for a list.
-		// If your environment is not supported or you settled on a specific environment, switch out the adapter.
-		// See https://kit.svelte.dev/docs/adapters for more information about adapters.
-		adapter: adapter()
+		adapter: adapter(),
+		prerender: {
+			entries: [
+				'/components/accordian/default',
+				'/components/button/sync',
+				'/components/button/async',
+				'/components/checkList/default',
+				'/components/code/singlePage',
+				'/components/code/multiPage',
+				'/components/colorPicker/default',
+				'/components/dialog/default',
+				'/components/input/regular',
+				'/components/input/check',
+				'/components/link/default',
+				'/components/loading/regular',
+				'/components/loading/skeleton',
+				'/components/pagination/default',
+				'/components/progress/continuos',
+				'/components/progress/multiStep',
+				'/components/radioGroup/default',
+				'/components/search/default',
+				'/components/select/default',
+				'/components/slider/default',
+				'/components/textarea/default',
+				'/components/toggle/state',
+				'/components/toggle/theme',
+				'/components/upload/default'
+			]
+		}
 	}
 };
 

@@ -5,13 +5,10 @@
 	import InputWrapper from '$lib/components/zeroUIWrappers/inputCheck.svelte';
 	import HomeNav from '$lib/components/core/homeNav.svelte';
 	import { changeTheme } from '$lib/utils/client';
-	import { MultiPageCode, SyncButton } from 'zero-ui-registry';
-	import { codePages } from '$lib/utils/const';
-	import { themeStore } from '$lib/utils/store';
+	import { SyncButton } from 'zero-ui-registry';
+	import CodeMultiPage from '$lib/components/zeroUIWrappers/codeMultiPage.svelte';
 
 	const pages = [AccordianWrapper, InputWrapper, ProgressWrapper];
-
-	$: darkMode = $themeStore == 'dark';
 	let pageIndex = 0;
 </script>
 
@@ -28,9 +25,6 @@
 			type="primary"
 			--padding-inline="24px"
 			--padding-block="12px"
-			on:click={() => {
-				goto('/docs/core/introduction');
-			}}
 		/>
 	</section>
 	<section class="description">
@@ -38,7 +32,7 @@
 			<svelte:component this={pages[pageIndex]} />
 		</div>
 		<div class="rightSide">
-			<MultiPageCode {codePages} --max-height="400px" bind:activePage={pageIndex} {darkMode} />
+			<CodeMultiPage on:change={(e) => (pageIndex = e.detail.activePageIndex)} />
 		</div>
 	</section>
 </div>

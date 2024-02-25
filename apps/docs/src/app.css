@@ -17,18 +17,7 @@
 	--zeroFont: 'Notable', sans-serif;
 }
 
-:not(dialog) {
-	margin: 0;
-	padding: 0;
-	list-style: none;
-	box-sizing: border-box;
-}
-
-body {
-	overflow-x: hidden;
-}
-
-.light {
+[data-theme='light']:root {
 	--primaryColor: #d4322c;
 	--secondaryColor: #3edd5b;
 	--backgroundColor: #ffffff;
@@ -38,7 +27,7 @@ body {
 	--mutedColor: #505050;
 }
 
-.dark {
+[data-theme='dark']:root {
 	--primaryColor: #d4322c;
 	--secondaryColor: #3edd5b;
 	--backgroundColor: #1a1a1a;
@@ -46,6 +35,17 @@ body {
 	--dangerColor: #ff0000;
 	--successColor: #4caf50;
 	--mutedColor: #b1b0b0;
+}
+
+:not(dialog) {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	box-sizing: border-box;
+}
+
+body {
+	overflow-x: hidden;
 }
 
 :where(h1, h2, h3, h4) {
