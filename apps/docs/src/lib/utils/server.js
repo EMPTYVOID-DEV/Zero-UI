@@ -48,5 +48,29 @@ export function getSearchContent(registry) {
 		}
 		searchContent.sections.push(searchEntry);
 	}
+	orderSearchResults([searchContent]);
 	return [searchContent];
+}
+
+/**
+ * @param {import("zero-ui-registry/types").category[]} categories
+ * @returns {import("zero-ui-registry/types").category[]}
+ */
+function orderSearchResults(categories) {
+	categories.sort((a, b) => a.categoryName.localeCompare(b.categoryName));
+	categories.forEach((category) => {
+		category.sections.sort((a, b) => a.sectionName.localeCompare(b.sectionName));
+		category.sections.forEach((section) => {
+			if (section.subSections) {
+				section.subSections.sort((a, b) => a.subSectionName.localeCompare(b.subSectionName));
+			}
+		});
+	});
+
+	return categories;
+}
+
+/**@param {string} word*/
+export function capitalize(word) {
+	return word[0].toUpperCase() + word.slice(1);
 }

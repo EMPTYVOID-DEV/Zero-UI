@@ -24,7 +24,6 @@
 			<svelte:component this={$page.data.currentComponent} />
 		</section>
 		<section class="md">
-			<h2>Documentation</h2>
 			<CoreMd source={$page.data.md} />
 		</section>
 	</div>

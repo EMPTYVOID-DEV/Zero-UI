@@ -43,14 +43,9 @@ export function detectSystemTheme() {
 export function filterCategories(query, categories) {
 	/**@type {import("zero-ui-registry/types").category[]}*/
 	const queryResult = [];
-	const coreSections = categories
-		.find((el) => el.categoryName == 'core')
-		?.sections.filter((el) => doesItInclude(el.sectionName, query));
 	const components = categories
 		.find((el) => el.categoryName == 'components')
 		?.sections.filter((el) => doesItInclude(el.sectionName, query));
-	if (coreSections && coreSections.length != 0)
-		queryResult.push({ categoryName: 'core', sections: coreSections });
 	if (components && components.length != 0)
 		queryResult.push({ categoryName: 'components', sections: components });
 	return queryResult;

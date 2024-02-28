@@ -1,12 +1,12 @@
 <script>
 	import { goto } from '$app/navigation';
-	import AccordianWrapper from '$lib/components/zeroUIWrappers/accordianDefault.svelte';
-	import ProgressWrapper from '$lib/components/zeroUIWrappers/progressContinuos.svelte';
-	import InputWrapper from '$lib/components/zeroUIWrappers/inputCheck.svelte';
+	import AccordianWrapper from '$lib/components/zeroUIWrappers/defaultAccordian.svelte';
+	import ProgressWrapper from '$lib/components/zeroUIWrappers/continuosProgress.svelte';
+	import InputWrapper from '$lib/components/zeroUIWrappers/reactiveInput.svelte';
 	import HomeNav from '$lib/components/core/homeNav.svelte';
 	import { changeTheme } from '$lib/utils/client';
 	import { SyncButton } from 'zero-ui-registry';
-	import CodeMultiPage from '$lib/components/zeroUIWrappers/codeMultiPage.svelte';
+	import CodeMultiPage from '$lib/components/zeroUIWrappers/multiPageCode.svelte';
 
 	const pages = [AccordianWrapper, InputWrapper, ProgressWrapper];
 	let pageIndex = 0;

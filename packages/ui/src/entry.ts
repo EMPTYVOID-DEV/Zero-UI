@@ -1,6 +1,6 @@
-export { default as CheckList } from "../registry/components/checkList/checkList.svelte";
+export { default as DefaultCheckList } from "../registry/components/checkList/defaultCheckList.svelte";
 
-export { default as RadioGroup } from "../registry/components/radioGroup/radioGroup.svelte";
+export { default as DefaultRadioGroup } from "../registry/components/radioGroup/defaultRadioGroup.svelte";
 
 export { default as SyncButton } from "../registry/components/button/syncButton.svelte";
 
@@ -10,9 +10,9 @@ export { default as SinglePageCode } from "../registry/components/code/singlePag
 
 export { default as MultiPageCode } from "../registry/components/code/multiPageCode.svelte";
 
-export { default as Link } from "../registry/components/link/link.svelte";
+export { default as DefaultLink } from "../registry/components/link/defaultLink.svelte";
 
-export { default as Accordian } from "../registry/components/accordian/accordian.svelte";
+export { default as DefaultAccordian } from "../registry/components/accordian/defaultAccordian.svelte";
 
 export { default as StateToggle } from "../registry/components/toggle/stateToggle.svelte";
 
@@ -20,28 +20,28 @@ export { default as ContinuosProgress } from "../registry/components/progress/co
 
 export { default as MultiStepProgress } from "../registry/components/progress/multiStepProgress.svelte";
 
-export { default as RegularInput } from "../registry/components/input/regularInput.svelte";
+export { default as StaticInput } from "../registry/components/input/staticInput.svelte";
 
-export { default as CheckInput } from "../registry/components/input/checkInput.svelte";
+export { default as ReactiveInput } from "../registry/components/input/reactiveInput.svelte";
 
-export { default as Textarea } from "../registry/components/textarea/textarea.svelte";
+export { default as DefaultTextarea } from "../registry/components/textarea/defaultTextarea.svelte";
 
-export { default as Slider } from "../registry/components/slider/slider.svelte";
+export { default as DefaultSlider } from "../registry/components/slider/defaultSlider.svelte";
 
-export { default as Select } from "../registry/components/select/select.svelte";
+export { default as DefaultSelect } from "../registry/components/select/defaultSelect.svelte";
 
 export { default as RegularLoading } from "../registry/components/loading/regularLoading.svelte";
 
 export { default as SkeletonLoading } from "../registry/components/loading/skeletonLoading.svelte";
 
-export { default as Pagination } from "../registry/components/pagination/pagination.svelte";
+export { default as DefaultPagination } from "../registry/components/pagination/defaultPagination.svelte";
 
-export { default as Upload } from "../registry/components/upload/upload.svelte";
+export { default as DefaultUpload } from "../registry/components/upload/defaultUpload.svelte";
 
-export { default as ColorPicker } from "../registry/components/colorPicker/colorPicker.svelte";
+export { default as DefaultColorPicker } from "../registry/components/colorPicker/defaultColorPicker.svelte";
 
-export { default as Dialog } from "../registry/components/dialog/dialog.svelte";
+export { default as DefaultDialog } from "../registry/components/dialog/defaultDialog.svelte";
 
-export { default as SiteSearch } from "../registry/components/search/siteSearch.svelte";
+export { default as DefaultSiteSearch } from "../registry/components/siteSearch/defaultSiteSearch.svelte";
 
 export { default as ThemeToggle } from "../registry/components/toggle/themeToggle.svelte";

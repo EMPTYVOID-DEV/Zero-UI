@@ -6,7 +6,7 @@ export type iconComponent = ComponentType<SvelteComponent>;
 // type for the asyncButton action prop
 export type asyncButtonAction = (ev: MouseEvent) => Promise<any>;
 
-// type for checklist component
+// type for default checklist component
 export type checkItem = {
   text: string;
   checked: boolean;
@@ -15,7 +15,7 @@ export type checkItem = {
   value?: string;
 };
 
-// type for radioGroup component
+// type for default radioGroup component
 export type radioItem = { text: string; name?: string; value?: string };
 
 // type for the change event
@@ -35,7 +35,7 @@ export type sliderEvent = (
   }
 ) => void;
 
-// type for the select change event
+// type for the default select change event
 
 export type selectEvent = Event & {
   detail:
@@ -44,7 +44,7 @@ export type selectEvent = Event & {
     | null;
 };
 
-// This is for the check variant input component
+// This is for the reactive variant input component
 export type checkFunction = (currentValue: string) => {
   state: "valid" | "invalid";
   errorMsg: string;

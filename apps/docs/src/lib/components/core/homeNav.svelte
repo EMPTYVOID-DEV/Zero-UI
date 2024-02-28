@@ -1,9 +1,9 @@
 <script>
 	import Logo from '$lib/components/icons/logo.svelte';
 	import Github from '$lib/components/icons/github.svelte';
-	import { Link, ThemeToggle } from 'zero-ui-registry';
+	import { DefaultLink as Link, ThemeToggle } from 'zero-ui-registry';
 	import { onMount } from 'svelte';
-	import SearchDefault from '$lib/components/zeroUIWrappers/searchDefault.svelte';
+	import SearchDefault from '$lib/components/zeroUIWrappers/defaultSiteSearch.svelte';
 	import { page } from '$app/stores';
 	import { getContext } from 'svelte';
 	/**@type {"dark"|"light"}*/

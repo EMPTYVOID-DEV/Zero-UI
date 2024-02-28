@@ -22,17 +22,7 @@ export const codePages = [
 	import { CheckInput } from 'zero-ui-registry';
 	/**@type {import("zero-ui-registry/types").checkFunction}*/
 	function checkFunction(value) {
-		const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)[A-Za-z\\d@$!%*?&]{8,}$/;
-		if (passwordRegex.test(value))
-			return {
-				errorMsg: '',
-				state: 'valid'
-			};
-		else
-			return {
-				errorMsg: 'Your password must be 8-16 characters, include at least one letter and one digit, and may use special characters',
-				state: 'invalid'
-			};
+		// check the password
 	}
 </script>
 
