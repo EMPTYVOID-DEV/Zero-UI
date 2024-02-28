@@ -73,6 +73,9 @@
   .description {
     color: color-mix(in srgb, var(--foregroundColor) 70%, transparent 30%);
   }
+  .description:empty {
+    display: none;
+  }
   span {
     font-size: var(--body);
     font-family: var(--bodyFont);

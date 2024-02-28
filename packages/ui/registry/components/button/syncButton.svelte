@@ -36,8 +36,8 @@
     justify-content: center;
     gap: 0.25rem;
     width: fit-content;
-    padding-inline: var(--padding-inline, 1rem);
-    padding-block: var(--padding-block, 0.5rem);
+    padding-inline: var(--padding-inline, 1.5rem);
+    padding-block: var(--padding-block, 0.75rem);
     cursor: pointer;
     outline: none;
     border: none;

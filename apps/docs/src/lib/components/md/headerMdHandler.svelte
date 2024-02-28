@@ -7,7 +7,7 @@
 	let id = text
 		.toLowerCase()
 		.replace(/ /g, '-')
-		.replace(/[@#:\$%\^&,\.\/*_?]/g, '');
+		.replace(/[@#:$%^&,./*_?]/g, '');
 </script>
 
 {#if depth === 1}

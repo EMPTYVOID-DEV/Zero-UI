@@ -48,6 +48,7 @@
     background: none;
     max-width: 100vw !important;
     max-height: 100vh !important;
+    overflow: visible;
   }
 
   dialog::backdrop {

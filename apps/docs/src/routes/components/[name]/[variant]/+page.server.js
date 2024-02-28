@@ -7,8 +7,6 @@ export const load = async ({ params }) => {
 	const url = `https://raw.githubusercontent.com/EMPTYVOID-DEV/Zero-UI/master/md/${params.variant}${capitalize(params.name)}.md`;
 	const content = await githubFetch(url);
 	return {
-		md:
-			content ||
-			'### The documentation for this component is still pending and has not been written yet'
+		md: content || '#### The documentation for this component is not available at the moment.'
 	};
 };

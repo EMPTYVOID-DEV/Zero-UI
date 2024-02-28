@@ -1,6 +1,7 @@
 <script>
 	import { fade } from 'svelte/transition';
 	import { DefaultDialog as Dialog, SyncButton } from 'zero-ui-registry';
+	import DefaultSelect from './defaultSelect.svelte';
 </script>
 
 <Dialog let:close>
@@ -8,11 +9,11 @@
 		<SyncButton on:click={() => open()} text="open" type="primary" />
 	</svelte:fragment>
 	<div class="content" transition:fade>
-		<h4>This Process is irreversible</h4>
-		<span>Are you sure you want to continue?</span>
+		<h4>Edit your choice</h4>
+		<DefaultSelect />
 		<div class="options">
 			<SyncButton on:click={() => close()} text="cancel" type="passive" />
-			<SyncButton on:click={() => close()} text="continue" type="danger" />
+			<SyncButton on:click={() => close()} text="confirm" type="primary" />
 		</div>
 	</div>
 </Dialog>
@@ -26,11 +27,10 @@
 		padding: 1.5rem;
 		border-radius: var(--border-radius);
 		background-color: var(--backgroundColor);
-		border: 2px solid var(--dangerColor);
+		border: 2px solid var(--primaryColor);
 	}
 
-	h4,
-	span {
+	h4 {
 		color: var(--foregroundColor);
 	}
 	.options {

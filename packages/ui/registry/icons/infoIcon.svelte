@@ -14,7 +14,7 @@
 >
 
 <style>
-  svg path:last-child {
+  svg path {
     fill: var(--icon, var(--primaryColor));
   }
 </style>

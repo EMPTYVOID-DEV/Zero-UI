@@ -30,6 +30,6 @@
     font-size: var(--h4);
     font-weight: 600;
     font-family: var(--headerFont);
-    color: color-mix(in srgb, var(--foregroundColor) 70%, transparent 30%);
+    color: var(--mutedColor);
   }
 </style>

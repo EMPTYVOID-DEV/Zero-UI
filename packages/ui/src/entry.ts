@@ -45,3 +45,7 @@ export { default as DefaultDialog } from "../registry/components/dialog/defaultD
 export { default as DefaultSiteSearch } from "../registry/components/siteSearch/defaultSiteSearch.svelte";
 
 export { default as ThemeToggle } from "../registry/components/toggle/themeToggle.svelte";
+
+export { default as InlineAlert } from "../registry/components/alert/inlineAlert.svelte";
+
+export { default as DialogAlert } from "../registry/components/alert/dialogAlert.svelte";

@@ -59,7 +59,7 @@
     },
     "reactive": {
       "files": ["reactiveInput.svelte"],
-      "icons": ["closeIcon", "validIcon"],
+      "icons": ["closeIcon"],
       "entry": "reactiveInput.svelte"
     }
   },
@@ -160,6 +160,18 @@
       ],
       "variants": ["dialog/default"],
       "entry": "defaultSiteSearch.svelte"
+    }
+  },
+  "alert": {
+    "inline": {
+      "files": ["inlineAlert.svelte"],
+      "icons": ["infoIcon", "dangerIcon", "successIcon"],
+      "entry": "inlineAlert.svelte"
+    },
+    "dialog": {
+      "files": ["dialogAlert.svelte"],
+      "variants": ["dialog/default", "button/sync"],
+      "entry": ["dialogAlert.svelte"]
     }
   }
 }

@@ -45,19 +45,28 @@ export function filterCategories(query, categories) {
 	const queryResult = [];
 	const components = categories
 		.find((el) => el.categoryName == 'components')
-		?.sections.filter((el) => doesItInclude(el.sectionName, query));
+		?.sections.filter((el) =>
+			doesItInclude(
+				el.sectionName,
+				el.subSections?.map((subSection) => subSection.subSectionName.toLowerCase()) || [],
+				query
+			)
+		);
 	if (components && components.length != 0)
 		queryResult.push({ categoryName: 'components', sections: components });
 	return queryResult;
 }
 
 /**
- * @param {string} str
- * @param {string} subStr
+ * @param {string} section
+ * @param {string[]} subSections
+ * @param {string} query
  * @return {boolean}
  * */
-function doesItInclude(str, subStr) {
-	const strLowerCase = str.toLowerCase();
-	const subStrLowerCase = subStr.toLowerCase();
-	return strLowerCase.includes(subStrLowerCase);
+function doesItInclude(section, subSections, query) {
+	const sectionLowerCase = section.toLowerCase();
+	const queryLowerCase = query.toLowerCase();
+	const sectionInclude = sectionLowerCase.includes(queryLowerCase);
+	const subSectionsInclude = subSections.find((name) => name.includes(queryLowerCase));
+	return sectionInclude || subSectionsInclude != undefined;
 }
