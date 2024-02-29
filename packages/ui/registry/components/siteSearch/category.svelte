@@ -20,7 +20,7 @@
     gap: 0.5rem;
     padding: 0.5rem;
     border-bottom: 1px solid
-      color-mix(in srgb, var(--foregroundColor) 30%, transparent 70%);
+      color-mix(in srgb, var(--mutedColor) 40%, transparent 60%);
   }
   .category:last-child {
     border: 0;

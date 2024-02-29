@@ -56,7 +56,7 @@
   .link:hover {
     background-color: color-mix(
       in srgb,
-      var(--foregroundColor) 30%,
+      var(--primaryColor) 30%,
       transparent 70%
     );
   }

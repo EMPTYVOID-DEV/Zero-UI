@@ -49,3 +49,5 @@ export { default as ThemeToggle } from "../registry/components/toggle/themeToggl
 export { default as InlineAlert } from "../registry/components/alert/inlineAlert.svelte";
 
 export { default as DialogAlert } from "../registry/components/alert/dialogAlert.svelte";
+
+export { default as DefaultTabs } from "../registry/components/tabs/defaultTabs.svelte";

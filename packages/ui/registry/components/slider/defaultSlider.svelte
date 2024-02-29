@@ -22,7 +22,7 @@
 <style>
   .slider {
     width: var(--width, 100%);
-    --track-bg: color-mix(in srgb, var(--foregroundColor) 30%, transparent 70%);
+    --track-bg: color-mix(in srgb, var(--mutedColor) 60%, transparent 40%);
     --progress-bg: var(--primaryColor);
     --thumb-bg: var(--primaryColor);
   }

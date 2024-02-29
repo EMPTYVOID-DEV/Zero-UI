@@ -56,7 +56,6 @@
     on:click={() => (activePage -= 1)}
   >
     <LeftIcon />
-    <span>Previous</span>
   </button>
 
   <Pages
@@ -71,7 +70,6 @@
     class="control"
     on:click={() => (activePage += 1)}
   >
-    <span>Next</span>
     <RightIcon />
   </button>
 </div>
@@ -80,33 +78,30 @@
   .pagination {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: 0.25rem;
   }
   .control {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: fit-content;
+    min-width: 2.25rem;
+    min-height: 2.25rem;
     cursor: pointer;
     outline: none;
     border: none;
+    border-radius: 0.25rem;
     background-color: transparent;
-    color: var(--foregroundColor);
-    font-family: var(--bodyFont);
-    font-size: var(--small);
-    font-weight: 600;
     --icon: var(--foregroundColor);
   }
-  .control:hover {
-    color: var(--primaryColor);
-    --icon: var(--primaryColor);
+  .control:not(:disabled):hover {
+    background-color: color-mix(
+      in srgb,
+      var(--primaryColor) 40%,
+      transparent 60%
+    );
   }
-  .control :global(svg) {
-    width: 1.25rem;
-    height: 1.25rem;
-  }
+
   .control:disabled {
-    color: var(--mutedColor);
     --icon: var(--mutedColor);
     cursor: default;
   }

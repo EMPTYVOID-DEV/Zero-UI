@@ -78,7 +78,7 @@
     align-items: center;
     padding: 0.5rem;
     border-bottom: 1px solid
-      color-mix(in srgb, var(--foregroundColor) 30%, transparent 70%);
+      color-mix(in srgb, var(--mutedColor) 40%, transparent 60%);
   }
   .searchBar input {
     flex-grow: 1;
@@ -110,7 +110,7 @@
   }
   .searchModel :global(::-webkit-scrollbar-track) {
     border-radius: 0;
-    background: color-mix(in srgb, var(--foregroundColor) 40%, transparent 60%);
+    background: color-mix(in srgb, var(--mutedColor) 40%, transparent 60%);
   }
 
   .searchModel :global(::-webkit-scrollbar-thumb) {

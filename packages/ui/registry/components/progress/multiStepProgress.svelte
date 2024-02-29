@@ -44,7 +44,7 @@
     height: 0.5rem;
     background-color: color-mix(
       in srgb,
-      var(--primaryColor) 40%,
+      var(--mutedColor) 40%,
       transparent 60%
     );
     border-radius: 0.5rem;

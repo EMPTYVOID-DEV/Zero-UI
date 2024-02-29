@@ -19,7 +19,7 @@
   };
 </script>
 
-<div class="input-container {status.state}">
+<div class="input-container {status.state}" class:disabled>
   <label for="input">{label}</label>
   <input
     id="input"
@@ -96,8 +96,11 @@
   .input::-webkit-inner-spin-button {
     -webkit-appearance: none;
   }
-  .input:disabled {
-    border-color: (--mutedColor);
+  .disabled .input {
+    border-color: var(--mutedColor);
+    color: var(--mutedColor);
+  }
+  .disabled label {
     color: var(--mutedColor);
   }
 

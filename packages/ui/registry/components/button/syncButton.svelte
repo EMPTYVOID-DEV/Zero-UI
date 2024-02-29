@@ -3,22 +3,26 @@
   export let text = "button";
   /**@type {import("../../types").iconComponent|null} icon is optional for the button */
   export let icon = null;
-  /**@type {"passive"|"primary"|"secondary"|"danger"}  Dictates the color based on the type*/
+  /**@type {"disabled"|"passive"|"primary"|"secondary"|"danger"}  Dictates the color based on the type*/
   export let type = "primary";
 </script>
 
-<button on:click class={type}>
+<button on:click class={type} disabled={type == "disabled"}>
   <svelte:component this={icon} />
   <span>{text}</span>
 </button>
 
 <style>
-  .passive {
-    --bg: var(--foregroundColor);
-  }
-  :is(.primary, .secondary, .danger, .secondary, .passive) {
+  :is(.disabled, .primary, .secondary, .danger, .secondary, .passive) {
     --text: var(--backgroundColor);
     --icon: var(--backgroundColor);
+  }
+  .disabled {
+    --bg: var(--mutedColor);
+    cursor: not-allowed;
+  }
+  .passive {
+    --bg: var(--foregroundColor);
   }
   .primary {
     --bg: var(--primaryColor);
@@ -36,8 +40,8 @@
     justify-content: center;
     gap: 0.25rem;
     width: fit-content;
-    padding-inline: var(--padding-inline, 1.5rem);
-    padding-block: var(--padding-block, 0.75rem);
+    padding-inline: var(--padding-inline, 1rem);
+    padding-block: var(--padding-block, 0.5rem);
     cursor: pointer;
     outline: none;
     border: none;

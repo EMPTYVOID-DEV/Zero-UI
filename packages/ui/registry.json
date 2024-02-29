@@ -173,5 +173,11 @@
       "variants": ["dialog/default", "button/sync"],
       "entry": ["dialogAlert.svelte"]
     }
+  },
+  "tabs": {
+    "default": {
+      "files": ["defaultTabs.svelte"],
+      "entry": "defaultTabs.svelte"
+    }
   }
 }

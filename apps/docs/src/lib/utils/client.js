@@ -1,4 +1,5 @@
 import { cookieMaxAge } from './const';
+import { themeStore } from './stores';
 
 /**
  *@function changeTheme will persist the the theme to local storage and set css variables
@@ -7,6 +8,7 @@ import { cookieMaxAge } from './const';
 export function changeTheme(theme) {
 	const actualTheme = theme == 'system' ? detectSystemTheme() : theme;
 	createCookie('theme', actualTheme, cookieMaxAge);
+	themeStore.set(actualTheme);
 	const html = document.querySelector('html');
 	const dataset = html?.dataset;
 	if (dataset) dataset.theme = actualTheme;

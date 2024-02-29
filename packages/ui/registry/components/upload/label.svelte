@@ -71,7 +71,7 @@
   }
 
   .description {
-    color: color-mix(in srgb, var(--foregroundColor) 70%, transparent 30%);
+    color: color-mix(in srgb, var(--mutedColor) 70%, transparent 30%);
   }
   .description:empty {
     display: none;

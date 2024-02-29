@@ -43,7 +43,7 @@
   }
 </script>
 
-<div class="radioGroup">
+<div class="radioGroup" class:disabled>
   {#each enhancedGroup as item, index}
     <!-- svelte-ignore a11y-click-events-have-key-events -->
     <!-- svelte-ignore a11y-no-static-element-interactions -->
@@ -60,7 +60,7 @@
         value={item.value}
         checked={item.checked}
       />
-      <label for={item.name} class:disabled>{item.text}</label>
+      <label for={item.name}>{item.text}</label>
     </div>
   {/each}
 </div>
@@ -91,10 +91,10 @@
     font-size: var(--body);
   }
 
-  .radioGroupItem input:disabled {
+  .disabled input {
     cursor: not-allowed;
   }
-  .radioGroupItem .disabled {
+  .disabled label {
     color: var(--mutedColor);
   }
 </style>

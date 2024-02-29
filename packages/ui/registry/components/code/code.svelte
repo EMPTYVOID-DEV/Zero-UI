@@ -81,7 +81,7 @@
   }
   .code :global(::-webkit-scrollbar-track) {
     border-radius: 0;
-    background: color-mix(in srgb, var(--foregroundColor) 40%, transparent 60%);
+    background: color-mix(in srgb, var(--mutedColor) 40%, transparent 60%);
   }
 
   .code :global(::-webkit-scrollbar-thumb) {

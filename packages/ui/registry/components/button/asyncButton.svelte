@@ -11,7 +11,7 @@
   /**@type {import("../../types").asyncButtonAction} This needs to be an async function that handles the button click*/
   export let action;
 
-  /**@type {"passive"|"primary"|"secondary"|"danger"}  Dictates the color based on the type*/
+  /**@type {"disabled"|"passive"|"primary"|"secondary"|"danger"}  Dictates the color based on the type*/
   export let type = "primary";
 
   const dispatcher = createEventDispatcher();
@@ -37,7 +37,12 @@
   }
 </script>
 
-<button class:loading={state == "loading"} class={type} on:click={handleClick}>
+<button
+  disabled={type == "disabled"}
+  class:loading={state == "loading"}
+  class={type}
+  on:click={handleClick}
+>
   {#if state == "loading"}
     <LoadingIcon />
   {:else}
@@ -47,12 +52,16 @@
 </button>
 
 <style>
-  .passive {
-    --bg: var(--foregroundColor);
-  }
-  :is(.primary, .secondary, .danger, .secondary, .passive) {
+  :is(.disabled, .primary, .secondary, .danger, .secondary, .passive) {
     --text: var(--backgroundColor);
     --icon: var(--backgroundColor);
+  }
+  .disabled {
+    --bg: var(--mutedColor);
+    cursor: not-allowed;
+  }
+  .passive {
+    --bg: var(--foregroundColor);
   }
   .primary {
     --bg: var(--primaryColor);
@@ -70,8 +79,8 @@
     justify-content: center;
     gap: 0.25rem;
     width: fit-content;
-    padding-inline: var(--padding-inline, 1.5rem);
-    padding-block: var(--padding-block, 0.75rem);
+    padding-inline: var(--padding-inline, 1rem);
+    padding-block: var(--padding-block, 0.5rem);
     cursor: pointer;
     outline: none;
     border: none;
