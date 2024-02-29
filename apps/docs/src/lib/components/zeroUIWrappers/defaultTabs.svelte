@@ -4,6 +4,7 @@
 	import Modeling from '$lib/components/icons/modeling.svelte';
 	import Development from '$lib/components/icons/development.svelte';
 	import Testing from '$lib/components/icons/test.svelte';
+	import Wrapper from '../core/wrapper.svelte';
 	let activeTab = 0;
 	const tabs = [
 		'Generate ideas and concepts for the project.',
@@ -13,7 +14,7 @@
 	];
 </script>
 
-<div class="tabsWrapper">
+<Wrapper>
 	<DefaultTabs
 		bind:activeTab
 		tabs={[
@@ -34,19 +35,12 @@
 				icon: Testing
 			}
 		]}
-		on:change={(e) => console.log(e.detail.activeTab)}
 	/>
 	<p>{tabs[activeTab]}</p>
-</div>
+</Wrapper>
 
 <style>
-	.tabsWrapper {
-		width: 100%;
-		display: flex;
-		flex-direction: column;
-		gap: 2rem;
-	}
-	.tabsWrapper p {
+	p {
 		color: var(--foregroundColor);
 		font-size: var(--body);
 		font-family: var(--bodyFont);

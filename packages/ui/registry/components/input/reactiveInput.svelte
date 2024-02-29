@@ -22,12 +22,10 @@
 <div class="input-container {status.state}" class:disabled>
   <label for="input">{label}</label>
   <input
-    id="input"
     {name}
     {disabled}
     {value}
     type={inputType}
-    class="input"
     on:input={(e) => {
       status = checkFunction(e.currentTarget.value);
     }}
@@ -71,7 +69,7 @@
     display: none;
   }
 
-  .input {
+  .input-container input {
     box-sizing: border-box;
     width: 100%;
     padding-left: 0.5rem;
@@ -84,7 +82,7 @@
     border: 2px solid var(--foregroundColor);
     outline: none;
   }
-  .input:focus {
+  .input-container input:focus {
     border-color: var(--main-color);
     background-color: color-mix(
       in srgb,
@@ -92,11 +90,11 @@
       transparent 70%
     );
   }
-  .input[type="number"]::-webkit-outer-spin-button,
-  .input::-webkit-inner-spin-button {
+  .input-container input[type="number"]::-webkit-outer-spin-button,
+  .input-container input::-webkit-inner-spin-button {
     -webkit-appearance: none;
   }
-  .disabled .input {
+  .disabled input {
     border-color: var(--mutedColor);
     color: var(--mutedColor);
   }

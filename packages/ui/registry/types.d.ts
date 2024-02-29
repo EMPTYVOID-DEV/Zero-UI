@@ -11,12 +11,11 @@ export type checkItem = {
   text: string;
   checked: boolean;
   disabled?: boolean;
-  name?: string;
-  value?: string;
+  description?: string;
 };
 
 // type for default radioGroup component
-export type radioItem = { text: string; name?: string; value?: string };
+export type radioItem = { text: string; description?: string };
 
 // type for the change event
 export type changeEvent<T> = Event & {

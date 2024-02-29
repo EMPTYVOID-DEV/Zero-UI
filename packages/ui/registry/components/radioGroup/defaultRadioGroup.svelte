@@ -1,5 +1,6 @@
 <script>
   import { createEventDispatcher } from "svelte";
+  import RadioItem from "./radioItem.svelte";
 
   /**@type {number}*/
   export let defaultChoice = 0;
@@ -44,24 +45,14 @@
 </script>
 
 <div class="radioGroup" class:disabled>
-  {#each enhancedGroup as item, index}
+  {#each enhancedGroup as radioItem, index}
     <!-- svelte-ignore a11y-click-events-have-key-events -->
     <!-- svelte-ignore a11y-no-static-element-interactions -->
-    <div
-      class="radioGroupItem"
-      on:click={() => {
-        toggleRadioGroup(index);
-      }}
-    >
-      <input
-        {disabled}
-        type="radio"
-        name={item.name}
-        value={item.value}
-        checked={item.checked}
-      />
-      <label for={item.name}>{item.text}</label>
-    </div>
+    <RadioItem
+      {disabled}
+      {radioItem}
+      on:click={() => toggleRadioGroup(index)}
+    />
   {/each}
 </div>
 
@@ -70,31 +61,5 @@
     display: flex;
     flex-direction: column;
     gap: 0.75rem;
-  }
-  .radioGroup .radioGroupItem {
-    display: grid;
-    grid-template-columns: repeat(2, auto);
-    align-items: center;
-    justify-content: start;
-    gap: 0.5rem;
-  }
-  .radioGroupItem input {
-    cursor: pointer;
-    accent-color: var(--primaryColor);
-  }
-
-  .radioGroupItem label {
-    white-space: pre-wrap;
-    word-break: break-word;
-    color: var(--foregroundColor);
-    font-family: var(--bodyFont);
-    font-size: var(--body);
-  }
-
-  .disabled input {
-    cursor: not-allowed;
-  }
-  .disabled label {
-    color: var(--mutedColor);
   }
 </style>

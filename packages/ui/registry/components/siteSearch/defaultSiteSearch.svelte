@@ -49,7 +49,7 @@
       <input type="text" {placeholder} on:input={handleChange} />
       <!-- svelte-ignore a11y-click-events-have-key-events -->
       <!-- svelte-ignore a11y-no-static-element-interactions -->
-      <span class="clear" on:click={() => close()}>
+      <span class="close" on:click={() => close()}>
         <CloseIcon />
       </span>
     </nav>
@@ -90,7 +90,7 @@
     font-family: var(--bodyFont);
   }
 
-  .searchBar .clear {
+  .searchBar .close {
     display: flex;
     justify-content: center;
     align-items: center;

@@ -1,5 +1,6 @@
 <script>
   import { createEventDispatcher } from "svelte";
+  import CheckItem from "./checkItem.svelte";
 
   /**@type {import("../../types").checkItem[]}*/
   export let checkList = [];
@@ -23,24 +24,8 @@
 </script>
 
 <div class="checkList">
-  {#each checkList as item, index}
-    <!-- svelte-ignore a11y-click-events-have-key-events -->
-    <!-- svelte-ignore a11y-no-static-element-interactions -->
-    <div
-      class="checkListItem"
-      on:click={() => {
-        toggleCheckListItem(index);
-      }}
-    >
-      <input
-        type="checkbox"
-        disabled={item.disabled}
-        value={item.value || ""}
-        name={item.name || ""}
-        checked={item.checked}
-      />
-      <label for="" class:disabled={item.disabled}>{item.text}</label>
-    </div>
+  {#each checkList as checkItem, index}
+    <CheckItem {checkItem} on:click={() => toggleCheckListItem(index)} />
   {/each}
 </div>
 
@@ -49,31 +34,5 @@
     display: flex;
     flex-direction: column;
     gap: 0.75rem;
-  }
-  .checkList .checkListItem {
-    display: grid;
-    grid-template-columns: repeat(2, auto);
-    align-items: center;
-    justify-content: start;
-    gap: 0.5rem;
-  }
-  .checkListItem input {
-    cursor: pointer;
-    accent-color: var(--primaryColor);
-  }
-
-  .checkListItem label {
-    white-space: pre-wrap;
-    word-break: break-word;
-    color: var(--foregroundColor);
-    font-family: var(--bodyFont);
-    font-size: var(--body);
-  }
-
-  .checkListItem input:disabled {
-    cursor: not-allowed;
-  }
-  .checkListItem .disabled {
-    color: var(--mutedColor);
   }
 </style>

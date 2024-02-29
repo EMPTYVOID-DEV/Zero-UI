@@ -24,15 +24,7 @@
 
 <div class="input-container" class:disabled>
   <label for="input">{label}</label>
-  <input
-    id="input"
-    type={inputType}
-    {disabled}
-    {value}
-    {name}
-    class="input"
-    on:input={handleChange}
-  />
+  <input type={inputType} {disabled} {value} {name} on:input={handleChange} />
 </div>
 
 <style>
@@ -54,7 +46,7 @@
   .input-container label:empty {
     display: none;
   }
-  .input {
+  .input-container input {
     box-sizing: border-box;
     width: 100%;
     padding-left: 0.5rem;
@@ -67,7 +59,7 @@
     border: 2px solid var(--foregroundColor);
     outline: none;
   }
-  .input:focus {
+  .input-container input:focus {
     border-color: var(--primaryColor);
     background-color: color-mix(
       in srgb,
@@ -75,11 +67,11 @@
       transparent 70%
     );
   }
-  .input[type="number"]::-webkit-outer-spin-button,
-  .input::-webkit-inner-spin-button {
+  .input-container input[type="number"]::-webkit-outer-spin-button,
+  .input-container input::-webkit-inner-spin-button {
     -webkit-appearance: none;
   }
-  .disabled .input {
+  .disabled input {
     border-color: var(--mutedColor);
     color: var(--mutedColor);
   }

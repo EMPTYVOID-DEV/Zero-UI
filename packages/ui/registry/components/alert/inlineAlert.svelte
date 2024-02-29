@@ -9,7 +9,7 @@
   /**@type {"primary"|"success"|"danger"}*/
   export let type = "primary";
   /**@type {import("../../types").iconComponent}*/
-  export let icon =
+  $: icon =
     type == "primary" ? InfoIcon : type == "danger" ? DangerIcon : SuccessIcon;
 </script>
 

@@ -100,7 +100,7 @@
     height: 1.25rem;
   }
   .loading {
-    opacity: 0.7;
+    opacity: 0.8;
     cursor: not-allowed;
   }
 </style>
