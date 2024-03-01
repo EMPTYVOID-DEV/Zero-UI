@@ -19,7 +19,7 @@
   },
   "checkList": {
     "default": {
-      "files": ["defaultCheckList.svelte"],
+      "files": ["defaultCheckList.svelte", "checkItem.svelte"],
       "entry": "defaultCheckList.svelte"
     }
   },
@@ -100,7 +100,7 @@
   },
   "radioGroup": {
     "default": {
-      "files": ["defaultRadioGroup.svelte"],
+      "files": ["defaultRadioGroup.svelte", "radioItem.svelte"],
       "entry": "defaultRadioGroup.svelte"
     }
   },
