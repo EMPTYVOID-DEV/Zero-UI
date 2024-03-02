@@ -1,5 +1,6 @@
 <script>
 	import { ReactiveInput } from 'zero-ui-registry';
+	import Wrapper from '../core/wrapper.svelte';
 	/**@type {import("zero-ui-registry/types").checkFunction}*/
 	function checkFunction(value) {
 		const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d@$!%*?&]{8,}$/;
@@ -14,6 +15,16 @@
 				state: 'invalid'
 			};
 	}
+	/**@type {("normal"|"disabled")[]} */
+	const tabs = ['disabled', 'normal'];
+	let activeTab = 0;
 </script>
 
-<ReactiveInput {checkFunction} inputType="password" label="Enter random password" />
+<Wrapper {tabs} bind:activeTab>
+	<ReactiveInput
+		{checkFunction}
+		inputType="password"
+		label="Enter random password"
+		disabled={activeTab == 0}
+	/>
+</Wrapper>

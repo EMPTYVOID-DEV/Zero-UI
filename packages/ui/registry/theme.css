@@ -1,11 +1,11 @@
 :root {
-  --primaryColor: #d4322c;
-  --secondaryColor: #3edd5b;
+  --primaryColor: #3498db;
+  --secondaryColor: #e74c3c;
   --backgroundColor: #ffffff;
-  --foregroundColor: #000000;
+  --foregroundColor: #1a1a1a;
   --dangerColor: #ff0000;
-  --successColor: #22bb33;
-  --mutedColor: #514657;
+  --successColor: #27cf22;
+  --mutedColor: #505050;
   --h1: clamp(2rem, calc(2rem + ((1vw - 0.48rem) * 0.9722)), 2.5rem);
   --h2: clamp(1.725rem, calc(1.725rem + ((1vw - 0.48rem) * 0.9722)), 2rem);
   --h3: clamp(1.5rem, calc(1.5rem + ((1vw - 0.48rem) * 0.9722)), 1.725rem);

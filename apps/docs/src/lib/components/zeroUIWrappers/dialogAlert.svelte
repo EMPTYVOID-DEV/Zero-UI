@@ -1,5 +1,5 @@
 <script>
-	import { SyncButton, DialogAlert, DefaultTabs } from 'zero-ui-registry';
+	import { SyncButton, DialogAlert } from 'zero-ui-registry';
 	import Wrapper from '../core/wrapper.svelte';
 	/**@type {("primary"|"danger")[]} */
 	const tabs = ['danger', 'primary'];
@@ -20,8 +20,7 @@
 	let activeTab = 0;
 </script>
 
-<Wrapper>
-	<DefaultTabs bind:activeTab tabs={tabs.map((el) => ({ title: el }))} />
+<Wrapper bind:activeTab {tabs}>
 	<DialogAlert
 		type={tabs[activeTab]}
 		header={info[activeTab].header}

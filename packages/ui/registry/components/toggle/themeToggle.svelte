@@ -8,6 +8,15 @@
 
   /**@type {"dark"|"light"|"system"}*/
   export let active = "dark";
+
+  /**
+   * @typedef {import("../../types").iconComponent} icon
+   * @type {Map<"dark"|"light"|"system",icon>}*/
+  const optionsMap = new Map([
+    ["dark", MoonIcon],
+    ["light", SunIcon],
+    ["system", ComputerIcon],
+  ]);
   const dispatcher = createEventDispatcher();
   let show = false;
 </script>
@@ -29,36 +38,18 @@
         });
       }}
     >
-      <button
-        class:active={active == "dark"}
-        class="option"
-        on:click={() => {
-          active = "dark";
-        }}
-      >
-        <MoonIcon />
-        <span>Dark</span>
-      </button>
-      <button
-        class:active={active == "light"}
-        class="option"
-        on:click={() => {
-          active = "light";
-        }}
-      >
-        <SunIcon />
-        <span>Light</span>
-      </button>
-      <button
-        class:active={active == "system"}
-        class="option"
-        on:click={() => {
-          active = "system";
-        }}
-      >
-        <ComputerIcon />
-        <span>System</span>
-      </button>
+      {#each optionsMap.entries() as option}
+        <button
+          class:active={active == option[0]}
+          class="option"
+          on:click={() => {
+            active = option[0];
+          }}
+        >
+          <svelte:component this={option[1]} />
+          <span>{option[0]}</span>
+        </button>
+      {/each}
     </div>
   {/if}
 </div>

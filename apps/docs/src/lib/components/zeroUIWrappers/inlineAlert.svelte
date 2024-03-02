@@ -1,6 +1,6 @@
 <script>
 	import Wrapper from '$lib/components/core/wrapper.svelte';
-	import { InlineAlert, DefaultTabs } from 'zero-ui-registry';
+	import { InlineAlert } from 'zero-ui-registry';
 	/**@type {("primary"|"danger"|"success")[]} */
 	const tabs = ['danger', 'primary', 'success'];
 	const info = [
@@ -20,8 +20,7 @@
 	let activeTab = 0;
 </script>
 
-<Wrapper>
-	<DefaultTabs bind:activeTab tabs={tabs.map((el) => ({ title: el }))} />
+<Wrapper bind:activeTab {tabs}>
 	<InlineAlert
 		description={info[activeTab].description}
 		header={info[activeTab].header}

@@ -18,22 +18,22 @@
 }
 
 [data-theme='light']:root {
-	--primaryColor: #d4322c;
-	--secondaryColor: #3edd5b;
+	--primaryColor: #3498db;
+	--secondaryColor: #e74c3c;
 	--backgroundColor: #ffffff;
 	--foregroundColor: #1a1a1a;
 	--dangerColor: #ff0000;
-	--successColor: #22bb33;
+	--successColor: #27cf22;
 	--mutedColor: #505050;
 }
 
 [data-theme='dark']:root {
-	--primaryColor: #d4322c;
-	--secondaryColor: #3edd5b;
+	--primaryColor: #3498db;
+	--secondaryColor: #e74c3c;
 	--backgroundColor: #1a1a1a;
 	--foregroundColor: #ffffff;
 	--dangerColor: #ff0000;
-	--successColor: #4caf50;
+	--successColor: #27cf22;
 	--mutedColor: #b1b0b0;
 }
 

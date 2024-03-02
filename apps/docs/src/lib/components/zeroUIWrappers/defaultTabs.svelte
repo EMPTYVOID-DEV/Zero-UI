@@ -14,7 +14,7 @@
 	];
 </script>
 
-<Wrapper>
+<Wrapper showTabs={false}>
 	<DefaultTabs
 		bind:activeTab
 		tabs={[

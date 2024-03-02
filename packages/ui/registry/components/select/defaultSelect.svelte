@@ -44,7 +44,7 @@
   }
 </script>
 
-<div class="select">
+<div class="select" class:disabled>
   <label for="select">{label}</label>
   <Select
     searchable
@@ -103,5 +103,8 @@
   }
   .select label:empty {
     display: none;
+  }
+  .disabled label {
+    color: var(--mutedColor);
   }
 </style>

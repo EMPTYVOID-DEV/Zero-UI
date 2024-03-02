@@ -20,8 +20,8 @@
   on:click|preventDefault
   on:mousedown|preventDefault
 >
-  <span class="bg" style="background-color: {hex};"></span>
   <span class="hex">{hex}</span>
+  <span class="bg" style="background-color: {hex};"></span>
 </label>
 
 <style>
@@ -31,24 +31,31 @@
   .trigger {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: 1.5rem;
+    padding: 0.25rem;
+    border-radius: var(--border-radius);
+    border: 1px solid
+      color-mix(in srgb, var(--primaryColor) 40%, transparent 60%);
     cursor: pointer;
   }
+  .trigger:hover {
+    border: 1px solid var(--primaryColor);
+  }
+
   .trigger .bg {
     height: 2rem;
     aspect-ratio: 1/1;
-    border-radius: 50%;
+    border-radius: 0.5rem;
   }
   .trigger .hex {
-    width: fit-content;
     display: flex;
     align-items: center;
     border-radius: var(--border-radius);
-    background-color: var(--foregroundColor);
     padding-block: 0.5rem;
     padding-inline: 1rem;
     font-size: var(--body);
     font-family: var(--bodyFont);
-    color: var(--backgroundColor);
+    color: var(--foregroundColor);
+    text-transform: uppercase;
   }
 </style>

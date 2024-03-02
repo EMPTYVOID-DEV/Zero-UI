@@ -94,14 +94,6 @@
   .input-container input::-webkit-inner-spin-button {
     -webkit-appearance: none;
   }
-  .disabled input {
-    border-color: var(--mutedColor);
-    color: var(--mutedColor);
-  }
-  .disabled label {
-    color: var(--mutedColor);
-  }
-
   .error {
     display: grid;
     grid-template-columns: auto 1fr;
@@ -113,5 +105,15 @@
     font-family: var(--bodyFont);
     color: var(--main-color);
     text-transform: capitalize;
+  }
+  .disabled input {
+    border-color: var(--mutedColor);
+    color: var(--mutedColor);
+  }
+  .disabled label {
+    color: var(--mutedColor);
+  }
+  .disabled .error {
+    display: none;
   }
 </style>
