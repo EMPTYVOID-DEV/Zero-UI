@@ -1,61 +1,61 @@
-# Zero-UI - Flexible Svelte UI Component Library
+# Zero-UI - Simple and Versatile Svelte UI Components
 
 ![zeroui Logo](./asset/logo.png)
 
-**zeroui** is a versatile and easy-to-use UI component library for svelte applications. It comes with good default styles, customizable components, and adheres to UI/UX guidelines. With no need for configuration, zeroui is designed to be effortlessly integrated into your Svelte projects.
+**zeroui** is a straightforward and user-friendly UI component library crafted for Svelte applications. It offers ready-to-use styles, customizable components, and aligns with UI/UX best practices. With zero configuration required, zeroui effortlessly integrates into your Svelte projects.
 
 ## Key Features
 
-1. **Components**
+1. **Copy-Paste Convenience**
 
-   - Functional components with clear local Svelte styles.
-   - Modular structure for easy integration into your projects.
+   - Zero-ui relies on an easy copy-paste method, making it as simple as shadcn.
 
-2. **Components Props**
+2. **Modular Components**
 
-   - Focus on filling the component and handling logic.
-   - No direct handling of style props, allowing for cleaner customization.
+   - Functional components with clear, local Svelte styles.
+   - Easy integration with a modular structure.
 
-3. **Global Theme**
+3. **Component Props**
 
-   - Defines a global theme with CSS variables for colors, font sizes, font families and  
-     border radius.
-   - Follows the 60-30-10 rule for color themes.
+   - Focus on content and logic without direct style prop handling.
+   - Cleaner customization with no fuss.
 
-4. **Variants**
+4. **Global Theme**
 
-   - Offers different variants for the same component based on functionality changes.
-   - Examples include synchronous and asynchronous button variants.
+   - Defines a global theme using CSS variables for colors, font sizes, font families, and border radius.
+   - Adheres to the 60-30-10 color rule.
 
-5. **Jsdoc**
+5. **Variants**
 
-   - Comprehensive documentation using JSDoc for seamless integration, whether using TypeScript or
-     not.
+   - Offers different variants for components to cater to various use-cases.
+   - Includes synchronous and asynchronous button variants as examples.
 
-6. **UI/UX**
+6. **Jsdoc Documentation**
 
-   - Built with UI/UX guidelines in mind.
-   - Responsive design and correct usage of colors for a pleasing user experience.
+   - Comprehensive documentation using JSDoc for seamless integration with or without TypeScript.
 
-7. **No Configuration Needed**
+7. **UI/UX Design**
 
-   - Simple installation and usage with the zero-ui-cli.
-   - Just use the CLI to load what you need into your project directory and install the required
-     packages.
+   - Crafted with UI/UX guidelines, ensuring responsiveness and a visually appealing experience.
 
-## Getting started
+8. **Zero Configuration Needed**
+
+   - Effortless installation and usage with the zero-ui-cli.
+   - Simply use the CLI to load required elements into your project directory and install the necessary packages.
+
+## Getting Started
 
 ```bash
 pnpm dlx zero-ui-cli
 ```
 
-## More info
+## More Information
 
-For more info you can check [zero-ui-docs](https://zero-ui.vercel.app).
+For detailed information, visit [zero-ui-docs](https://zero-ui.vercel.app).
 
 ## Contribution
 
-I welcome contributions from the community. Feel free to open issues, submit pull requests, or join discussions to make zeroui even better.
+Community contributions are welcome! Feel free to open issues, submit pull requests, or join discussions to enhance zeroui.
 
 ## License
 
