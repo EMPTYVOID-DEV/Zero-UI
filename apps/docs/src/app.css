@@ -21,7 +21,7 @@
 	--primaryColor: #3498db;
 	--secondaryColor: #e74c3c;
 	--backgroundColor: #ffffff;
-	--foregroundColor: #1a1a1a;
+	--foregroundColor: #000000;
 	--dangerColor: #ff0000;
 	--successColor: #27cf22;
 	--mutedColor: #505050;
@@ -30,7 +30,7 @@
 [data-theme='dark']:root {
 	--primaryColor: #3498db;
 	--secondaryColor: #e74c3c;
-	--backgroundColor: #1a1a1a;
+	--backgroundColor: #000000;
 	--foregroundColor: #ffffff;
 	--dangerColor: #ff0000;
 	--successColor: #27cf22;

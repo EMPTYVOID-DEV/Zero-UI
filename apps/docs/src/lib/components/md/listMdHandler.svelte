@@ -18,10 +18,4 @@
 		gap: 0.75rem;
 		color: var(--foregroundColor);
 	}
-	ul {
-		list-style: disc;
-	}
-	ol {
-		list-style: decimal;
-	}
 </style>

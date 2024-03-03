@@ -4,29 +4,47 @@
 	import DocsNav from '$lib/components/core/docsNav.svelte';
 	import { onMount } from 'svelte';
 	import { changeMode } from 'sveltedocsmaker/utils';
+	import CodeMdHandler from '$lib/components/md/codeMdHandler.svelte';
+	import ListMdHandler from '$lib/components/md/listMdHandler.svelte';
 	const sectionsMap = new Map([
-		['Getting Started', ['Introduction', 'Installation', 'Theming', 'Components', 'Jsdoc', 'Cli']]
+		[
+			'Getting Started',
+			[
+				'Introduction',
+				'Installation',
+				'Folder structure',
+				'Components',
+				'Theming',
+				'Jsdoc',
+				'Registry.json'
+			]
+		]
 	]);
-
+	/**@type {any}*/
 	$: data = $page.data;
 	onMount(() => {
 		const html = document.querySelector('html');
 		const dataset = html?.dataset;
 		if (dataset && dataset.theme == 'dark') changeMode(false);
+		else changeMode(true);
 	});
 </script>
 
 <Main
+	mdHandlers={{
+		list: ListMdHandler,
+		code: CodeMdHandler
+	}}
 	{sectionsMap}
 	{data}
 	pathname={$page.url.pathname}
 	CustomNavBar={DocsNav}
-	darkBgColor="#1a1a1a"
+	darkBgColor="#000000"
 	lightBgColor="#ffffff"
-	darkPrimary="#d4322c"
-	lightPrimary="#d4322c"
-	lightFontColor="#1a1a1a"
+	darkPrimary="#3498db"
+	lightPrimary="#1076ba"
+	lightFontColor="#000000"
 	darkFontColor="#ffffff"
-	headingFont="'Playfair Display', serif"
+	headingFont="Arial, Helvetica, sans-serif"
 	bodyFont="Arial, Helvetica, sans-serif"
 />

@@ -72,6 +72,7 @@
   }
 
   .description {
+    text-align: center;
     color: color-mix(in srgb, var(--mutedColor) 70%, transparent 30%);
   }
   .description:empty {

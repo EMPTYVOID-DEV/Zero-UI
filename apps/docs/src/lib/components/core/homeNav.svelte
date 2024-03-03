@@ -41,7 +41,7 @@
 		display: flex;
 		align-items: center;
 		padding-inline: 12px;
-		gap: 12px;
+		gap: 8px;
 	}
 	.logo {
 		display: flex;

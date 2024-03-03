@@ -4,7 +4,8 @@
 	import Close from '$lib/components/icons/close.svelte';
 	import { changeTheme, detectSystemTheme } from '$lib/utils/client';
 	import { changeMobileStatus, changeMode } from 'sveltedocsmaker/utils';
-	let showSections = false;
+	import { MobileMenuAppear } from 'sveltedocsmaker/stores';
+	$: showSections = $MobileMenuAppear;
 	/**@param {Event & { detail:{theme:"dark"|"light"|"system"}}} e*/
 	function handleThemeChange(e) {
 		const theme = e.detail.theme == 'system' ? detectSystemTheme() : e.detail.theme;
@@ -48,9 +49,13 @@
 		height: fit-content;
 		display: flex;
 		align-items: center;
-		gap: 12px;
-		padding-right: 8px;
+		gap: 2px;
+		padding-inline: 8px;
 	}
+	.docsNav > :global(nav) {
+		padding: 0;
+	}
+
 	.control {
 		display: none;
 	}

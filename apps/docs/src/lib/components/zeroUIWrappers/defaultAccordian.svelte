@@ -20,7 +20,7 @@
 		{
 			title: 'What are variants?',
 			description:
-				'Offers different variants for components based on functionality changes. Examples include synchronous and asynchronous button variants.'
+				'Offers different variants for different use-cases of the component. Examples include synchronous and asynchronous button variants.'
 		}
 	];
 </script>

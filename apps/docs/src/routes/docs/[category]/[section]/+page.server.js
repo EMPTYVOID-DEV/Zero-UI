@@ -4,6 +4,7 @@ import { error } from '@sveltejs/kit';
 export const prerender = true;
 
 export async function load(/**@type { import('@sveltejs/kit').LoadEvent}*/ event) {
+	// @ts-ignore
 	const [data, err] = await readMd(event.params.section, event.params.category);
 
 	if (err) {
