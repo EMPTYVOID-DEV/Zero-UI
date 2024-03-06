@@ -105,15 +105,15 @@
     flex-direction: column;
     overflow-y: auto;
   }
-  .searchModel :global(::-webkit-scrollbar) {
+  .searchModel ::-webkit-scrollbar {
     width: 0.5rem;
   }
-  .searchModel :global(::-webkit-scrollbar-track) {
+  .searchModel ::-webkit-scrollbar-track {
     border-radius: 0;
     background: color-mix(in srgb, var(--mutedColor) 40%, transparent 60%);
   }
 
-  .searchModel :global(::-webkit-scrollbar-thumb) {
+  .searchModel ::-webkit-scrollbar-thumb {
     border-radius: 0.25rem;
     background: color-mix(in srgb, var(--primaryColor) 60%, transparent 40%);
   }

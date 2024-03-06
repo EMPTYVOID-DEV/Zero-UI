@@ -69,7 +69,7 @@
     top: clamp(0.75rem, 2%, 1.25rem);
     right: clamp(1rem, 3%, 1.5rem);
     cursor: pointer;
-    z-index: 100;
+    z-index: 2;
   }
 
   .code:not(.radius) {

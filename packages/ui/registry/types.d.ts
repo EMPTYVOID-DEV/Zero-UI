@@ -1,4 +1,4 @@
-import { ComponentType, EventDispatcher, SvelteComponent } from "svelte";
+import { ComponentType, SvelteComponent } from "svelte";
 
 // general type for a an icon component
 export type iconComponent = ComponentType<SvelteComponent>;
@@ -14,8 +14,12 @@ export type checkItem = {
   description?: string;
 };
 
-// type for default radioGroup component
-export type radioItem = { text: string; description?: string };
+// type for reactive input
+
+export type reactiveInputStatus = {
+  errorMsg: string;
+  state: "idle" | "valid" | "invalid";
+};
 
 // type for the change event
 export type changeEvent<T> = Event & {
@@ -64,4 +68,19 @@ export type section = {
 export type category = {
   categoryName: string;
   sections: section[];
+};
+
+// this type is for the toast
+
+export type toastAction = {
+  label: string;
+  action: (ev: MouseEvent) => void;
+};
+
+// this type is for the async toaste
+
+export type toastState = {
+  header: string;
+  description: string;
+  toastAction: toastAction | null;
 };

@@ -9,7 +9,7 @@
 
 <div class="playGround">
 	<HomeNav on:change={(e) => changeTheme(e.detail.theme)} />
-	<div class="wrapper">
+	<div class="content">
 		<section class="header">
 			<div>
 				<ComponentIcon />
@@ -42,7 +42,7 @@
 		background-size: 32px 32px;
 		background-repeat: repeat;
 	}
-	.wrapper {
+	.content {
 		width: 60%;
 		display: flex;
 		flex-direction: column;
@@ -68,6 +68,7 @@
 		width: 1.5rem;
 		height: 1.5rem;
 	}
+
 	.component {
 		padding: 1.25rem;
 		width: 100%;
@@ -77,7 +78,7 @@
 		justify-content: center;
 		background-color: color-mix(in srgb, var(--primaryColor) 4%, transparent 96%);
 		border-radius: var(--border-radius);
-		border: 2px solid var(--primaryColor);
+		border: 1px solid var(--primaryColor);
 	}
 	.md {
 		width: 100%;
@@ -89,7 +90,7 @@
 		color: var(--foregroundColor);
 	}
 	@media screen and (width<768px) {
-		.wrapper {
+		.content {
 			width: 90%;
 		}
 		.header {

@@ -179,5 +179,19 @@
       "files": ["defaultTabs.svelte"],
       "entry": "defaultTabs.svelte"
     }
+  },
+  "toast": {
+    "sync": {
+      "files": ["syncToast.svelte", "customToast.svelte"],
+      "icons": ["infoIcon", "dangerIcon", "successIcon"],
+      "packages": ["svelte-sonner"],
+      "entry": "syncToast.svelte"
+    },
+    "async": {
+      "files": ["asyncToast.svelte", "customToast.svelte"],
+      "icons": ["loadingIcon", "dangerIcon", "successIcon"],
+      "packages": ["svelte-sonner"],
+      "entry": "asyncToast.svelte"
+    }
   }
 }

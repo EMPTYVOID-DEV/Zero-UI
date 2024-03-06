@@ -12,7 +12,7 @@
   export let disabled = false;
   /**@type {import("../../types").checkFunction}*/
   export let checkFunction;
-  /**@type {{errorMsg:string,state:"idle"|"valid"|"invalid"}}*/
+  /**@type {import("../../types").reactiveInputStatus}*/
   let status = {
     state: "idle",
     errorMsg: "",

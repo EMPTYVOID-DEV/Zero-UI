@@ -51,3 +51,7 @@ export { default as InlineAlert } from "../registry/components/alert/inlineAlert
 export { default as DialogAlert } from "../registry/components/alert/dialogAlert.svelte";
 
 export { default as DefaultTabs } from "../registry/components/tabs/defaultTabs.svelte";
+
+export { default as SyncToast } from "../registry/components/toast/syncToast.svelte";
+
+export { default as AsyncToast } from "../registry/components/toast/asyncToast.svelte";

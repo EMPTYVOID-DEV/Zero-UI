@@ -85,6 +85,7 @@
 		align-items: center;
 	}
 	.error div h3 {
+		text-align: center;
 		color: var(--foregroundColor);
 	}
 	.error div p {

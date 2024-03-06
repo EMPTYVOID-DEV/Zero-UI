@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "84c47bc021ba4968",
+        "id": "d7ab8560fb96ae56",
         "type": "tabs",
         "children": [
           {
-            "id": "ce68cb48d7a5433d",
+            "id": "24c41be98985625a",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -146,15 +146,16 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "ce68cb48d7a5433d",
+  "active": "24c41be98985625a",
   "lastOpenFiles": [
-    "Getting Started/Registry.json.md",
-    "Getting Started/Folder structure.md",
+    "Getting Started/Theming.md",
     "Getting Started/Components.md",
+    "Getting Started/Icons.md",
+    "Getting Started/Jsdoc.md",
     "Getting Started/Introduction.md",
     "Getting Started/Installation.md",
-    "Getting Started/Jsdoc.md",
-    "Getting Started/Theming.md",
+    "Getting Started/Folder structure.md",
+    "Getting Started/Registry.json.md",
     "Untitled.md"
   ]
 }

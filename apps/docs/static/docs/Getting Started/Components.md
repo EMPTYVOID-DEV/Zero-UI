@@ -16,7 +16,7 @@ The `type` prop is special and used by multiple components. It defines the main 
 
 ### Events
 
-Zero-ui variant entries either forward events or fire custom events, considering only the relevant ones.
+In Zero-ui, variant entries can either forward DOM events or generate custom events. If a component requires handling around a particular event or is unable to forward the event, an action needs to be supplied.
 
 ### CSS Variables
 
@@ -25,5 +25,17 @@ Zero-ui components utilize global CSS variables and expose local CSS variables f
 These can be easily overridden using Svelte CSS variable props:
 
 ```html
-<MultiPageCode {codePages} {darkMode} --max-height="400px" on:change />
+<MultiPageCode --max-height="400px" />
 ```
+
+### Icons
+
+Zero-ui houses all its icons within the `icons` folder, each represented as svelte component wrapping an **SVG** with a default width and height set to 24px. To avoid redundancy, every icon exposes a `--icon` CSS variable that components can override.
+
+```css
+svg path {
+	fill: var(--icon, var(--primaryColor));
+}
+```
+
+By default, the `--icon` CSS variable is set to `--primaryColor`.

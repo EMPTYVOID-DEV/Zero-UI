@@ -6,7 +6,7 @@
   export let defaultChoice = 0;
   /**@type {boolean}*/
   export let disabled = false;
-  /**@type {import("../../types").radioItem[]}*/
+  /**@type {{ text: string; description?: string }[]}*/
   export let radioGroup = [];
   /**
    * creating new list of group items with the checked property

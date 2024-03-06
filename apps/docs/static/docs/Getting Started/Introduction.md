@@ -15,7 +15,7 @@ Zero-UI utilizes plain CSS for styling instead of Tailwind CSS. This offers two 
 
 ### Using JSDoc
 
-While TypeScript offers benefits, it can add complexity for libraries designed for easy integration. Zero-UI chooses **JSDoc** as an alternative, providing helpful information about the Wcomponents without requiring users to adopt TypeScript. JSDoc offers similar features like type checking and autocompletion, making it a user-friendly choice.
+While TypeScript offers benefits, it can add complexity for libraries designed for easy integration. Zero-UI chooses **JSDoc** as an alternative, providing helpful information about the components without requiring users to adopt TypeScript. JSDoc offers similar features like type checking and autocompletion, making it a user-friendly choice.
 
 ### Theme Your Way
 

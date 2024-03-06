@@ -69,3 +69,50 @@ A global border-radius is applied to all components, although exceptions are mad
 #### Global styles
 
 Try avoiding global styles that may break components styling.For example `margin` set to 0 will break the dialog element positioning.
+
+#### Dark Mode
+
+Switching between dark and light mode in Zero-ui is as simple as toggling CSS variables. Additionally, SvelteKit hooks enable seamless theme setting from cookies.
+
+```css
+[data-theme='light']:root {
+  --primaryColor: #3498db;
+  --secondaryColor: #e74c3c;
+  --backgroundColor: #ffffff;
+  --foregroundColor: #000000;
+  --dangerColor: #ff0000;
+  --successColor: #27cf22;
+  --mutedColor: #505050;
+}
+
+[data-theme='dark']:root {
+  --primaryColor: #3498db;
+  --secondaryColor: #e74c3c;
+  --backgroundColor: #000000;
+  --foregroundColor: #ffffff;
+  --dangerColor: #ff0000;
+  --successColor: #27cf22;
+  --mutedColor: #b1b0b0;
+}
+```
+
+
+```js
+export async function handle({ event, resolve }) {
+  const response = await resolve(event, {
+    transformPageChunk: ({ html }) => {
+      let currentTheme = event.cookies.get('theme');
+      if (!currentTheme) {
+        currentTheme = 'dark';
+        event.cookies.set('theme', currentTheme, {
+          path: '/',
+          httpOnly: false,
+          maxAge: cookieMaxAge,
+        });
+      }
+      return html.replace('data-theme=""', `data-theme="${currentTheme}"`);
+    },
+  });
+  return response;
+}
+```

@@ -39,10 +39,15 @@
     display: grid;
     grid-template-columns: repeat(2, auto);
     justify-content: start;
-    gap: 0.75rem;
+    gap: 0.5rem;
     padding: 0.5rem;
     border: 2px solid var(--main-color);
     border-radius: var(--border-radius);
+    background-color: color-mix(
+      in srgb,
+      var(--main-color) 30%,
+      transparent 70%
+    );
   }
   .alertContent {
     display: flex;
