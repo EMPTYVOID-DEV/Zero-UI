@@ -10,7 +10,7 @@
   export let inputType = "text";
   /**@type {boolean}*/
   export let disabled = false;
-  /**@type {import("../../types").checkFunction}*/
+  /**@type {import("../../types").checkFunction} This function will be used to validate the input on every change*/
   export let checkFunction;
   /**@type {import("../../types").reactiveInputStatus}*/
   let status = {

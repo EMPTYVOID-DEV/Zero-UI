@@ -7,8 +7,8 @@
   export let darkMode;
   /**@type {string}*/
   export let code;
-  /**@type {boolean}*/
-  export let useRadius = false;
+  /**@type {boolean} in case this component used with singlePage variant it sets a full radius */
+  export let singelPage;
   let copyStatement = false;
   /**
    *@function copyCode will handle copying the code to the user keyboard
@@ -29,7 +29,7 @@
   {/if}
 </svelte:head>
 
-<div class="code" class:radius={useRadius}>
+<div class="code" class:radius={singelPage}>
   {#if copyStatement}
     <span class="control">
       <DoneIcon />
@@ -49,6 +49,9 @@
     overflow: hidden;
     position: relative;
     border-radius: var(--border-radius);
+  }
+  .code:not(.radius) {
+    border-top-left-radius: 0;
   }
   /* These styles are for svelte highlight code block  */
   .code :global(> :not(.control)) {
@@ -70,10 +73,6 @@
     right: clamp(1rem, 3%, 1.5rem);
     cursor: pointer;
     z-index: 2;
-  }
-
-  .code:not(.radius) {
-    border-top-left-radius: 0;
   }
 
   .code :global(::-webkit-scrollbar) {

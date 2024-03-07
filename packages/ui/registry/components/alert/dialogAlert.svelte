@@ -10,6 +10,11 @@
   export let description;
   /**@type {"primary"|"danger"}*/
   export let type = "primary";
+  /**@type {{cancelLabel:string,confirmLabel:string}} */
+  export let btnsLabels = {
+    cancelLabel: "cancel",
+    confirmLabel: "confirm",
+  };
   const dispatcher = createEventDispatcher();
 </script>
 
@@ -30,7 +35,7 @@
     <p>{description}</p>
     <div class="controls">
       <SyncButton
-        text="Cancel"
+        text={btnsLabels.cancelLabel}
         type="passive"
         on:click={() => {
           dispatcher("cancel");
@@ -38,7 +43,7 @@
         }}
       />
       <SyncButton
-        text="Confirm"
+        text={btnsLabels.confirmLabel}
         {type}
         on:click={() => {
           dispatcher("confirm");

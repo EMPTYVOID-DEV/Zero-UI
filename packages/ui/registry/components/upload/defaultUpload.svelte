@@ -10,7 +10,9 @@
 
   /**@type {string}*/
   export let description = "";
-  /**@type {string}*/
+  /**@type {string}
+   * This is the mime type for your accepted files
+   */
   export let acceptedFiles = "*";
 
   const dispatcher = createEventDispatcher();
@@ -30,7 +32,7 @@
   }
 
   /**
-   * @function This function checks whether we reach the size limit
+   * @function This function checks whether we reach the files number limit
    * @returns {boolean}
    */
   function reachLimit() {
@@ -59,19 +61,19 @@
   }
 
   /**
-   * @function This is a function that handles the addition of a valid file
+   * @function addFiles is a function that handles the addition of a valid file
    * @param {FileList} selectedFiles this is the list of the selected files after a drop or browse addition
    */
   function addFiles(selectedFiles) {
-    if (selectedFiles)
-      for (let i = 0; i < selectedFiles.length; i++) {
-        if (
-          checkType(selectedFiles[i].type) &&
-          !reachLimit() &&
-          !checkSize(selectedFiles[i].size)
-        )
-          files = [...files, selectedFiles[i]];
-      }
+    if (!selectedFiles) return;
+    for (let i = 0; i < selectedFiles.length; i++) {
+      if (
+        checkType(selectedFiles[i].type) &&
+        !reachLimit() &&
+        !checkSize(selectedFiles[i].size)
+      )
+        files = [...files, selectedFiles[i]];
+    }
     dispatcher("change", {
       files,
     });

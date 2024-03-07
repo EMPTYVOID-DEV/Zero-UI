@@ -1,4 +1,7 @@
 <script>
+  /**
+   * The props are passed by the svelte-awesome-color-picker component
+   */
   /**@type {HTMLLabelElement}*/
   export let labelElement;
   /**@type {string}*/

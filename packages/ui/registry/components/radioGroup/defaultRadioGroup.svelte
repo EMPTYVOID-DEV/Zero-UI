@@ -2,8 +2,13 @@
   import { createEventDispatcher } from "svelte";
   import RadioItem from "./radioItem.svelte";
 
-  /**@type {number}*/
-  export let defaultChoice = 0;
+  /**
+   * @type {number}
+   * This variable represents the index of pre-selected choice in the radioGroup.
+   * Set it to any number outside the range of the radioGroup list to have no pre-selected choice.
+   */
+
+  export let defaultChoice = -1;
   /**@type {boolean}*/
   export let disabled = false;
   /**@type {{ text: string; description?: string }[]}*/

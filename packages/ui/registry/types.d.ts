@@ -1,12 +1,12 @@
 import { ComponentType, SvelteComponent } from "svelte";
 
-// general type for a an icon component
+// General type for an icon component
 export type iconComponent = ComponentType<SvelteComponent>;
 
-// type for the asyncButton action prop
+// Type for the asyncButton action prop
 export type asyncButtonAction = (ev: MouseEvent) => Promise<any>;
 
-// type for default checklist component
+// Type for default checklist component
 export type checkItem = {
   text: string;
   checked: boolean;
@@ -14,22 +14,23 @@ export type checkItem = {
   description?: string;
 };
 
-// type for reactive input
-
+// Type for reactive input variant
 export type reactiveInputStatus = {
   errorMsg: string;
   state: "idle" | "valid" | "invalid";
 };
 
-// type for the change event
+// Type for input change handlers
 export type changeEvent<T> = Event & {
   currentTarget: EventTarget & T;
 };
 
-//type for input change event
+//type for input change handlers
 export type inputChangeHandler<T> = (ev: changeEvent<T>) => void;
 
-// event type for the change handler fired by slider package which contains a detail tuple  with range
+/** Event type for the change handler fired by the slider package.
+ *  Contains a detail tuple representing the selected range.
+ */
 export type sliderEvent = (
   ev: Event & {
     currentTarget: EventTarget & HTMLInputElement;
@@ -38,8 +39,7 @@ export type sliderEvent = (
   }
 ) => void;
 
-// type for the default select change event
-
+// Type for the default select variant change event
 export type selectEvent = Event & {
   detail:
     | { value: any; label: string }[]
@@ -47,13 +47,13 @@ export type selectEvent = Event & {
     | null;
 };
 
-// This is for the reactive variant input component
+// Type for the checkFunction prop - reactive input variant
 export type checkFunction = (currentValue: string) => {
   state: "valid" | "invalid";
   errorMsg: string;
 };
 
-// this type is for a search section
+// Type for a search section
 export type section = {
   link: string;
   sectionName: string;
@@ -64,21 +64,19 @@ export type section = {
   }[];
 };
 
-// this type is for search category.
+// Type for the siteSearch component
 export type category = {
   categoryName: string;
   sections: section[];
 };
 
-// this type is for the toast
-
+// Type for the toast component
 export type toastAction = {
   label: string;
   action: (ev: MouseEvent) => void;
 };
 
-// this type is for the async toaste
-
+// Type for the async toast variant
 export type toastState = {
   header: string;
   description: string;

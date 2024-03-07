@@ -15,7 +15,7 @@
   /**@type {import("../../types").inputChangeHandler<HTMLTextAreaElement>}*/
   function handleChange(e) {
     dispatcher("change", {
-      query: e.currentTarget.value,
+      value: e.currentTarget.value,
     });
   }
 </script>

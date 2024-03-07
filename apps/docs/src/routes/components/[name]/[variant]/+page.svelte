@@ -4,6 +4,9 @@
 	import PuzzleIcon from '$lib/components/icons/puzzle.svelte';
 	import HomeNav from '$lib/components/core/homeNav.svelte';
 	import { changeTheme } from '$lib/utils/client';
+	import { repoLink } from '$lib/utils/const';
+	import { capitalize } from '$lib/utils/shared';
+	$: exampleLink = `${repoLink}/tree/master/apps/docs/src/lib/components/zeroUIWrappers/${$page.params.variant}${capitalize($page.params.name)}.svelte`;
 </script>
 
 <div class="playGround">
@@ -22,6 +25,9 @@
 		<section class="component">
 			<svelte:component this={$page.data.currentComponent} />
 		</section>
+		<h4 class="example">
+			You can find a usage example <a target="_blank" href={exampleLink}>here.</a>
+		</h4>
 	</div>
 </div>
 
@@ -75,6 +81,19 @@
 		background-color: color-mix(in srgb, var(--primaryColor) 4%, transparent 96%);
 		border-radius: var(--border-radius);
 		border: 1px solid var(--primaryColor);
+	}
+	.example {
+		color: var(--foregroundColor);
+	}
+	.example a {
+		font-size: var(--h4);
+		font-family: var(--headerFont);
+		font-weight: 600;
+		text-decoration: none;
+		color: inherit;
+	}
+	.example a:hover {
+		color: var(--primaryColor);
 	}
 	@media screen and (width<768px) {
 		.content {

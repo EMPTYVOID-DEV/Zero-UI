@@ -14,7 +14,7 @@
   $: visiblePages = adjustToActive(activePage);
 
   /**
-   * @function adjustToActive - Adjust visible pages based on active page and siblings count
+   * @function adjustToActive - Adjust visible pages based on active page and fires a change event with the new active page
    * @param {number} activePage
    * @returns {{ start: number; end: number; }} the return value is the range of visible pages
    */

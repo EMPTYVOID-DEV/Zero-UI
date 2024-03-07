@@ -11,7 +11,8 @@
 
   /**
    * @typedef {import("../../types").iconComponent} icon
-   * @type {Map<"dark"|"light"|"system",icon>}*/
+   * @type {Map<"dark"|"light"|"system",icon>}
+   */
   const optionsMap = new Map([
     ["dark", MoonIcon],
     ["light", SunIcon],

@@ -31,7 +31,6 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"svelte-markdown": "^0.4.1",
 		"svelte-sonner": "^0.3.19",
 		"sveltedocsmaker": "^0.6.5",
 		"zero-ui-registry": "workspace:*"

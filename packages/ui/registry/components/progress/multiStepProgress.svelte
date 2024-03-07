@@ -1,7 +1,7 @@
 <script>
-  /**@type {number} This is the number of steps*/
+  /**@type {number}*/
   export let numberOfSteps = 0;
-  /**@type {number} This is the number of passed steps*/
+  /**@type {number}*/
   export let stepsPassed = 0;
   /**@type {string}*/
   export let currentStepName = "";

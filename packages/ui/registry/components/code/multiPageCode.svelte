@@ -1,13 +1,13 @@
 <script>
   import Code from "./code.svelte";
   import PageChanger from "./pageChanger.svelte";
-  /**
-   * @type {{name:string,code:string}[]}
-   */
+  /**@type {{name:string,code:string}[]}*/
   export let codePages = [];
   /**@type {boolean}*/
   export let darkMode = false;
+  /**@type {number}*/
   export let activePage = 0;
+  /**The Page change will fire an event when the active page changes*/
 </script>
 
 <div class="multiPageCode">
@@ -18,7 +18,7 @@
   />
   {#key activePage}
     <div class="page">
-      <Code code={codePages[activePage].code} {darkMode} />
+      <Code code={codePages[activePage].code} {darkMode} singelPage={false} />
     </div>
   {/key}
 </div>

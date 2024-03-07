@@ -27,3 +27,7 @@ type RegistryType = {
 5. Optionally, each variant may specify a list of icon dependencies.
 6. Variants may also have dependencies on different components' variants (e.g., the alert/dialog variant depend on the dialog/default variant).
 7. The entry property within each variant points to the designated entry component.
+
+## Local copy
+
+The **Cli** will create for you a local copy of the registry which contains only the components you chosen.

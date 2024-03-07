@@ -6,6 +6,7 @@
 	import SearchDefault from '$lib/components/zeroUIWrappers/defaultSiteSearch.svelte';
 	import { page } from '$app/stores';
 	import { getContext } from 'svelte';
+	import { repoLink } from '$lib/utils/const';
 	/**@type {"dark"|"light"}*/
 	let theme = 'light';
 	let categories = getContext('searchContent');
@@ -22,13 +23,13 @@
 		<Logo />
 	</a>
 	<div class="links">
-		<Link href="/docs/Getting Started/Introduction" text="docs" isBlank={false} />
-		<Link href="/components/accordian/default" text="components" isBlank={false} />
+		<Link href="/docs/Getting Started/Introduction" text="Docs" isBlank={false} />
+		<Link href="/components/accordian/default" text="Components" isBlank={false} />
 	</div>
 
 	<div class="utility">
 		<ThemeToggle on:change active={theme} --left="-50px" --top="40px" />
-		<Link href="https://github.com/EMPTYVOID-DEV/Zero-UI" icon={Github} text="" />
+		<Link href={repoLink} icon={Github} text="" />
 	</div>
 	{#key $page.url}
 		<SearchDefault {categories} placeholder="Search ..." --width="200px" />

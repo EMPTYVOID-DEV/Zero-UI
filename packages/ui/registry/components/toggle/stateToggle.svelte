@@ -2,14 +2,14 @@
   import { createEventDispatcher } from "svelte";
   import ValidIcon from "../../icons/validIcon.svelte";
   import CloseIcon from "../../icons/closeIcon.svelte";
-
+  /**@type {boolean}*/
   export let state = false;
-  const dispatcher = createEventDispatcher();
 
-  const toggleState = () => {
+  const dispatcher = createEventDispatcher();
+  function toggleState() {
     state = !state;
     dispatcher("change", { newState: state });
-  };
+  }
 </script>
 
 <!-- svelte-ignore a11y-click-events-have-key-events -->

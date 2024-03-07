@@ -21,9 +21,9 @@
 
   /**
    * @param {import("../../types").selectEvent} e
-   * The event wont contain detail object if no elements were selected
+   * The select event wont contain detail object if no elements were selected
    * Detail will be an array in case isMulti is set , single value otherwise
-   * But the change event detail will always fire with an array
+   * However the change event detail will always fire with an array
    */
   function handleChange(e) {
     if (!e.detail) {

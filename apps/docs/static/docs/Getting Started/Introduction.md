@@ -1,6 +1,6 @@
 # Introduction
 
-**Zero-UI** offers a collection of well-crafted, reusable Svelte components. Easily add them to your project using a command-line tool (CLI). The CLI takes care of copying the chosen components, loading the styling file, and adding a `types.d.ts`  file for TypeScript or JSDoc users.
+**Zero-UI** offers a collection of well-crafted, reusable Svelte components. Easily add them to your project using a command-line tool (CLI). The CLI takes care of copying the chosen components.
 
 ## Comparing Zero-UI to Shadcn-Svelte
 

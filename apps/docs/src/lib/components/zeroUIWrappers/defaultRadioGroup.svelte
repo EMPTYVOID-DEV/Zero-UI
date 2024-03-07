@@ -2,7 +2,7 @@
 	import { DefaultRadioGroup as RadioGroup } from 'zero-ui-registry';
 	import Wrapper from '../core/wrapper.svelte';
 	const tabs = ['normal', 'disabled'];
-	/**@type {import("zero-ui-registry/types").radioItem[]}*/
+	/**@type {{ text: string; description?: string }[]}*/
 	let radioGroup = [
 		{
 			text: 'svelte',

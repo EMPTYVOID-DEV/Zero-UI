@@ -16,6 +16,7 @@
   export let placeholder = "Search ...";
 
   const dispatcher = createEventDispatcher();
+  /**@function handleChange will fire an event w*/
   /**@type {import("../../types").inputChangeHandler<HTMLInputElement>}*/
   function handleChange(e) {
     dispatcher("change", {

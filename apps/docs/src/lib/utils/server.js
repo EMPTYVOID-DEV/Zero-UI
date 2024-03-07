@@ -1,3 +1,5 @@
+import { capitalize } from './shared.js';
+
 /**
  * @param {string} url
  * @returns {Promise<string|null>}
@@ -68,11 +70,6 @@ function orderSearchResults(categories) {
 	});
 
 	return categories;
-}
-
-/**@param {string} word*/
-export function capitalize(word) {
-	return word[0].toUpperCase() + word.slice(1);
 }
 
 /**

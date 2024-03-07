@@ -2,12 +2,12 @@
   import Code from "./code.svelte";
   /**@type {string}*/
   export let code;
-  /**@type {boolean}*/
+  /**@type {boolean} This prop will decide which svelte-highlight theme to use*/
   export let darkMode = false;
 </script>
 
 <div class="singlePageCode">
-  <Code {code} {darkMode} useRadius={true} />
+  <Code {code} {darkMode} singelPage={true} />
 </div>
 
 <style>

@@ -1,9 +1,9 @@
 <script>
-  /**@type {string} this is the text for the button*/
+  /**@type {string}*/
   export let text = "button";
-  /**@type {import("../../types").iconComponent|null} icon is optional for the button */
+  /**@type {import("../../types").iconComponent|null} */
   export let icon = null;
-  /**@type {"disabled"|"passive"|"primary"|"secondary"|"danger"}  Dictates the color based on the type*/
+  /**@type {"disabled"|"passive"|"primary"|"secondary"|"danger"} */
   export let type = "primary";
 </script>
 
@@ -14,7 +14,6 @@
 
 <style>
   :is(.disabled, .primary, .secondary, .danger, .secondary, .passive) {
-    --text: var(--backgroundColor);
     --icon: var(--backgroundColor);
   }
   .disabled {
@@ -33,7 +32,7 @@
   .danger {
     --bg: var(--dangerColor);
   }
-
+  /**The padding will determine the width and height of the button*/
   button {
     display: flex;
     align-items: center;
@@ -50,7 +49,7 @@
   }
   button span {
     text-transform: capitalize;
-    color: var(--text);
+    color: var(--backgroundColor);
     font-family: var(--bodyFont);
     font-size: var(--body);
     font-weight: 600;

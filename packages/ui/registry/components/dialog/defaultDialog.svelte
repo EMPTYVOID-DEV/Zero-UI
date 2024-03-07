@@ -1,12 +1,11 @@
 <script>
   import { tick } from "svelte";
-
   /**@type {HTMLDialogElement}*/
   let dialogRef;
-  /**
-   * The reason we re opening and closing the dialog by toggling a variable is to let svelte animate the slot.
-   */
   let isOpen = false;
+  /**
+   * The reason for why we re opening and closing the dialog by toggling a variable is to let svelte animate the slot.
+   */
   async function open() {
     isOpen = true;
     await tick();
@@ -30,6 +29,7 @@
       /**
        * you need to re-open the model after the browser closes it.
        * then close it using the close function
+       * otherwise the slot won't animate
        * */
       dialogRef.showModal();
       close();
@@ -46,8 +46,8 @@
     outline: 0;
     box-shadow: none;
     background: none;
-    max-width: 100vw !important;
-    max-height: 100vh !important;
+    max-width: 100vw;
+    max-height: 100vh;
     overflow: visible;
   }
 

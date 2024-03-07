@@ -7,7 +7,7 @@
   export let isBlank = true;
   /**@type {"primary"|"secondary"}*/
   export let type = "primary";
-  /**@type {import("../../types").iconComponent|null} icon is optional for the button */
+  /**@type {import("../../types").iconComponent|null}*/
   export let icon = null;
 </script>
 
@@ -29,18 +29,17 @@
     gap: 0.25rem;
     cursor: pointer;
     text-decoration: none;
-    --cl: var(--foregroundColor);
+    --text: var(--foregroundColor);
     --icon: var(--foregroundColor);
   }
   .link span {
-    color: var(--cl);
-    text-transform: capitalize;
+    color: var(--text);
     font-family: var(--bodyFont);
     font-size: var(--body);
     font-weight: 600;
   }
   .link:hover {
-    --cl: var(--main-color);
+    --text: var(--main-color);
     --icon: var(--main-color);
   }
 

@@ -1,4 +1,4 @@
-import { capitalize } from '$lib/utils/server';
+import { capitalize } from '$lib/utils/shared';
 
 /** @type {import('./$types').PageLoad} */
 // @ts-ignore

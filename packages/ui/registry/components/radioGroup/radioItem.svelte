@@ -1,7 +1,7 @@
 <script>
   /**@type {boolean}*/
   export let disabled;
-  /**@type {import("../../types").radioItem & {checked:boolean}}*/
+  /**@type {{ text: string; description?: string } & {checked:boolean}}*/
   export let radioItem;
 </script>
 
