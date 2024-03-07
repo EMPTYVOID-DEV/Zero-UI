@@ -25,12 +25,13 @@
 		<Link href="/docs/Getting Started/Introduction" text="docs" isBlank={false} />
 		<Link href="/components/accordian/default" text="components" isBlank={false} />
 	</div>
+
 	<div class="utility">
-		<Link href="https://github.com/EMPTYVOID-DEV/Zero-UI" icon={Github} text="" />
 		<ThemeToggle on:change active={theme} --left="-50px" --top="40px" />
+		<Link href="https://github.com/EMPTYVOID-DEV/Zero-UI" icon={Github} text="" />
 	</div>
 	{#key $page.url}
-		<SearchDefault {categories} placeholder="Search for components" />
+		<SearchDefault {categories} placeholder="Search ..." --width="200px" />
 	{/key}
 </nav>
 
@@ -40,8 +41,8 @@
 		height: 80px;
 		display: flex;
 		align-items: center;
-		padding-inline: 12px;
-		gap: 8px;
+		padding-inline: 0.75rem;
+		gap: 0.5rem;
 	}
 	.logo {
 		display: flex;
@@ -54,14 +55,6 @@
 	.utility {
 		display: flex;
 		align-items: center;
-		gap: 8px;
-	}
-	@media screen and (width <768px) {
-		.links {
-			display: none;
-		}
-		.homeNav {
-			padding-left: 2px;
-		}
+		gap: 0.5rem;
 	}
 </style>

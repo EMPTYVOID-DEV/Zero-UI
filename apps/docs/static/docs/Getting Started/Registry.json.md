@@ -13,7 +13,7 @@ type Variant = {
 
 type RegistryType = {
     [component: string]: {
-       [otherVariant: string]: Variant;
+       [variant: string]: Variant;
    };
 };
 ```
@@ -25,5 +25,5 @@ type RegistryType = {
 3. Each variant includes a list of file dependencies, representing the different Svelte components used by the variant.
 4. Optionally, each variant may have a list of package dependencies.
 5. Optionally, each variant may specify a list of icon dependencies.
-6. Variants may also have dependencies on different components' variants (e.g., an alert/dialog variant depend on the dialog/default variant).
+6. Variants may also have dependencies on different components' variants (e.g., the alert/dialog variant depend on the dialog/default variant).
 7. The entry property within each variant points to the designated entry component.

@@ -68,9 +68,8 @@
     --list-border="1px solid var(--primaryColor)"
     --list-border-radius="var(--border-radius)"
     --selected-item-color="var(--foregroundColor)"
-    --multi-item-bg="var(--backgroundColor)"
+    --multi-item-bg="transparent"
     --multi-item-color="var(--foregroundColor)"
-    --multi-item-border-radius="var(--border-radius)"
     --item-color="var(--foregroundColor)"
     --item-first-border-radius="0"
     --item-hover-bg="color-mix(in srgb , var(--primaryColor) 40%, transparent 60%)"
@@ -81,6 +80,7 @@
     --border-focused="2px solid var(--primaryColor)"
     --border-hover="2px solid var(--foregroundColor)"
     --disabled-color="var(--mutedColor)"
+    --disabled-background="transparent"
     --disabled-border-color="var(--mutedColor)"
     --list-z-index="999"
   ></Select>

@@ -49,7 +49,7 @@ export function getSearchContent(registry) {
 		searchContent.sections.push(searchEntry);
 	}
 	orderSearchResults([searchContent]);
-	return [searchContent];
+	return addDocsLinks([searchContent]);
 }
 
 /**
@@ -73,4 +73,34 @@ function orderSearchResults(categories) {
 /**@param {string} word*/
 export function capitalize(word) {
 	return word[0].toUpperCase() + word.slice(1);
+}
+
+/**
+ * @param {import("zero-ui-registry/types").category[]} searchContent
+ * @returns {import("zero-ui-registry/types").category[]}
+ */
+export function addDocsLinks(searchContent) {
+	const docsSections = [
+		'introduction',
+		'installation',
+		'folder structure',
+		'components',
+		'theming',
+		'jsdoc',
+		'registry.json'
+	];
+	/**@type {import("zero-ui-registry/types").category} */
+	const docsCategory = {
+		categoryName: 'Getting started',
+		sections: []
+	};
+	docsSections.forEach((section) => {
+		const capitalizedSection = capitalize(section);
+		docsCategory.sections.push({
+			link: `/docs/Getting Started/${capitalizedSection}`,
+			sectionName: capitalizedSection
+		});
+	});
+	searchContent.unshift(docsCategory);
+	return searchContent;
 }

@@ -15,8 +15,8 @@ importers:
         specifier: ^0.3.19
         version: 0.3.19(svelte@4.2.11)
       sveltedocsmaker:
-        specifier: ^0.6.4
-        version: 0.6.4(svelte@4.2.11)
+        specifier: ^0.6.5
+        version: 0.6.5(svelte@4.2.11)
       zero-ui-registry:
         specifier: workspace:*
         version: link:../../packages/ui
@@ -1856,8 +1856,8 @@ packages:
       magic-string: 0.30.7
       periscopic: 3.1.0
 
-  /sveltedocsmaker@0.6.4(svelte@4.2.11):
-    resolution: {integrity: sha512-JvriUn2PIoQFqmzogwuK7j8x9q3BKhBMZTcmfbs7hyqdWOQQLTs6ISoGQ70EDk2gNqdlauxCNhIbujQ3WR1HCQ==}
+  /sveltedocsmaker@0.6.5(svelte@4.2.11):
+    resolution: {integrity: sha512-CQk7uJmzt3PECIPZyaXF2OjqcmPuYq5deI2o7D0GpHi89ngYcPi+h1YDpNNJGfHRsH+k8yXOQJXaHUZSeD0ooQ==}
     engines: {node: '>=16.14'}
     peerDependencies:
       svelte: ^4.0.0

@@ -16,7 +16,7 @@ The `type` prop is special and used by multiple components. It defines the main 
 
 ### Events
 
-In Zero-ui, variant entries can either forward DOM events or generate custom events. If a component requires handling around a particular event or is unable to forward the event, an action needs to be supplied.
+In Zero-ui, variant entries can either forward DOM events or generate custom events. If a component requires handling the logic around a particular event or is unable to forward the event, an action needs to be supplied.
 
 ### CSS Variables
 

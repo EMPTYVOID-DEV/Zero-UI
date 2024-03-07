@@ -1,7 +1,7 @@
 <script>
   import CopyIcon from "../../icons/copyIcon.svelte";
   import DoneIcon from "../../icons/doneIcon.svelte";
-  import { edgeLight, edgeDark } from "svelte-highlight/styles";
+  import { githubDark, github } from "svelte-highlight/styles";
   import { HighlightAuto, LineNumbers } from "svelte-highlight";
   /**@type {boolean}*/
   export let darkMode;
@@ -23,9 +23,9 @@
 
 <svelte:head>
   {#if darkMode}
-    {@html edgeLight}
+    {@html github}
   {:else}
-    {@html edgeDark}
+    {@html githubDark}
   {/if}
 </svelte:head>
 
@@ -35,11 +35,9 @@
       <DoneIcon />
     </span>
   {:else}
-    <!-- svelte-ignore a11y-click-events-have-key-events -->
-    <!-- svelte-ignore a11y-no-static-element-interactions -->
-    <span class="control" on:click={copyCode}>
+    <button class="control" on:click={copyCode}>
       <CopyIcon />
-    </span>
+    </button>
   {/if}
   <HighlightAuto {code} let:highlighted>
     <LineNumbers {highlighted} hideBorder />
@@ -63,6 +61,8 @@
     justify-content: center;
     align-items: center;
     position: absolute;
+    background-color: transparent;
+    outline: none;
     border: 1px solid var(--primaryColor);
     border-radius: 0.25rem;
     padding: 2px;

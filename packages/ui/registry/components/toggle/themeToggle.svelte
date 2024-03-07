@@ -77,7 +77,7 @@
   .options {
     position: absolute;
     top: var(--top, 30px);
-    left: var(--left, 0);
+    left: var(--left, 0px);
     display: flex;
     flex-direction: column;
     gap: 0.5rem;

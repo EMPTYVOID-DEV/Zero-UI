@@ -8,7 +8,6 @@
 </script>
 
 <SiteSearch
-	showFullMobile={true}
 	{placeholder}
 	categories={filteredCategories}
 	on:change={(e) => {

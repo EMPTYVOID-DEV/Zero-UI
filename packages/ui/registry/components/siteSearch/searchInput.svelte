@@ -33,7 +33,8 @@
     border-radius: var(--border-radius);
     border: 2px solid var(--foregroundColor);
     background-color: transparent;
-    display: flex;
+    display: grid;
+    grid-template-columns: max-content auto max-content;
     align-items: center;
     padding-inline: 0.5rem;
     padding-block: 0.25rem;
@@ -56,6 +57,7 @@
   }
   .mobileSearch {
     display: none;
+    --icon: var(--foregroundColor);
   }
   @media screen and (width<768px) {
     .SearchInput.notShow {

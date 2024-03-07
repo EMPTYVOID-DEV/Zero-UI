@@ -4,7 +4,6 @@
 	import PuzzleIcon from '$lib/components/icons/puzzle.svelte';
 	import HomeNav from '$lib/components/core/homeNav.svelte';
 	import { changeTheme } from '$lib/utils/client';
-	import CoreMd from '$lib/components/md/coreMd.svelte';
 </script>
 
 <div class="playGround">
@@ -22,9 +21,6 @@
 		</section>
 		<section class="component">
 			<svelte:component this={$page.data.currentComponent} />
-		</section>
-		<section class="md">
-			<CoreMd source={$page.data.md} />
 		</section>
 	</div>
 </div>
@@ -79,15 +75,6 @@
 		background-color: color-mix(in srgb, var(--primaryColor) 4%, transparent 96%);
 		border-radius: var(--border-radius);
 		border: 1px solid var(--primaryColor);
-	}
-	.md {
-		width: 100%;
-		display: flex;
-		flex-direction: column;
-		gap: 0.75rem;
-	}
-	.md {
-		color: var(--foregroundColor);
 	}
 	@media screen and (width<768px) {
 		.content {

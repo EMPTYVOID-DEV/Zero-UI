@@ -5,7 +5,6 @@
 	import { onMount } from 'svelte';
 	import { changeMode } from 'sveltedocsmaker/utils';
 	import CodeMdHandler from '$lib/components/md/codeMdHandler.svelte';
-	import ListMdHandler from '$lib/components/md/listMdHandler.svelte';
 	const sectionsMap = new Map([
 		[
 			'Getting Started',
@@ -32,7 +31,6 @@
 
 <Main
 	mdHandlers={{
-		list: ListMdHandler,
 		code: CodeMdHandler
 	}}
 	{sectionsMap}

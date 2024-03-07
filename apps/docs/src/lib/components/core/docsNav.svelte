@@ -49,8 +49,8 @@
 		height: fit-content;
 		display: flex;
 		align-items: center;
-		gap: 2px;
-		padding-inline: 8px;
+		gap: 0.5rem;
+		padding-inline: 0.75rem;
 	}
 	.docsNav > :global(nav) {
 		padding: 0;
@@ -59,10 +59,7 @@
 	.control {
 		display: none;
 	}
-	.control :global(svg) {
-		width: 28px;
-		height: 28px;
-	}
+
 	@media screen and (width<768px) {
 		.control {
 			display: flex;
