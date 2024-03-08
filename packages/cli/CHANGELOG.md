@@ -1,5 +1,11 @@
 # zero-ui-cli
 
+## 0.1.0
+
+### Minor Changes
+
+- 6e42c1e: first functional version
+
 ## 0.0.4
 
 ### Patch Changes
