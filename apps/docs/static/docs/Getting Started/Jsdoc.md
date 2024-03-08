@@ -1,6 +1,6 @@
 # Jsdoc
 
-As mentioned earlier, **Zero-ui** components make use of JSDoc. However, to enable type checking and auto-completion, you need to have TypeScript installed and ensure that its server is running.
+As mentioned earlier, **Zero-UI** components make use of JSDoc. However, to enable type checking and auto-completion, you need to have TypeScript installed and ensure that its server is running.
 
 ## JSDoc Comments
 
@@ -13,7 +13,7 @@ export let accordionList = [];
 
 ## `types.d.ts`
 
-All shared or complex types in Zero-ui are stored in the `types.d.ts` file and subsequently imported into the components.
+All shared or complex types in Zero-UI are stored in the `types.d.ts` file and subsequently imported into the components.
 
 ```js
 /**@type {import("../../types").asyncButtonAction}*/

@@ -70,7 +70,6 @@
   }
 
   .input-container input {
-    box-sizing: border-box;
     width: 100%;
     padding-left: 0.5rem;
     padding-block: 0.5rem;

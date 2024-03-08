@@ -29,7 +29,6 @@
 <style>
   .SearchInput {
     width: var(--width, fit-content);
-    box-sizing: border-box;
     border-radius: var(--border-radius);
     border: 2px solid var(--foregroundColor);
     background-color: transparent;

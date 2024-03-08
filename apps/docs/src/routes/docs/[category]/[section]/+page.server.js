@@ -1,7 +1,6 @@
 import { readMd } from 'sveltedocsmaker/utils';
 import { error } from '@sveltejs/kit';
 
-export const prerender = true;
 
 export async function load(/**@type { import('@sveltejs/kit').LoadEvent}*/ event) {
 	// @ts-ignore

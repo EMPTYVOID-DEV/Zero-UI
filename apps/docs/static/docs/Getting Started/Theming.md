@@ -1,9 +1,9 @@
 # Theming 
 
-For theming, **Zero-ui** relies on a `theme.css` file that includes a root selector with various CSS variables.
+For theming, **Zero-UI** relies on a `theme.css` file that includes a root selector with various CSS variables.
 #### Colors
 
-Following the 60-30-10 rule, Zero-ui uses colors with different shades (700, 600, 400, 300) through the `color-mix` CSS function.
+Following the 60-30-10 rule, Zero-UI uses colors with different shades (700, 600, 400, 300) through the `color-mix` CSS function.
 
 ```css
 --primaryColor: #3498db;
@@ -34,7 +34,7 @@ These colors are used as support colors.
 
 #### Font Sizes
 
-**Zero-ui** incorporates a set of responsive fonts, primarily utilizing `small`, `body`, and `h4`.
+Zero-UI incorporates a set of responsive fonts, primarily utilizing `small`, `body`, and `h4`.
 
 ```css
 --h1: clamp(2rem, calc(2rem + ((1vw - 0.48rem) * 0.9722)), 2.5rem);
@@ -47,7 +47,7 @@ These colors are used as support colors.
 
 #### Font Family
 
-Two font pairs are employed by **Zero-ui**, one for headers and another for body elements.
+Two font pairs are employed by Zero-UI, one for headers and another for body elements.
 
 ```css
 --bodyFont: Verdana, Geneva, Tahoma, sans-serif;
@@ -64,15 +64,23 @@ A global border-radius is applied to all components, although exceptions are mad
 
 #### Spacing
 
-**Zero-ui** maintains consistent negative spacing (padding, gap) in increments of **0.25rem**. Notably, there is no global CSS variable for either padding or gap.
+Zero-UI maintains consistent negative spacing (padding, gap) in increments of **0.25rem**. Notably, there is no global CSS variable for either padding or gap.
 
 #### Global styles
 
-Try avoiding global styles that may break components styling.For example `margin` set to 0 will break the dialog element positioning.
+Zero-UI leverages a standard set of global styles defined within `theme.css`. Exercise caution when introducing additional global styles, as they might inadvertently disrupt component presentation (e.g., word-break).
+
+```css
+:not(dialog) {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+```
 
 #### Dark Mode
 
-Switching between dark and light mode in Zero-ui is as simple as toggling CSS variables. Additionally, SvelteKit hooks enable seamless theme setting from cookies.
+Switching between dark and light mode in Zero-UI is as simple as toggling CSS variables. Additionally, SvelteKit hooks enable seamless theme setting from cookies.
 
 ```css
 [data-theme='light']:root {

@@ -73,7 +73,6 @@
     border: 2px solid var(--primaryColor);
   }
   .searchBar {
-    box-sizing: border-box;
     width: 100%;
     display: flex;
     align-items: center;

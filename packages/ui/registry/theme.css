@@ -20,3 +20,10 @@
   --bodyFont: Verdana, Geneva, Tahoma, sans-serif;
   --headerFont: Helvetica, sans-serif;
 }
+
+/* These global styles are just standard now */
+:not(dialog) {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}

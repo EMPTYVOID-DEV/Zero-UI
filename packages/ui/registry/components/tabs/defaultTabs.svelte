@@ -28,7 +28,6 @@
 
 <style>
   .tabs {
-    box-sizing: border-box;
     width: var(--width, 100%);
     display: flex;
     align-items: center;

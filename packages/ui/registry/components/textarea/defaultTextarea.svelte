@@ -42,7 +42,6 @@
     display: none;
   }
   .textarea textarea {
-    box-sizing: border-box;
     outline: none;
     resize: none;
     width: 100%;

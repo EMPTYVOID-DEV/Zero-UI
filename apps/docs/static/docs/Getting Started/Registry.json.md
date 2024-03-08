@@ -1,6 +1,6 @@
 # Registry.json
 
-**Zero-ui** maintains a `registry.json` file that stores information about various components. The schema for this file is defined in TypeScript as follows:
+**Zero-UI** maintains a `registry.json` file that stores information about various components. The schema for this file is defined in TypeScript as follows:
 
 ```typescript
 type Variant = {

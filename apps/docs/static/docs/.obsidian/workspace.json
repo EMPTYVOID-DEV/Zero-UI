@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Getting Started/Installation.md",
+                "file": "Getting Started/Components.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Getting Started/Installation.md",
+                "file": "Getting Started/Components.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Getting Started/Installation.md",
+                "file": "Getting Started/Components.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Getting Started/Installation.md"
+                "file": "Getting Started/Components.md"
               }
             }
           }
@@ -151,10 +151,10 @@
     "Getting Started/Folder structure.md",
     "Getting Started/Installation.md",
     "Getting Started/Introduction.md",
-    "Getting Started/Registry.json.md",
     "Getting Started/Jsdoc.md",
-    "Getting Started/Components.md",
+    "Getting Started/Registry.json.md",
     "Getting Started/Theming.md",
+    "Getting Started/Components.md",
     "Getting Started/Icons.md",
     "Untitled.md"
   ]

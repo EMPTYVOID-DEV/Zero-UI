@@ -6,12 +6,14 @@ import { getDependencies } from "./handlers/getDependencies.js";
 import { loadFiles } from "./handlers/loadFiles.js";
 import { loadTheme, loadTypes } from "./handlers/loadUtility.js";
 import { installPackages } from "./handlers/installPackages.js";
+import { createLocalRegistry } from "./handlers/createLocalRegistry.js";
 
 async function main() {
   welcome();
   const registry = await getRegistry();
   const { choices, componentsPath, isTypes } = await cli(registry);
   const { files, icons, packages } = getDependencies(registry, choices);
+  await createLocalRegistry(choices, componentsPath, registry);
   await loadFiles(files, "components", componentsPath);
   await loadFiles(icons, "icons", componentsPath);
   await loadTheme(componentsPath);

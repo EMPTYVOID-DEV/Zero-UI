@@ -31,8 +31,8 @@
       opacity: 0.2,
     }}
   >
-    <h4>{header}</h4>
-    <p>{description}</p>
+    <h4 class="header">{header}</h4>
+    <span class="description">{description}</span>
     <div class="controls">
       <SyncButton
         text={btnsLabels.cancelLabel}
@@ -72,14 +72,14 @@
     gap: 1rem;
     padding: 1.25rem;
   }
-  .dialogAlert h4 {
+  .dialogAlert .header {
     display: inline-block;
     font-size: var(--h4);
     font-weight: 600;
     font-family: var(--headerFont);
     color: var(--foregroundColor);
   }
-  .dialogAlert p {
+  .dialogAlert .description {
     font-size: var(--small);
     font-family: var(--bodyFont);
     color: var(--mutedColor);

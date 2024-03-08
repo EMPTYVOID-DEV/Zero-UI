@@ -52,7 +52,6 @@
     gap: 1rem;
   }
   label {
-    box-sizing: border-box;
     width: 100%;
     display: flex;
     flex-direction: column;

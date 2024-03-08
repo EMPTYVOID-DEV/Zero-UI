@@ -17,7 +17,7 @@
   <svelte:component this={icon} />
   <div class="alertContent">
     <span class="header">{header}</span>
-    <p class="description">{description}</p>
+    <span class="description">{description}</span>
   </div>
 </div>
 
