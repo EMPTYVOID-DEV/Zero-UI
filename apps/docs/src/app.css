@@ -76,15 +76,15 @@ h4 {
 	line-height: var(--lbody);
 }
 
-body::-webkit-scrollbar {
+*::-webkit-scrollbar {
 	width: 0.5rem;
 }
-body::-webkit-scrollbar-track {
+*::-webkit-scrollbar-track {
 	border-radius: 0;
 	background: color-mix(in srgb, var(--foregroundColor) 40%, transparent 60%);
 }
 
-body::-webkit-scrollbar-thumb {
+*::-webkit-scrollbar-thumb {
 	border-radius: 4px;
 	background: var(--primaryColor);
 }
