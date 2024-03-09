@@ -1,9 +1,11 @@
-import adapter from '@sveltejs/adapter-auto';
+import adapter from '@sveltejs/adapter-vercel';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	kit: {
-		adapter: adapter(),
+		adapter: adapter({
+			runtime: 'nodejs18.x'
+		}),
 		prerender: {
 			entries: [
 				'/docs/Getting Started/Introduction',
@@ -43,7 +45,8 @@ const config = {
 				'/components/toast/async',
 				'/components/upload/default'
 			]
-		}
+		},
+		outDir: 'build'
 	}
 };
 

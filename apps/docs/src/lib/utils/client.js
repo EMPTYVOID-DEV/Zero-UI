@@ -1,4 +1,3 @@
-import { cookieMaxAge } from './const';
 import { themeStore } from './stores';
 
 /**
@@ -7,23 +6,10 @@ import { themeStore } from './stores';
  */
 export function changeTheme(theme) {
 	const actualTheme = theme == 'system' ? detectSystemTheme() : theme;
-	createCookie('theme', actualTheme, cookieMaxAge);
 	themeStore.set(actualTheme);
 	const html = document.querySelector('html');
 	const dataset = html?.dataset;
 	if (dataset) dataset.theme = actualTheme;
-}
-
-/**
- * @param {string} name
- * @param {string} value
- * @param {number} maxAge
- */
-function createCookie(name, value, maxAge) {
-	const date = new Date();
-	const expirationDate = date.getTime() + maxAge * 1000;
-	date.setTime(expirationDate);
-	document.cookie = `${name}=${value};expires=${date.toUTCString()};path=/`;
 }
 
 /**
