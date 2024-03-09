@@ -1,0 +1,47 @@
+name: vercel deploy
+
+env:
+  VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+  VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+concurrency: ${{ github.workflow }}-${{ github.ref }}
+
+jobs:
+  deploy:
+    if: github.repository == 'EMPTYVOID-DEV/Zero-UI'
+    name: Deploy
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version:
+          - "18.x"
+    defaults:
+      run:
+        working-directory: ./apps/docs
+    steps:
+      - uses: actions/checkout@v3
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 8
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{matrix.node-version}}
+          cache: "pnpm"
+      - name: Installing vercel cli
+        run: pnpm i -g vercel
+      - name: Installing dependencies
+        run: pnpm install
+      - name: pulling vercel environement informantion
+        run: vercel pull --yes --environment=production --token=${{ secrets.VERCEL_TOKEN }}
+      - name: building the documentation
+        run: vercel build --prod --token=${{ secrets.VERCEL_TOKEN }}
+      - name: deploying the build to vercel
+        run: vercel deploy --prebuilt --prod --token=${{ secrets.VERCEL_TOKEN }}

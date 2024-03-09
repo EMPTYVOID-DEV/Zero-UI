@@ -49,6 +49,4 @@ export const codePages = [
 	}
 ];
 
-export const cookieMaxAge = 3600 * 24 * 7;
-
 export const repoLink = 'https://github.com/EMPTYVOID-DEV/Zero-UI';

@@ -1,47 +1,48 @@
-# Zero-UI - Simple and Versatile Svelte UI Components
+# Zero-UI - Easy Svelte UI Components
 
-![zeroui Logo](./asset/logo.png)
+![ZeroUI Logo](./asset/logo.png)
 
-**zeroui** is a straightforward and user-friendly UI component library crafted for Svelte applications. It offers ready-to-use styles, customizable components, and aligns with UI/UX best practices. With zero configuration required, zeroui effortlessly integrates into your Svelte projects.
+**Zero-UI** is a simple and friendly library for Svelte UI components. It provides ready-to-use styles and customizable components, following the best practices of UI/UX design. You can effortlessly integrate Zero-UI into your Svelte projects without any complex setup.
 
 ## Key Features
 
-1. **Copy-Paste Convenience**
+1. **Easy to Use**
 
-   - Zero-ui relies on an easy copy-paste method, making it as simple as shadcn.
+   - Copy-paste simplicity for a hassle-free experience.
 
 2. **Modular Components**
 
    - Functional components with clear, local Svelte styles.
-   - Easy integration with a modular structure.
+   - Simple integration with a modular structure.
 
-3. **Component Props**
+3. **Customization Made Simple**
 
-   - Focus on content and logic without direct style prop handling.
-   - Cleaner customization with no fuss.
+   - Focus on content and logic without dealing with complex style props.
+   - Enjoy straightforward customization without unnecessary complications.
 
 4. **Global Theme**
 
-   - Defines a global theme using CSS variables for colors, font sizes, font families, and border radius.
+   - Define a global theme using CSS variables for colors, fonts, and more.
    - Adheres to the 60-30-10 color rule.
 
-5. **Variants**
+5. **Different Styles for Everyone**
 
-   - Offers different variants for components to cater to various use-cases.
-   - Includes synchronous and asynchronous button variants as examples.
+   - Explore different component variants for various use-cases.
+   - Examples include regular and async button styles.
 
-6. **Jsdoc Documentation**
+6. **Easy Documentation**
 
-   - Comprehensive documentation using JSDoc for seamless integration with or without TypeScript.
+   - Understand and use Zero-UI easily with clear JSDoc documentation.
+   - Seamless integration with or without TypeScript.
 
-7. **UI/UX Design**
+7. **User-Friendly Design**
 
-   - Crafted with UI/UX guidelines, ensuring responsiveness and a visually appealing experience.
+   - Crafted with a focus on user experience, ensuring responsiveness and an appealing look.
 
-8. **Zero Configuration Needed**
+8. **Zero Setup Headache**
 
-   - Effortless installation and usage with the zero-ui-cli.
-   - Simply use the CLI to load required elements into your project directory and install the necessary packages.
+   - Install and use Zero-UI effortlessly with the Zero-UI CLI.
+   - Load necessary elements into your project directory with a simple CLI command.
 
 ## Getting Started
 
@@ -49,13 +50,13 @@
 pnpm dlx zero-ui-cli
 ```
 
-## More Information
+## Learn More
 
-For detailed information, visit [zero-ui-docs](https://zero-ui.vercel.app).
+For more details, check out [Zero-UI Docs](https://zero-ui.vercel.app).
 
-## Contribution
+## Contribute
 
-Community contributions are welcome! Feel free to open issues, submit pull requests, or join discussions to enhance zeroui.
+Join the community! Open issues, submit pull requests, or participate in discussions to make Zero-UI even better.
 
 ## License
 
