@@ -22,8 +22,9 @@ jobs:
       matrix:
         node-version:
           - "18.x"
-    env:
-      working-directory: ./apps/docs
+    defaults:
+      run:
+        working-directory: ./apps/docs
     steps:
       - uses: actions/checkout@v3
       - uses: pnpm/action-setup@v2
@@ -40,10 +41,7 @@ jobs:
         run: pnpm install
       - name: pulling vercel environement informantion
         run: vercel pull --yes --environment=production --token=${{ secrets.VERCEL_TOKEN }}
-        working-directory: ${{env.working-directory}}
       - name: building the documentation
         run: vercel build --prod --token=${{ secrets.VERCEL_TOKEN }}
-        working-directory: ${{env.working-directory}}
       - name: deploying the build to vercel
         run: vercel deploy --prebuilt --prod --token=${{ secrets.VERCEL_TOKEN }}
-        working-directory: ${{env.working-directory}}

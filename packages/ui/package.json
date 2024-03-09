@@ -2,6 +2,7 @@
   "name": "zero-ui-registry",
   "version": "0.1.0",
   "private": "true",
+  "type": "module",
   "description": "",
   "main": "./dist/entry.js",
   "scripts": {
@@ -26,7 +27,7 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "@bulatdashiev/svelte-slider": "^1.0.3",
     "mime-types": "^2.1.35",
