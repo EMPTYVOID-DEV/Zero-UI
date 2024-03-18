@@ -1,5 +1,11 @@
 # zero-ui-cli
 
+## 0.1.1
+
+### Patch Changes
+
+- 694c716: adding shebang line in index.ts
+
 ## 0.1.0
 
 ### Minor Changes
