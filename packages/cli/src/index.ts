@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 import { welcome } from "./handlers/welcome.js";
 import { logger } from "./utils/logger.js";
 import { getRegistry } from "./handlers/getRegistry.js";
