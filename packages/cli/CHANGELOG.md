@@ -1,5 +1,11 @@
 # zero-ui-cli
 
+## 0.1.2
+
+### Patch Changes
+
+- 8559669: Adjusting the createLocalRegistry to load the previous load registry
+
 ## 0.1.1
 
 ### Patch Changes
