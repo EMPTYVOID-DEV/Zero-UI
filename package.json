@@ -6,6 +6,7 @@
     "docs-dev": "pnpm --filter zero-ui-docs dev",
     "docs-build": "pnpm --filter zero-ui-docs build",
     "docs-preview": "pnpm --filter zero-ui-docs preview",
+    "docs-deploy": "pnpm run --filter  zero-ui-docs vercel-build && pnpm run --filter  zero-ui-docs vercel-deploy",
     "cli-dev": "pnpm --filter zero-ui-cli dev",
     "cli-build": "pnpm --filter zero-ui-cli build",
     "registry-build": "pnpm --filter zero-ui-registry build",

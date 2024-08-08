@@ -55,3 +55,9 @@ export { default as DefaultTabs } from "../registry/components/tabs/defaultTabs.
 export { default as SyncToast } from "../registry/components/toast/syncToast.svelte";
 
 export { default as AsyncToast } from "../registry/components/toast/asyncToast.svelte";
+
+export { default as DefaultAvatar } from "../registry/components/avatar/defaultAvatar.svelte";
+
+export { default as DefaultCopy } from "../registry/components/copy/defaultCopy.svelte";
+
+export { default as DefaultOtp } from "../registry/components/otp/defaultOtp.svelte";

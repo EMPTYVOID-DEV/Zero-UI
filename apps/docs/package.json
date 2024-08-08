@@ -10,7 +10,9 @@
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./jsconfig.json --watch",
 		"test": "playwright test",
 		"lint": "prettier --check . && eslint .",
-		"format": "prettier --write ."
+		"format": "prettier --write .",
+		"vercel-build": "pnpm dlx vercel build --prod",
+		"vercel-deploy": "pnpm dlx vercel deploy --prebuilt --prod"
 	},
 	"devDependencies": {
 		"@playwright/test": "^1.28.1",

@@ -193,5 +193,24 @@
       "packages": ["svelte-sonner"],
       "entry": "asyncToast.svelte"
     }
+  },
+  "copy": {
+    "default": {
+      "files": ["defaultCopy.svelte"],
+      "icons": ["copyIcon", "doneIcon"],
+      "entry": "defaultCopy.svelte"
+    }
+  },
+  "avatar": {
+    "default": {
+      "files": ["defaultAvatar.svelte"],
+      "entry": "defaultAvatar.svelte"
+    }
+  },
+  "otp": {
+    "default": {
+      "files": ["defaultOtp.svelte"],
+      "entry": ["defaultOtp.svelte"]
+    }
   }
 }
