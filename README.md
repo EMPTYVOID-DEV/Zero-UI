@@ -1,6 +1,4 @@
-# Zero-UI - Easy Svelte UI Components
-
-![ZeroUI Logo](./asset/logo.png)
+# Zero-UI
 
 **Zero-UI** is a simple and friendly library for Svelte UI components. It provides ready-to-use styles and customizable components, following the best practices of UI/UX design. You can effortlessly integrate Zero-UI into your Svelte projects without any complex setup.
 
@@ -49,14 +47,6 @@
 ```bash
 pnpm dlx zero-ui-cli
 ```
-
-## Learn More
-
-For more details, check out [Zero-UI Docs](https://zero-ui.vercel.app).
-
-## Contribute
-
-Join the community! Open issues, submit pull requests, or participate in discussions to make Zero-UI even better.
 
 ## License
 
