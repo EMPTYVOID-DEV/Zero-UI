@@ -1,5 +1,5 @@
 export const rawPath =
-  "https://raw.githubusercontent.com/EMPTYVOID-DEV/Zero-UI/master/packages/ui";
+  "https://raw.githubusercontent.com/EMPTYVOID-DEV/Zero-UI/master/packages/ui/src/lib";
 
 export const warnColor = "#FFD700";
 
