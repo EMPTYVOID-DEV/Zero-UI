@@ -1,5 +1,13 @@
 # zero-ui-cli
 
+## 0.1.3
+
+### Patch Changes
+
+- 56b1890: 1-Fixing the rawPath
+  2-Removing css loader
+  3-Removing types loader
+
 ## 0.1.2
 
 ### Patch Changes
