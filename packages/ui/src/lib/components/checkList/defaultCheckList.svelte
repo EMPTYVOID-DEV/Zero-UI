@@ -12,18 +12,20 @@
 	/**
 	 * @typedef {Object} Props
 	 * @property {CheckItem[]} [checkList]
+	 * @property {(checkedItem:CheckItem)=>void} [handleChange]
 	 */
 
 	/** @type {Props} */
-	let { checkList = $bindable([]) } = $props();
+	let { checkList = $bindable([]), handleChange } = $props();
 
 	/**
-	 * @param {number} itemIndex - The index of the checkList item that changed its status.
+	 * @param {number} itemIndex
 	 */
 	function toggleCheckListItem(itemIndex) {
 		if (checkList[itemIndex].disabled) return;
-		const oldStatus = checkList[itemIndex].checked;
-		checkList[itemIndex].checked = !oldStatus;
+		const newStatus = !checkList[itemIndex].checked;
+		checkList[itemIndex].checked = newStatus;
+		handleChange?.(checkList[itemIndex]);
 	}
 </script>
 

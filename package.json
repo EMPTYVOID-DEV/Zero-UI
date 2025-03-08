@@ -3,20 +3,13 @@
   "version": "0.0.0",
   "description": "",
   "scripts": {
-    "docs-dev": "pnpm --filter zero-ui-docs dev",
-    "docs-build": "pnpm --filter zero-ui-docs build",
-    "docs-preview": "pnpm --filter zero-ui-docs preview",
-    "docs-deploy": "pnpm run --filter  zero-ui-docs vercel-build && pnpm run --filter  zero-ui-docs vercel-deploy",
     "cli-dev": "pnpm --filter zero-ui-cli dev",
     "cli-build": "pnpm --filter zero-ui-cli build",
-    "registry-build": "pnpm --filter zero-ui-registry build",
-    "registry-lint": "pnpm --filter zero-ui-registry lint",
+    "registry-dev": "pnpm --filter zero-ui-registry dev",
     "release": "pnpm cli-build && changeset publish ",
-    "version": "npx changeset version --ignore zero-ui-registry --ignore zero-ui-docs"
+    "version": "npx changeset version --ignore zero-ui-registry"
   },
-  "keywords": [
-    
-  ],
+  "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {

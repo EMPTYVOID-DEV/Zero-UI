@@ -1,72 +1,50 @@
 <script>
-  import { createEventDispatcher } from "svelte";
-  import RadioItem from "./radioItem.svelte";
+	import RadioItem from './radioItem.svelte';
 
-  
+	/**
+	 * @typedef {Object} RadioItem
+	 * @property {string} text
+	 * @property {boolean} checked
+	 * @property {string} [description]
+	 */
 
-  
-  
-  /**
-   * @typedef {Object} Props
-   * @property {number} [defaultChoice]
-   * @property {boolean} [disabled]
-   * @property {{ text: string; description?: string }[]} [radioGroup]
-   */
+	/**
+	 * @typedef {Object} Props
+	 * @property {boolean} [disabled]
+	 * @property {RadioItem[]} [radioGroup]
+	 * @property {(choiceItem:RadioItem)=>void} [handleChange]
+	 */
 
-  /** @type {Props} */
-  let { defaultChoice = -1, disabled = false, radioGroup = [] } = $props();
-  /**
-   * creating new list of group items with the checked property
-   *  also setting the checked property of the item with the index matching the defaultChoice
-   */
-  const enhancedGroup = $state(radioGroup.map((el, index) => {
-    return {
-      ...el,
-      checked: index === defaultChoice,
-    };
-  }));
+	/** @type {Props} */
+	let { disabled = false, radioGroup = $bindable([]), handleChange } = $props();
 
-  const dispatcher = createEventDispatcher();
-
-  /**
-   * @function toggleRadioGroup
-   * This function handles the toggling of the checked property for a specific choice within a radioGroup upon a click event.
-   * It ensures that only the clicked choice is checked, and all other choices are unchecked.
-   * Additionally, it triggers a custom "change" event, providing a detail object with the selected property. The selected property indicates either the index of the currently selected choice or null if no choice is selected.
-   * @param {number} choiceIndex - The index of the choice whose state has changed.
-   */
-  function toggleRadioGroup(choiceIndex) {
-    if (disabled) return;
-    for (let i = 0; i < enhancedGroup.length; i++) {
-      if (i === choiceIndex) {
-        const oldStatus = enhancedGroup[i].checked;
-        enhancedGroup[i].checked = !oldStatus;
-      } else {
-        enhancedGroup[i].checked = false;
-      }
-    }
-    dispatcher("change", {
-      selected: enhancedGroup[choiceIndex].checked ? choiceIndex : null,
-    });
-  }
+	/**
+	 * @param {number} choiceIndex
+	 */
+	function toggleRadioGroup(choiceIndex) {
+		if (disabled) return;
+		for (let i = 0; i < radioGroup.length; i++) {
+			if (i === choiceIndex) {
+				const oldStatus = radioGroup[i].checked;
+				radioGroup[i].checked = !oldStatus;
+			} else {
+				radioGroup[i].checked = false;
+			}
+		}
+		handleChange?.(radioGroup[choiceIndex]);
+	}
 </script>
 
-<div class="radioGroup" class:disabled>
-  {#each enhancedGroup as radioItem, index}
-    <!-- svelte-ignore a11y_click_events_have_key_events -->
-    <!-- svelte-ignore a11y_no_static_element_interactions -->
-    <RadioItem
-      {disabled}
-      {radioItem}
-      on:click={() => toggleRadioGroup(index)}
-    />
-  {/each}
+<div class="radioGroup">
+	{#each radioGroup as radioItem, index}
+		<RadioItem {disabled} {radioItem} onclick={() => toggleRadioGroup(index)} />
+	{/each}
 </div>
 
 <style>
-  .radioGroup {
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-  }
+	.radioGroup {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+	}
 </style>

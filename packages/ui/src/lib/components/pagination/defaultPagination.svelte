@@ -1,101 +1,82 @@
 <script>
-	import { onMount } from 'svelte';
+	import RightIcon from '../../icons/rightIcon.svelte';
+	import LeftIcon from '../../icons/leftIcon.svelte';
+	import Pages from './pages.svelte';
 
 	/**
 	 * @typedef {Object} Props
-	 * @property {number} [numberOfInputs]
-	 * @property {(val: string) => boolean} validator
-	 * @property {string} [otpString]
+	 * @property {number} [numberOfPages]
+	 * @property {number} [activePage]
 	 */
+	/** @type {Props}*/
+	let { activePage = $bindable(1), numberOfPages = 5 } = $props();
 
-	/** @type {Props} */
-	let { numberOfInputs = 6, validator, otpString = $bindable('') } = $props();
-
-	/** @type {string[]} */
-	let boxValues = $state(Array(numberOfInputs).fill(''));
-
-	/** @type {HTMLDivElement} */
-	let otpRef = $state();
-
-	/** @type {number} */
-	let focusedBox = 0;
+	let siblingsCount = 1;
+	let visiblePages = $derived(adjustToActive(activePage));
 
 	/**
-	 * @param {string} value
-	 * @param {number} index
+	 * @function adjustToActive
+	 * @param {number} activePage
+	 * @returns {{ start: number; end: number; }}
 	 */
-	function handleInput(value, index) {
-		if (validator(value)) {
-			boxValues[index] = value;
-			otpString = boxValues.join('');
-			focusNextBox(index);
-		} else {
-			boxValues[index] = '';
+	function adjustToActive(activePage) {
+		let start = Math.max(1, activePage - siblingsCount);
+		let end = Math.min(numberOfPages, activePage + siblingsCount);
+		let pagesDiff = siblingsCount * 2 - (end - start);
+
+		if (pagesDiff !== 0) {
+			if (end + pagesDiff <= numberOfPages) end += pagesDiff;
+			else if (start - pagesDiff >= 1) start -= pagesDiff;
 		}
-	}
 
-	/**
-	 * @param {number} currentIndex
-	 */
-	function focusNextBox(currentIndex) {
-		const nextBoxIndex = Math.min(currentIndex + 1, numberOfInputs - 1);
-		focusedBox = nextBoxIndex;
-		/** @type {HTMLInputElement} */ (otpRef.children[nextBoxIndex]).focus();
-	}
+		if (numberOfPages - end === 1) end = numberOfPages;
 
-	/**
-	 * @param {KeyboardEvent} event
-	 */
-	function handleKeydown(event) {
-		if (event.key === 'Backspace' && focusedBox > 0) {
-			boxValues[focusedBox] = '';
-			focusedBox--;
-			/** @type {HTMLInputElement} */ (otpRef.children[focusedBox]).focus();
-		}
-	}
+		if (start - 1 === 1) start = 1;
 
-	onMount(() => {
-		window.addEventListener('keydown', handleKeydown);
-		return () => window.removeEventListener('keydown', handleKeydown);
-	});
+		return {
+			start,
+			end
+		};
+	}
 </script>
 
-<div class="otp" bind:this={otpRef}>
-	{#each boxValues as boxVal, idx}
-		<input
-			class="box"
-			type="text"
-			maxlength="1"
-			oninput={(e) => handleInput(e.currentTarget.value, idx)}
-			bind:value={boxVal}
-		/>
-	{/each}
+<div class="pagination">
+	<button class="control" disabled={activePage === 1} onclick={() => (activePage -= 1)}>
+		<LeftIcon />
+	</button>
+
+	<Pages bind:activePage start={visiblePages.start} end={visiblePages.end} {numberOfPages} />
+
+	<button disabled={activePage === numberOfPages} class="control" onclick={() => (activePage += 1)}>
+		<RightIcon />
+	</button>
 </div>
 
 <style>
-	.otp {
+	.pagination {
 		display: flex;
 		align-items: center;
-		justify-content: space-between;
-		width: 100%;
+		gap: 0.25rem;
+	}
+	.control {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		min-width: 2.25rem;
+		min-height: 2.25rem;
+		cursor: pointer;
+		outline: none;
+		border: none;
+		border-radius: 0.25rem;
+		background-color: transparent;
+		--icon: var(--foregroundColor);
+	}
+	.control:not(:disabled):hover {
+		background-color: color-mix(in srgb, var(--primaryColor) 40%, transparent 60%);
 	}
 
-	.box {
-		all: unset;
-		width: 3rem;
-		aspect-ratio: 1/1;
-		font-family: var(--bodyFont);
-		font-size: var(--h4);
-		font-weight: bold;
-		text-align: center;
-		color: var(--foregroundColor);
-		background-color: var(--backgroundColor);
-		border: 2px solid var(--foregroundColor);
-		border-radius: var(--border-radius);
-	}
-
-	.box:focus {
-		border-color: var(--primaryColor);
-		color: var(--primaryColor);
+	.control:disabled {
+		--icon: var(--mutedColor);
+		cursor: default;
 	}
 </style>

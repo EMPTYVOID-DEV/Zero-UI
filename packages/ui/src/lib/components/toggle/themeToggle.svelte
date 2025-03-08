@@ -1,39 +1,40 @@
 <script>
-    import MoonIcon from "../../icons/moonIcon.svelte";
-    import SunIcon from "../../icons/sunIcon.svelte";
-    import { createEventDispatcher } from "svelte";
+	import MoonIcon from '../../icons/moonIcon.svelte';
+	import SunIcon from '../../icons/sunIcon.svelte';
 
-    
-    /**
-     * @typedef {Object} Props
-     * @property {"dark" | "light"} [active]
-     */
+	/**
+	 * @typedef {"dark" | "light"} Theme
+	 */
 
-    /** @type {Props} */
-    let { active = $bindable("dark") } = $props();
+	/**
+	 * @typedef {Object} Props
+	 * @property {Theme} [active]
+	 * @property {(theme:Theme)=>void} [handleChange]
+	 */
 
-    const dispatch = createEventDispatcher();
+	/** @type {Props} */
+	let { active = $bindable('dark'), handleChange } = $props();
 
-    /**
-     * @param {"dark" | "light"} newTheme
-     */
-    function toggleTheme(newTheme) {
-        active = newTheme;
-        dispatch("change", { theme: active });
-    }
+	/**
+	 * @param {Theme} newTheme
+	 */
+	function toggleTheme(newTheme) {
+		active = newTheme;
+		handleChange?.(active);
+	}
 </script>
 
-<button onclick={() => toggleTheme(active === "dark" ? "light" : "dark")}>
-    {#if active === "dark"}
-        <MoonIcon />
-    {:else}
-        <SunIcon />
-    {/if}
+<button onclick={() => toggleTheme(active === 'dark' ? 'light' : 'dark')}>
+	{#if active === 'dark'}
+		<MoonIcon />
+	{:else}
+		<SunIcon />
+	{/if}
 </button>
 
 <style>
-    button {
-        all: unset;
-        cursor: pointer;
-    }
+	button {
+		all: unset;
+		cursor: pointer;
+	}
 </style>

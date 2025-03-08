@@ -1,130 +1,102 @@
 <script>
-  import { createEventDispatcher } from "svelte";
-  import Label from "./label.svelte";
+	import Label from './label.svelte';
 
-  
+	/**
+	 * @typedef {Object} Props
+	 * @property {number} [sizeLimit]
+	 * @property {number} [numberLimit]
+	 * @property {string} [description]
+	 * @property {string} [acceptedFiles]
+	 * @property {File[]} [files]
+	 * @property {(files:File[])=>void} [handleChange]
+	 */
 
-  
+	/** @type {Props} */
+	let {
+		sizeLimit = -1,
+		numberLimit = -1,
+		description = '',
+		acceptedFiles = '*',
+		files = $bindable([]),
+		handleChange
+	} = $props();
 
-  
-  
-  /**
-   * @typedef {Object} Props
-   * @property {number} [sizeLimit]
-   * @property {number} [numberLimit]
-   * @property {string} [description]
-   * @property {string} [acceptedFiles]
-   */
+	/**
+	 * @param {number} sizeInBytes
+	 */
+	function checkSize(sizeInBytes) {
+		const sizeInKilos = sizeInBytes / 1000000;
+		if (sizeLimit == -1) return false;
+		if (sizeInKilos < sizeLimit) return false;
+		return true;
+	}
 
-  /** @type {Props} */
-  let {
-    sizeLimit = -1,
-    numberLimit = -1,
-    description = "",
-    acceptedFiles = "*"
-  } = $props();
+	function reachLimit() {
+		if (numberLimit == -1) return false;
+		else if (files.length < numberLimit) return false;
+		return true;
+	}
 
-  const dispatcher = createEventDispatcher();
-  /**@type {File[]} */
-  let files = $state([]);
+	/**
+	 * @param {string} type
+	 */
+	function checkType(type) {
+		const typeArray = type.split('/');
+		if (acceptedFiles == '*') return true;
+		for (let v of acceptedFiles.split(',')) {
+			let testType = v.trim().split('/');
+			if (testType[0] == typeArray[0] && (testType[1] == '*' || testType[1] == typeArray[1]))
+				return true;
+		}
+		return false;
+	}
 
-  /**
-   * @function this function checks the size limit
-   * @param {number} sizeInBytes
-   * @returns {boolean}
-   */
-  function checkSize(sizeInBytes) {
-    const sizeInKilos = sizeInBytes / 1024;
-    if (sizeLimit == -1) return false;
-    if (sizeInKilos < sizeLimit) return false;
-    return true;
-  }
+	/**
+	 * @param {FileList} selectedFiles
+	 */
+	function addFiles(selectedFiles) {
+		if (!selectedFiles) return;
+		for (let i = 0; i < selectedFiles.length; i++) {
+			if (checkType(selectedFiles[i].type) && !reachLimit() && !checkSize(selectedFiles[i].size))
+				files = [...files, selectedFiles[i]];
+		}
+	}
 
-  /**
-   * @function This function checks whether we reach the files number limit
-   * @returns {boolean}
-   */
-  function reachLimit() {
-    if (numberLimit == -1) return false;
-    else if (files.length < numberLimit) return false;
-    return true;
-  }
+	/**
+	 * @param {number} index
+	 */
+	function remove(index) {
+		files = files.filter((el, idx) => idx != index);
+	}
 
-  /**
-   * @function checkType checks the file type for the component
-   * @param {string} type this is the file type
-   * @returns {boolean} true:the type is valid , false:the type is not valid
-   */
-  function checkType(type) {
-    const typeArray = type.split("/");
-    if (acceptedFiles == "*") return true;
-    for (let v of acceptedFiles.split(",")) {
-      let testType = v.trim().split("/");
-      if (
-        testType[0] == typeArray[0] &&
-        (testType[1] == "*" || testType[1] == typeArray[1])
-      )
-        return true;
-    }
-    return false;
-  }
-
-  /**
-   * @function addFiles is a function that handles the addition of a valid file
-   * @param {FileList} selectedFiles this is the list of the selected files after a drop or browse addition
-   */
-  function addFiles(selectedFiles) {
-    if (!selectedFiles) return;
-    for (let i = 0; i < selectedFiles.length; i++) {
-      if (
-        checkType(selectedFiles[i].type) &&
-        !reachLimit() &&
-        !checkSize(selectedFiles[i].size)
-      )
-        files = [...files, selectedFiles[i]];
-    }
-    dispatcher("change", {
-      files,
-    });
-  }
-
-  /**
-   * @function remove this will remove a file using the fileIndex
-   * @param {{ detail: { fileIndex: number; }; }} e this is an event fired by the label component each time the user removes a file
-   */
-  function remove(e) {
-    files = files.filter((el, idx) => idx != e.detail.fileIndex);
-    dispatcher("change", {
-      files,
-    });
-  }
+	$effect(() => {
+		handleChange?.(files);
+	});
 </script>
 
 <div class="fileUpload">
-  <input
-    id="upload"
-    type="file"
-    accept={acceptedFiles}
-    onchange={(e) => {
-      let selectedFiles = e.currentTarget.files;
-      if (selectedFiles) addFiles(selectedFiles);
-    }}
-  />
-  <Label
-    {description}
-    {files}
-    on:remove={remove}
-    on:drop={(e) => {
-      addFiles(e.detail.dropFiles);
-    }}
-  />
+	<input
+		id="upload"
+		type="file"
+		accept={acceptedFiles}
+		onchange={(e) => {
+			let selectedFiles = e.currentTarget.files;
+			if (selectedFiles) addFiles(selectedFiles);
+		}}
+	/>
+	<Label
+		{description}
+		{files}
+		handleRemove={remove}
+		handleDrop={(dropFiles) => addFiles(dropFiles)}
+	/>
 </div>
 
 <style>
-  .fileUpload {
-    width: var(--width, 100%);
-  }
-  .fileUpload input {
-    display: none;
-  }
+	.fileUpload {
+		width: var(--width, 100%);
+	}
+	.fileUpload input {
+		display: none;
+	}
 </style>

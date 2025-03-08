@@ -1,38 +1,35 @@
 <script>
-  //@ts-ignore
-  import Slider from "@bulatdashiev/svelte-slider";
-  
-  
-  
-  
-  /**
-   * @typedef {Object} Props
-   * @property {number} [max]
-   * @property {[number,number]} [value]
-   * @property {number} [min]
-   * @property {boolean} [range] - This event is triggered with the selection range [min,max]
-In case range prop is false the max value is the slider's max
-   */
+	import Slider from 'svelte-range-slider-pips';
 
-  /** @type {Props} */
-  let {
-    max = 100,
-    value = $bindable([0, max]),
-    min = 0,
-    range = false
-  } = $props();
-  
+	/**
+	 * @typedef {Object} Props
+	 * @property {number} [max]
+	 * @property {number} [value]
+	 * @property {number} [min]
+	 * @property {number} [step]
+	 * @property {string} [prefix]
+	 * @property {string} [suffix]
+	 */
+
+	/** @type {Props} */
+	let { max = 100, value = $bindable(0), min = 0, prefix = '', suffix = '', step = 10 } = $props();
 </script>
 
 <div class="slider">
-  <Slider {min} {max} {range} order bind:value on:input />
+	<Slider {min} {max} bind:value {prefix} {suffix} pips pipstep={step} all="label" />
 </div>
 
 <style>
-  .slider {
-    width: var(--width, 100%);
-    --track-bg: color-mix(in srgb, var(--mutedColor) 60%, transparent 40%);
-    --progress-bg: var(--primaryColor);
-    --thumb-bg: var(--primaryColor);
-  }
+	.slider {
+		width: var(--width, 100%);
+		--range-slider: color-mix(
+			in srgb,
+			var(--primaryColor) 40%,
+			transparent 60%
+		); /* slider main background color */
+		--range-handle-inactive: var(--mutedColor); /* inactive handle color */
+		--range-handle: var(--primaryColor); /* non-focussed handle color */
+		--range-handle-focus: var(--primaryColor); /* focussed handle color */
+		--range-limit: var(--mutedColor); /* limit range background color */
+	}
 </style>
