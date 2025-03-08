@@ -27,13 +27,13 @@
 		"singlePage": {
 			"files": ["singlePageCode.svelte", "code.svelte"],
 			"icons": ["copyIcon", "doneIcon"],
-			"dependency": ["svelte-highlight"],
+			"packages": ["svelte-highlight"],
 			"entry": "singlePageCode.svelte"
 		},
 		"multiPage": {
 			"files": ["multiPageCode.svelte", "code.svelte", "pageChanger.svelte"],
 			"icons": ["copyIcon", "doneIcon"],
-			"dependency": ["svelte-highlight"],
+			"packages": ["svelte-highlight"],
 			"entry": "multiPageCode.svelte"
 		}
 	},
@@ -41,7 +41,7 @@
 		"default": {
 			"files": ["defaultUpload.svelte", "label.svelte", "files.svelte"],
 			"icons": ["closeIcon", "plusIcon"],
-			"dependency": ["mime-types"],
+			"packages": ["mime-types"],
 			"entry": "defaultUpload.svelte"
 		}
 	},
@@ -100,14 +100,14 @@
 	"select": {
 		"default": {
 			"files": ["defaultSelect.svelte"],
-			"dependency": ["svelte-select"],
+			"packages": ["svelte-select"],
 			"entry": "defaultSelect.svelte"
 		}
 	},
 	"slider": {
 		"default": {
 			"files": ["defaultSlider.svelte"],
-			"dev-dependency": ["svelte-range-slider-pips"],
+			"packages": ["svelte-range-slider-pips"],
 			"entry": "defaultSlider.svelte"
 		}
 	},
@@ -170,7 +170,7 @@
 		"default": {
 			"files": ["defaultToast.svelte", "customToast.svelte"],
 			"icons": ["infoIcon", "dangerIcon", "successIcon"],
-			"dependency": ["svelte-sonner"],
+			"packages": ["svelte-sonner"],
 			"entry": "defaultToast.svelte"
 		}
 	},
