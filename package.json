@@ -14,7 +14,9 @@
     "release": "pnpm cli-build && changeset publish ",
     "version": "npx changeset version --ignore zero-ui-registry --ignore zero-ui-docs"
   },
-  "keywords": [],
+  "keywords": [
+    
+  ],
   "author": "",
   "license": "ISC",
   "devDependencies": {
@@ -26,5 +28,10 @@
   "workspaces": [
     "apps/*",
     "packages/*"
-  ]
+  ],
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild"
+    ]
+  }
 }

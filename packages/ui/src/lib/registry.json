@@ -1,0 +1,202 @@
+{
+	"accordian": {
+		"default": {
+			"files": ["defaultAccordian.svelte", "accordianItem.svelte"],
+			"icons": ["upIcon", "downIcon"],
+			"entry": "defaultAccordian.svelte"
+		}
+	},
+	"button": {
+		"sync": {
+			"files": ["syncButton.svelte"],
+			"entry": "syncButton.svelte"
+		},
+		"async": {
+			"files": ["asyncButton.svelte"],
+			"icons": ["loadingIcon"],
+			"entry": "asyncButton.svelte"
+		}
+	},
+	"checkList": {
+		"default": {
+			"files": ["defaultCheckList.svelte", "checkItem.svelte"],
+			"entry": "defaultCheckList.svelte"
+		}
+	},
+	"code": {
+		"singlePage": {
+			"files": ["singlePageCode.svelte", "code.svelte"],
+			"icons": ["copyIcon", "doneIcon"],
+			"packages": ["svelte-highlight"],
+			"entry": "singlePageCode.svelte"
+		},
+		"multiPage": {
+			"files": ["multiPageCode.svelte", "code.svelte", "pageChanger.svelte"],
+			"icons": ["copyIcon", "doneIcon"],
+			"packages": ["svelte-highlight"],
+			"entry": "multiPageCode.svelte"
+		}
+	},
+	"upload": {
+		"default": {
+			"files": ["defaultUpload.svelte", "label.svelte", "files.svelte"],
+			"icons": ["closeIcon", "plusIcon"],
+			"packages": ["mime-types"],
+			"entry": "defaultUpload.svelte"
+		}
+	},
+	"input": {
+		"static": {
+			"files": ["staticInput.svelte"],
+			"entry": "staticInput.svelte"
+		},
+		"reactive": {
+			"files": ["reactiveInput.svelte"],
+			"icons": ["closeIcon"],
+			"entry": "reactiveInput.svelte"
+		}
+	},
+	"link": {
+		"default": {
+			"files": ["defaultLink.svelte"],
+			"entry": "defaultLink.svelte"
+		}
+	},
+	"loading": {
+		"regular": {
+			"files": ["regularLoading.svelte"],
+			"icons": ["loadingIcon"],
+			"entry": "regularLoading.svelte"
+		},
+		"skeleton": {
+			"files": ["skeletonLoading.svelte"],
+			"entry": "skeletonLoading.svelte"
+		}
+	},
+	"pagination": {
+		"default": {
+			"files": ["defaultPagination.svelte", "pages.svelte"],
+			"icons": ["leftIcon", "rightIcon", "dotsIcon"],
+			"entry": "defaultPagination.svelte"
+		}
+	},
+	"progress": {
+		"continuos": {
+			"files": ["continuosProgress.svelte"],
+			"icons": ["percentageIcon"],
+			"entry": "[continuosProgress.svelte]"
+		},
+		"multiStep": {
+			"files": ["multiStepProgress.svelte"],
+			"entry": "multiStepProgress.svelte"
+		}
+	},
+	"radioGroup": {
+		"default": {
+			"files": ["defaultRadioGroup.svelte", "radioItem.svelte"],
+			"entry": "defaultRadioGroup.svelte"
+		}
+	},
+	"select": {
+		"default": {
+			"files": ["defaultSelect.svelte"],
+			"packages": ["svelte-select"],
+			"entry": "defaultSelect.svelte"
+		}
+	},
+	"slider": {
+		"default": {
+			"files": ["defaultSlider.svelte"],
+			"packages": ["@bulatdashiev/svelte-slider"],
+			"entry": "defaultSlider.svelte"
+		}
+	},
+	"textarea": {
+		"default": {
+			"files": ["defaultTextarea.svelte"],
+			"entry": "defaultTextarea.svelte"
+		}
+	},
+	"toggle": {
+		"state": {
+			"files": ["stateToggle.svelte"],
+			"icons": ["validIcon", "closeIcon"],
+			"entry": "stateToggle.svelte"
+		},
+		"theme": {
+			"files": ["themeToggle.svelte"],
+			"icons": ["moonIcon", "sunIcon", "computerIcon"],
+			"entry": "themeToggle.svelte"
+		}
+	},
+	"dialog": {
+		"default": {
+			"files": ["defaultDialog.svelte"],
+			"entry": "defaultDialog.svelte"
+		}
+	},
+	"siteSearch": {
+		"default": {
+			"files": [
+				"defaultSiteSearch.svelte",
+				"section.svelte",
+				"category.svelte",
+				"searchInput.svelte"
+			],
+			"icons": ["closeIcon", "searchIcon", "hashIcon", "subMenuIcon", "fileIcon", "upIcon"],
+			"variants": ["dialog/default"],
+			"entry": "defaultSiteSearch.svelte"
+		}
+	},
+	"alert": {
+		"inline": {
+			"files": ["inlineAlert.svelte"],
+			"icons": ["infoIcon", "dangerIcon", "successIcon"],
+			"entry": "inlineAlert.svelte"
+		},
+		"dialog": {
+			"files": ["dialogAlert.svelte"],
+			"variants": ["dialog/default", "button/sync"],
+			"entry": ["dialogAlert.svelte"]
+		}
+	},
+	"tabs": {
+		"default": {
+			"files": ["defaultTabs.svelte"],
+			"entry": "defaultTabs.svelte"
+		}
+	},
+	"toast": {
+		"sync": {
+			"files": ["syncToast.svelte", "customToast.svelte"],
+			"icons": ["infoIcon", "dangerIcon", "successIcon"],
+			"packages": ["svelte-sonner"],
+			"entry": "syncToast.svelte"
+		},
+		"async": {
+			"files": ["asyncToast.svelte", "customToast.svelte"],
+			"icons": ["loadingIcon", "dangerIcon", "successIcon"],
+			"packages": ["svelte-sonner"],
+			"entry": "asyncToast.svelte"
+		}
+	},
+	"copy": {
+		"default": {
+			"files": ["defaultCopy.svelte"],
+			"icons": ["copyIcon", "doneIcon"],
+			"entry": "defaultCopy.svelte"
+		}
+	},
+	"avatar": {
+		"default": {
+			"files": ["defaultAvatar.svelte"],
+			"entry": "defaultAvatar.svelte"
+		}
+	},
+	"otp": {
+		"default": {
+			"files": ["defaultOtp.svelte"],
+			"entry": ["defaultOtp.svelte"]
+		}
+	}
+}
